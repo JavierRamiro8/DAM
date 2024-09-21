@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut03_PasosDeDatosEntreActividades.u303Heladeria"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="0dp">
+
+    <EditText
+        android:id="@+id/ut303numFresa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/u303TiposHelados"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/u303tvFresa" />
+
+    <EditText
+        android:id="@+id/ut303numChocolate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/ut303numFresa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/u303tvChocolate" />
+
+    <TextView
+        android:id="@+id/u303tvTipo"
+        android:layout_width="141dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="87dp"
+        android:text="Tipo"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/u303btAceptar"
+        app:layout_constraintEnd_toEndOf="@+id/u303tvFresa"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u303tvFresa"
+        app:layout_constraintTop_toBottomOf="@+id/u303tvFresa"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <TextView
+        android:id="@+id/u303tvFresa"
+        android:layout_width="141dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="87dp"
+        android:text="Fresa"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/u303tvChocolate"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u303tvChocolate"
+        app:layout_constraintTop_toBottomOf="@+id/u303tvChocolate" />
+
+    <TextView
+        android:id="@+id/u303tvChocolate"
+        android:layout_width="141dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="87dp"
+        android:text="Chocolate"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/u303tvVainilla"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/u303tvVainilla"
+        app:layout_constraintTop_toBottomOf="@+id/u303tvVainilla" />
+
+    <TextView
+        android:id="@+id/u303tvVainilla"
+        android:layout_width="141dp"
+        android:layout_height="46dp"
+        android:text="Vainilla"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.099" />
+
+    <Spinner
+        android:id="@+id/u303TiposHelados"
+        android:layout_width="188dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="468dp"
+        android:entries="@array/spinner_data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/u303tvTipo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/u303btAceptar"
+        android:layout_width="183dp"
+        android:layout_height="89dp"
+        android:text="Aceptar"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.975" />
+
+    <EditText
+        android:id="@+id/ut303numVainilla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/ut303numChocolate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/u303tvVainilla"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.436" />
+
+    <TextView
+        android:id="@+id/u303tvErrores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/u303btAceptar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/u303TiposHelados" />
+</androidx.constraintlayout.widget.ConstraintLayout>

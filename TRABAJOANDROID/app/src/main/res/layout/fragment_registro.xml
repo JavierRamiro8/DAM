@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.Registro">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/icono3">
+
+        <EditText
+            android:id="@+id/reg_et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="@color/material_dynamic_neutral90"
+            android:drawablePadding="10dp"
+            android:hint="Email"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/reg_et_password"
+            app:layout_constraintTop_toBottomOf="@+id/reg_et_usuario"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <TextView
+            android:id="@+id/tv_Registro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Register Account"
+            android:textColor="#FFC107"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/reg_et_usuario"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/reg_et_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="@color/material_dynamic_neutral90"
+            android:drawablePadding="10dp"
+            android:hint="Username"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/reg_et_email"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Registro"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <EditText
+            android:id="@+id/reg_et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="@color/material_dynamic_neutral90"
+            android:drawablePadding="10dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/tv_terminosYcondiciones"
+            app:layout_constraintTop_toBottomOf="@+id/reg_et_email"
+            tools:layout_editor_absoluteX="20dp" />
+
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/cb_terminosYcondiciones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/btRegistro"
+            app:layout_constraintEnd_toStartOf="@+id/tv_terminosYcondiciones"
+            app:layout_constraintHorizontal_bias="0.553"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reg_et_password"
+            app:layout_constraintVertical_bias="0.22" />
+
+        <TextView
+            android:id="@+id/tv_terminosYcondiciones"
+            android:layout_width="286dp"
+            android:layout_height="32dp"
+            android:text="I accept the Terms and conditions."
+            android:textAlignment="viewStart"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/IniciarSesion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.832"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reg_et_password" />
+
+        <Button
+            android:id="@+id/btRegistro"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:backgroundTint="#FFC107"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/IniciarSesion"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <TextView
+            android:id="@+id/IniciarSesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Do you already have an Account? Log in"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/btRegistro"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_terminosYcondiciones" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

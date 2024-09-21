@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="texto">
+    <input type="button" value="Arriba">
+    <input type="button" value="Abajo" id="Abajo">
+    <ul id="lista"></ul>
+</body>
+<script>
+    var padre = document.getElementsByTagName("body")[0];
+
+    document.getElementById("Abajo").addEventListener("click", abajo);
+
+    var botonArriba = document.getElementsByTagName("input")[1];
+    botonArriba.addEventListener("click", arriba);
+
+    function arriba() {
+        var texto = document.getElementsByTagName("input")[0].value;
+        var listaHijo = document.createElement("li");
+        listaHijo.textContent = texto;
+        var listaPadre = document.getElementById("lista");
+        var primerElemento = listaPadre.firstChild;
+        listaPadre.insertBefore(listaHijo, primerElemento);
+    }
+
+    function abajo() {
+        var texto = document.getElementsByTagName("input")[0].value;
+        var listaHijo = document.createElement("li");
+        listaHijo.textContent = texto;
+        var listaPadre = document.getElementById("lista");
+        listaPadre.appendChild(listaHijo);
+        padre.appendChild(listaPadre);
+    }
+</script>
+
+</html>

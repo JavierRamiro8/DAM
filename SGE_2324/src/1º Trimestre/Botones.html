@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Esto es una pagina web</h1>
+   <input type="text" name="datosPersonales" id="nombre">
+   <br>
+   <input type="text" name="datosPersonales" id="apellidos">
+    <br>
+   <button type="submit" value="Aceptar" id="boton">Aceptar</button> 
+</body>
+<script>
+    document.getElementById("boton").addEventListener("click",saludos)
+    function saludos(){
+       cadena=prompt("Que info quieres que ponga")
+        //console.log(document.getElementsByTagName("input"))
+       //console.log(document.getElementsByTagName("h1")[0].innerHTML)
+        document.getElementsByTagName("h1")[0].innerHTML=cadena
+    }
+</script>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Simple</title>
+
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre">
+
+    <br>
+
+    <input type="button" value="Mostrar">
+    <input type="button" value="Comprobar">
+    <input type="button" value="tablaJSON">
+
+    <br>
+    <label for="opcion1">Opción 1</label>
+    <input type="radio" id="opcion1" name="opcion" value="1">
+
+    <label for="opcion2">Opción 2</label>
+    <input type="radio" id="opcion2" name="opcion" value="2">
+
+    <label for="opcion3">Opción 3</label>
+    <input type="radio" id="opcion3" name="opcion" value="3">
+
+    <br>
+
+    <input type="checkbox" id="checkbox1" name="checkbox1" value="1">
+    <label for="checkbox1">Checkbox 1</label>
+
+    <input type="checkbox" id="checkbox2" name="checkbox2" value="2">
+    <label for="checkbox2">Checkbox 2</label>
+
+    <input type="checkbox" id="checkbox3" name="checkbox3" value="3">
+    <label for="checkbox3">Checkbox 3</label>
+
+</body>
+<script>
+    Clientes = {
+        "Cliente": 1233,
+        "Nombre": "Pedro Ramirez",
+        "Direccion": "Calle de la Piuleta 14",
+        "ultimo_pedido": {
+            "id_pedido": 2,
+            "Productos": [
+                {
+                    "id_producto": 77,
+                    "Nombre": "Impresora Laser",
+                    "Fabricante": "Canon",
+                    "Cantidad": 3,
+                    "precio_uni": 80
+                },
+                {
+                    "id_producto": 22,
+                    "Nombre": "Raton Gamer",
+                    "Fabricante": "Longitech",
+                    "Cantidad": 2,
+                    "precio_uni": 55
+                }
+            ]
+        }
+    }
+    var body = document.getElementsByTagName("body")[0];
+    var botonMostrar = document.getElementsByTagName("input")[1];
+    var botonComprobar = document.getElementsByTagName("input")[2];
+    var botonTabla=document.getElementsByTagName("input")[3];
+    botonMostrar.addEventListener("click", mostrarResultados)
+    function mostrarResultados() {
+        var textoIntroducido = document.getElementsByTagName("input")[0].value;
+        if (!textoIntroducido) {
+            alert("No has introducido ningun nombre");
+        } else {
+            console.log("Tu nombre es: " + textoIntroducido)
+        }
+    }
+    botonComprobar.addEventListener("click", Comprobar);
+    function Comprobar() {
+        var radio1 = document.getElementById("opcion1");
+        var radio2 = document.getElementById("opcion2");
+        var radio3 = document.getElementById("opcion3");
+        var check1 = document.getElementById("checkbox1");
+        var check2 = document.getElementById("checkbox2");
+        var check3 = document.getElementById("checkbox3");
+        var label = document.createElement("p");
+        if (!radio1.checked && !radio2.checked && !radio3.checked) {
+            console.log("No has clickado a ningun radio");
+        } else {
+            if (radio1.checked) {
+                label.textContent = "Has seleccionado la opcion " + radio1.value;
+                body.appendChild(label);
+            } else if (radio2.checked) {
+                label.textContent = "Has seleccionado la opcion " + radio2.value;
+                body.appendChild(label);
+            } else {
+                label.textContent = "Has seleccionado la opcion " + radio3.value;
+                body.appendChild(label);
+            }
+        }
+        if (!check1.checked && !check2.checked && !check3.checked) {
+            console.log("No has clickado a ningun checkbox");
+        } else {
+            if (check1.checked) {
+                label.textContent = "Has seleccionado la opcion " + check1.value;
+                body.appendChild(label);
+            }
+            if (check2.checked) {
+                label.textContent = "Has seleccionado la opcion " + check2.value;
+                body.appendChild(label);
+            }
+            if (check3.checked) {
+                label.textContent = "Has seleccionado la opcion " + check3.value;
+                body.appendChild(label);
+            }
+        }
+    }
+        botonTabla.addEventListener("click",crearTablaJSON)
+        function crearTablaJSON(){
+            var tabla = document.createElement("table");
+            var fila = document.createElement("tr");
+            var encabezado = document.createElement("th");
+            var encabezado2=document.createElement("th");
+            encabezado.textContent = "NOMBRE";
+            encabezado2.textContent="Nombre_producto"
+            fila.appendChild(encabezado);
+            fila.appendChild(encabezado2);
+            tabla.appendChild(fila);
+
+            var cuerpoTabla = document.createElement("tbody");
+            var filaCuerpo = document.createElement("tr");
+            var datoCuerpo = document.createElement("td");
+            var datoCuerpo2 = document.createElement("td");
+
+            datoCuerpo.textContent = Clientes.Nombre;
+            datoCuerpo2.textContent= Clientes.ultimo_pedido.Productos[0].Nombre
+            filaCuerpo.appendChild(datoCuerpo);
+            filaCuerpo.appendChild(datoCuerpo2);
+            cuerpoTabla.appendChild(filaCuerpo);
+            tabla.appendChild(cuerpoTabla);
+
+            body.appendChild(tabla);
+        }
+
+
+</script>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <title></title>
+</head>
+<body>
+    <p>Nombre</p><input type="text" name="" id="txNombre">
+    <p>Apellido</p><input type="text" name="" id="txApellido">
+    <p>Edad</p><input type="text" name="" id="txEdad">
+    <br>
+    <p>Estado civil: </p>
+    <p>Soltero</p><input type="radio" name="grupo" id="rdSoltero">
+    <p>Casado</p><input type="radio" name="grupo" id="rdCasado">
+    <br>
+    <br>
+    <input type="button" value="Añadir" id="btAniadir">
+</body>
+
+<script>
+    var personas = []; // Arreglo para almacenar los objetos JSON
+
+    document.getElementById("btAniadir").addEventListener("click", conversorJSON);
+
+    function conversorJSON() {
+        var nombre = document.getElementById("txNombre").value;
+        var apellido = document.getElementById("txApellido").value;
+        var edad = document.getElementById("txEdad").value;
+        var soltero = document.getElementById("rdSoltero");
+        var casado = document.getElementById("rdCasado");
+        var grupo;
+
+        if (casado.checked) {
+            grupo = "casado";
+        } else {
+            grupo = "soltero";
+        }
+
+        var persona = {
+            "Nombre": nombre,
+            "Apellido": apellido,
+            "Edad": edad,
+            "Grupo": grupo
+        };
+
+        personas.push(persona); // Agregar el objeto JSON al arreglo
+        console.log(personas); // Mostrar todos los objetos JSON en el arreglo
+    }
+</script>
+</html>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.configuracion">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/icono3"
+        tools:context=".ConfiguracionActivity">
+
+
+        <Button
+            android:id="@+id/ACbtRegresar"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:text="return"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:backgroundTint="#F44336"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ACbtModificarDatos" />
+
+        <Button
+            android:id="@+id/ACbtModificarDatos"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="315dp"
+            android:layout_height="61dp"
+            android:backgroundTint="#4B8C8C8C"
+            android:text="modify Password"
+            android:textAlignment="viewStart"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/ACbtRegresar"
+            app:layout_constraintEnd_toEndOf="@+id/ACbtRegresar"
+            app:layout_constraintStart_toStartOf="@+id/ACbtRegresar"
+            app:layout_constraintTop_toBottomOf="@+id/ACbtInformacionProblema" />
+
+        <Button
+            android:id="@+id/ACbtInformacionProblema"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="315dp"
+            android:layout_height="61dp"
+            android:backgroundTint="#4B8C8C8C"
+            android:text="Report a problem"
+            android:textAlignment="viewStart"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/ACbtModificarDatos"
+            app:layout_constraintEnd_toEndOf="@+id/ACbtModificarDatos"
+            app:layout_constraintStart_toStartOf="@+id/ACbtModificarDatos"
+            app:layout_constraintTop_toBottomOf="@+id/TVTituloHistorial" />
+
+        <TextView
+            android:id="@+id/TVTituloHistorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_color_encabezado"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
+            android:text="CONFIGURATION"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#FFC107"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/ACbtInformacionProblema"
+            app:layout_constraintEnd_toEndOf="@+id/ACbtInformacionProblema"
+            app:layout_constraintStart_toStartOf="@+id/ACbtInformacionProblema"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

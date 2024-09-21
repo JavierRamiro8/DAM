@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="enlaces">
+        <a href="https://google.es">Google</a>
+        <br>
+        <a href="https://youtube.es">Youtube</a>
+        <br>
+        <a href="https://twitter.es">Twitter</a>
+        <br>
+        <a href="https://facebook.es" id="facebook">facebook</a>
+    </div>
+<br>
+<br>
+<p>Prueba 1</p>
+<p>Prueba 2</p>
+
+<input type="button" value="Aceptar" id="boton">
+<div id="nuevosEnlaces"></div>
+
+<script>  
+  document.getElementById("boton").addEventListener("click", moverEnlaces)
+  function moverEnlaces(){
+    var enlaces = document.getElementById("enlaces");
+    var nuevosEnlaces = document.getElementById("nuevosEnlaces");
+    for (let i = enlaces.childNodes.length -1; i >= 0; i--) {
+        nuevosEnlaces.insertBefore(enlaces.childNodes[i],nuevosEnlaces.firstChild);
+        
+    }
+  }
+</script>
+
+</body>
+</html>
+

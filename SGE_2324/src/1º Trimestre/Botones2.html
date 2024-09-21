@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://google.es">Google</a>
+    <br>
+    <a href="https://youtube.es">Youtube</a>
+    <br>
+    <a href="https://twitter.es">Twitter</a>
+    <br>
+    <a href="https://facebook.es" id="facebook">facebook</a>
+
+<br>
+<br>
+<p>Prueba 1</p>
+<p>Prueba 2</p>
+
+<input type="button" value="Aceptar">
+</body>
+<script>
+    
+    document.getElementsByTagName("input")[0].addEventListener("click",cambioParrafo)
+    function cambioParrafo(){
+        cadena=prompt("Introduce Nuevo Parrafo")
+        document.getElementsByTagName("p")[1].innerHTML=cadena
+    }
+    
+    
+    
+    document.getElementsByTagName("input")[0].addEventListener("click",cambioNombre)
+    function cambioNombre(){
+     cambioTexto=prompt("Introduce un nuevo nombre")
+    document.getElementsByTagName("a")[2].innerHTML=cambioTexto
+    }
+
+    document.getElementsByTagName("input")[0].addEventListener("click",cambioEnlace)
+    function cambioEnlace(){
+     cambioEnlace=prompt("Introduce un nuevo enlace")
+    document.getElementsByTagName("a")[2].href=cambioEnlace
+    }
+
+</script>
+</html>

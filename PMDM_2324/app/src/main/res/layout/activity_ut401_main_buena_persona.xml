@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut04_Fragments.ut401MainBuenaPersona">
+
+    <TextView
+        android:id="@+id/ut401idTvNoFumado3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="204dp"
+        android:text="Dias Sin Pegar \n a nadie"
+        app:layout_constraintEnd_toStartOf="@+id/ut401FragmentPegar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ut401idTvNoFumado2" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/ut401FragmentPegar"
+        android:name="com.example.pmdm_2324.ut04_Fragments.ut401FragmentBuenaPersona"
+        android:layout_width="173dp"
+        android:layout_height="173dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ut401FragmentInsultar"
+        app:layout_constraintVertical_bias="0.402" />
+
+    <TextView
+        android:id="@+id/ut401idTvNoFumado2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="244dp"
+        android:text="Dias Sin Insultar \n a nadie"
+        app:layout_constraintEnd_toStartOf="@+id/ut401FragmentInsultar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ut401idTvNoFumado" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/ut401FragmentInsultar"
+        android:name="com.example.pmdm_2324.ut04_Fragments.ut401FragmentBuenaPersona"
+        android:layout_width="173dp"
+        android:layout_height="173dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ut401idFragmentFumar" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/ut401idFragmentFumar"
+        android:name="com.example.pmdm_2324.ut04_Fragments.ut401FragmentBuenaPersona"
+        android:layout_width="173dp"
+        android:layout_height="173dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/ut401idTvNoFumado"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ut401idTvNoFumado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Dias Sin Fumar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

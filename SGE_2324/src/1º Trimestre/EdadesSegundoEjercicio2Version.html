@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mi tercera practica</h1>
+</body>
+<script>
+     let edad=prompt("pon tu edad")
+    parseInt(edad)
+    let numeroSwitch
+    if(edad>0 & edad<17){
+    
+        numeroSwitch=1
+
+    }else if(edad>18 & edad<65){
+    
+        numeroSwitch=2
+
+    }else if(edad>65){
+    
+        numeroSwitch=3
+    }
+
+    switch(numeroSwitch){
+        case 1:
+        console.log("Soy menor de edad")
+        break
+        case 2:
+        console.log("Tengo edad de trabajar")
+        break
+        case 3:
+        console.log("Jubilate")
+        break
+    }
+</script>
+</html>

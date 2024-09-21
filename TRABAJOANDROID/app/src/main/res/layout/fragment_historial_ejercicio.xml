@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ejercicios.Historial.HistorialEjercicioFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/icono3"
+        tools:layout_editor_absoluteX="-4dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <EditText
+            android:id="@+id/EDSeries"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/datePicker"
+            app:layout_constraintEnd_toEndOf="@+id/EDRepeticiones"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textViewSeries"
+            app:layout_constraintStart_toStartOf="@+id/EDRepeticiones"
+            app:layout_constraintTop_toBottomOf="@+id/EDRepeticiones" />
+
+        <TextView
+            android:id="@+id/textViewSeries"
+            android:layout_width="136dp"
+            android:layout_height="35dp"
+            android:text="Series"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/datePicker"
+            app:layout_constraintEnd_toEndOf="@+id/textViewRepeticiones"
+            app:layout_constraintEnd_toStartOf="@+id/EDSeries"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/textViewRepeticiones"
+            app:layout_constraintTop_toBottomOf="@+id/textViewRepeticiones" />
+
+        <TextView
+            android:id="@+id/textViewPeso"
+            android:layout_width="136dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="16dp"
+            android:text="Weight"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/textViewRepeticiones"
+            app:layout_constraintEnd_toStartOf="@+id/EDPeso"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TVTituloHistorial" />
+
+        <TextView
+            android:id="@+id/textViewRepeticiones"
+            android:layout_width="154dp"
+            android:layout_height="33dp"
+            android:layout_marginEnd="16dp"
+            android:text="Repetitions"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/textViewSeries"
+            app:layout_constraintEnd_toEndOf="@+id/textViewPeso"
+            app:layout_constraintEnd_toStartOf="@+id/EDRepeticiones"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/textViewPeso"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPeso" />
+
+        <Button
+            android:id="@+id/BTGenerar"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="169dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="add history"
+            android:textColor="@color/black"
+            app:backgroundTint="#61FD00"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datePicker" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/datePicker"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Select Date"
+            android:textColor="@color/black"
+            app:backgroundTint="#FFC107"
+            app:layout_constraintBottom_toTopOf="@+id/BTGenerar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EDSeries" />
+
+        <TextView
+            android:id="@+id/TVTituloHistorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/border_color_encabezado"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
+            android:text="Exercise"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#FFC107"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/EDPeso"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="spread_inside" />
+
+        <EditText
+            android:id="@+id/EDPeso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/EDRepeticiones"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textViewPeso"
+            app:layout_constraintTop_toBottomOf="@+id/TVTituloHistorial" />
+
+        <EditText
+            android:id="@+id/EDRepeticiones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/EDSeries"
+            app:layout_constraintEnd_toEndOf="@+id/EDPeso"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/textViewRepeticiones"
+            app:layout_constraintStart_toStartOf="@+id/EDPeso"
+            app:layout_constraintTop_toBottomOf="@+id/EDPeso" />
+
+        <Button
+            android:id="@+id/BTSalir"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="169dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="8dp"
+            android:text="return"
+            android:textColor="@color/black"
+            app:backgroundTint="#F44336"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.698"
+            app:layout_constraintStart_toEndOf="@+id/BTGenerar"
+            app:layout_constraintTop_toBottomOf="@+id/datePicker" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleHistorial"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/filtrarFecha" />
+
+        <Button
+            android:id="@+id/filtrarFecha"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:text="Filter by date"
+            android:textColor="@color/black"
+            app:backgroundTint="#FFC107"
+            app:layout_constraintEnd_toEndOf="@+id/BTSalir"
+            app:layout_constraintStart_toStartOf="@+id/BTGenerar"
+            app:layout_constraintTop_toBottomOf="@+id/BTSalir" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

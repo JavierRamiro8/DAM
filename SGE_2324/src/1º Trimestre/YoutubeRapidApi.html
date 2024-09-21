@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Autocompletar y Mostrar Videos de YouTube</title>
+</head>
+<body>
+    <h1>Buscar en YouTube</h1>
+    <label for="searchInput">Escribe tu búsqueda:</label>
+    <input type="text" id="searchInput" placeholder="Ejemplo: gatos lindos">
+    <button id="searchButton">Buscar</button>
+    <ul id="suggestionsList"></ul>
+    <div id="videosContainer"></div>
+</body>
+<script>
+    document.getElementById("searchButton").addEventListener("click", buscarSugerencias);
+
+    async function buscarSugerencias() {
+        const query = document.getElementById("searchInput").value;
+        const suggestionsList = document.getElementById("suggestionsList");
+        const videosContainer = document.getElementById("videosContainer");
+
+        const apiKey = '6059c47febmsha84374a61d7abcfp11c6ebjsn74fbf3094e51'; // Reemplaza con tu propia clave de API de YouTube
+
+        const url = `https://youtube138.p.rapidapi.com/auto-complete/?q=&hl=es&gl=ES`;
+
+        const options = {
+            method: 'GET',
+            headers: {
+                'X-RapidAPI-Key': '6059c47febmsha84374a61d7abcfp11c6ebjsn74fbf3094e51',
+                'X-RapidAPI-Host': 'youtube138.p.rapidapi.com',
+            },
+        };
+
+        try {
+            const response = await fetch(url, options);
+            const result = await response.json();
+            const suggestions = result.suggestions || [];
+
+            // Limpiar la lista de sugerencias previas
+            suggestionsList.innerHTML = '';
+
+            // Mostrar las sugerencias en una lista
+            suggestions.forEach(suggestion => {
+                const listItem = document.createElement("li");
+                listItem.textContent = suggestion;
+                listItem.addEventListener("click", () => buscarVideos(suggestion));
+                suggestionsList.appendChild(listItem);
+            });
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    async function buscarVideos(query) {
+        const videosContainer = document.getElementById("videosContainer");
+
+        const apiKey = '6059c47febmsha84374a61d7abcfp11c6ebjsn74fbf3094e51'; // Reemplaza con tu propia clave de API de YouTube
+
+        const youtubeUrl = 'https://www.googleapis.com/youtube/v3/search';
+        const maxResults = 5; // Número máximo de resultados de video a mostrar
+
+        const params = new URLSearchParams({
+            part: 'snippet',
+            q: query,
+            maxResults: maxResults,
+            key: apiKey,
+        });
+
+        const videoUrl = `${youtubeUrl}?${params.toString()}`;
+
+        try {
+            const response = await fetch(videoUrl);
+            const result = await response.json();
+
+            // Limpiar los videos anteriores
+            videosContainer.innerHTML = '';
+
+            // Mostrar los videos
+            result.items.forEach(item => {
+                const videoTitle = item.snippet.title;
+                const videoId = item.id.videoId;
+                const videoThumbnailUrl = item.snippet.thumbnails.default.url;
+
+                const videoDiv = document.createElement("div");
+                videoDiv.innerHTML = `
+                    <h3>${videoTitle}</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>
+                `;
+
+                videosContainer.appendChild(videoDiv);
+            });
+        } catch (error) {
+            console.error(error);
+        }
+    }
+</script>
+</html>

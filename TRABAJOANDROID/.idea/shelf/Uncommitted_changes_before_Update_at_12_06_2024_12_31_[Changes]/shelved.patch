@@ -1,0 +1,1544 @@
+Index: app/src/main/res/layout/fragment_perfil.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<FrameLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".Login.Perfil\">\r\n\r\n    <androidx.constraintlayout.widget.ConstraintLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:background=\"@drawable/icono3\">\r\n\r\n        <ImageButton\r\n            android:id=\"@+id/APibAvatarPerfil\"\r\n            android:layout_width=\"200dp\"\r\n            android:layout_height=\"150dp\"\r\n            android:adjustViewBounds=\"true\"\r\n            android:scaleType=\"fitCenter\"\r\n            android:src=\"@drawable/usuario\"\r\n            app:layout_constraintBottom_toTopOf=\"@+id/APtvNombrePerfil\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/APtvNombrePerfil\"\r\n            android:layout_width=\"350dp\"\r\n            android:layout_height=\"40dp\"\r\n            android:text=\"Welcome\"\r\n            android:textColor=\"#FFFFFF\"\r\n            android:textSize=\"24dp\"\r\n            android:textStyle=\"bold|italic\"\r\n            app:layout_constraintBottom_toTopOf=\"@+id/APtvEmail\"\r\n            app:layout_constraintEnd_toEndOf=\"@+id/APibAvatarPerfil\"\r\n            app:layout_constraintStart_toStartOf=\"@+id/APibAvatarPerfil\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/APibAvatarPerfil\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/APtvEmail\"\r\n            android:layout_width=\"350dp\"\r\n            android:layout_height=\"40dp\"\r\n            android:text=\"Email\"\r\n            android:textColor=\"#FFFFFF\"\r\n            android:textSize=\"24dp\"\r\n            android:textStyle=\"bold|italic\"\r\n            app:layout_constraintBottom_toTopOf=\"@+id/APbtHistorial\"\r\n            app:layout_constraintEnd_toEndOf=\"@+id/APtvNombrePerfil\"\r\n            app:layout_constraintStart_toStartOf=\"@+id/APtvNombrePerfil\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/APtvNombrePerfil\" />\r\n\r\n        <Button\r\n            android:id=\"@+id/APbtInformacion\"\r\n            style=\"@style/Widget.MaterialComponents.Button.OutlinedButton\"\r\n            android:layout_width=\"280dp\"\r\n            android:layout_height=\"50dp\"\r\n            android:text=\"Information\"\r\n            android:textColor=\"#000000\"\r\n            android:textSize=\"20sp\"\r\n            app:backgroundTint=\"#FFC107\"\r\n            app:layout_constraintBottom_toTopOf=\"@+id/APbtConfiguracion\"\r\n            app:layout_constraintEnd_toEndOf=\"@+id/APbtHistorial\"\r\n            app:layout_constraintStart_toStartOf=\"@+id/APbtHistorial\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/APbtHistorial\" />\r\n\r\n        <Button\r\n            android:id=\"@+id/APbtConfiguracion\"\r\n            style=\"@style/Widget.MaterialComponents.Button.OutlinedButton\"\r\n            android:layout_width=\"280dp\"\r\n            android:layout_height=\"50dp\"\r\n            android:text=\"Configuration\"\r\n            android:textColor=\"#000000\"\r\n            android:textSize=\"20sp\"\r\n            app:backgroundTint=\"#FFC107\"\r\n            app:layout_constraintBottom_toTopOf=\"@+id/APbtCerrarSesion\"\r\n            app:layout_constraintEnd_toEndOf=\"@+id/APbtInformacion\"\r\n            app:layout_constraintStart_toStartOf=\"@+id/APbtInformacion\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/APbtInformacion\" />\r\n\r\n        <Button\r\n            android:id=\"@+id/APbtCerrarSesion\"\r\n            style=\"@style/Widget.MaterialComponents.Button.OutlinedButton\"\r\n            android:layout_width=\"280dp\"\r\n            android:layout_height=\"50dp\"\r\n            android:backgroundTint=\"#F44336\"\r\n            android:text=\"Log out\"\r\n            android:textColor=\"#000000\"\r\n            android:textSize=\"20sp\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"@+id/APbtConfiguracion\"\r\n            app:layout_constraintStart_toStartOf=\"@+id/APbtConfiguracion\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/APbtConfiguracion\" />\r\n\r\n        <Button\r\n            android:id=\"@+id/APbtHistorial\"\r\n            style=\"@style/Widget.MaterialComponents.Button.OutlinedButton\"\r\n            android:layout_width=\"280dp\"\r\n            android:layout_height=\"50dp\"\r\n            android:backgroundTint=\"#FFC107\"\r\n            android:text=\"history\"\r\n            android:textColor=\"@color/black\"\r\n            android:textSize=\"20sp\"\r\n            app:layout_constraintBottom_toTopOf=\"@+id/APbtInformacion\"\r\n            app:layout_constraintEnd_toEndOf=\"@+id/APtvEmail\"\r\n            app:layout_constraintStart_toStartOf=\"@+id/APtvEmail\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/APtvEmail\" />\r\n    </androidx.constraintlayout.widget.ConstraintLayout>\r\n\r\n</FrameLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_perfil.xml b/app/src/main/res/layout/fragment_perfil.xml
+--- a/app/src/main/res/layout/fragment_perfil.xml	(revision ad8cb50f01c384eb0fb7bec66b836bc3b7be95f7)
++++ b/app/src/main/res/layout/fragment_perfil.xml	(date 1718188249222)
+@@ -11,30 +11,19 @@
+         android:layout_height="match_parent"
+         android:background="@drawable/icono3">
+ 
+-        <ImageButton
+-            android:id="@+id/APibAvatarPerfil"
+-            android:layout_width="200dp"
+-            android:layout_height="150dp"
+-            android:adjustViewBounds="true"
+-            android:scaleType="fitCenter"
+-            android:src="@drawable/usuario"
+-            app:layout_constraintBottom_toTopOf="@+id/APtvNombrePerfil"
+-            app:layout_constraintEnd_toEndOf="parent"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toTopOf="parent" />
+-
+         <TextView
+             android:id="@+id/APtvNombrePerfil"
+-            android:layout_width="350dp"
+-            android:layout_height="40dp"
++            android:layout_width="351dp"
++            android:layout_height="60dp"
+             android:text="Welcome"
++            android:textAlignment="center"
+             android:textColor="#FFFFFF"
+-            android:textSize="24dp"
++            android:textSize="39dp"
+             android:textStyle="bold|italic"
+             app:layout_constraintBottom_toTopOf="@+id/APtvEmail"
+-            app:layout_constraintEnd_toEndOf="@+id/APibAvatarPerfil"
+-            app:layout_constraintStart_toStartOf="@+id/APibAvatarPerfil"
+-            app:layout_constraintTop_toBottomOf="@+id/APibAvatarPerfil" />
++            app:layout_constraintEnd_toEndOf="@+id/APtvEmail"
++            app:layout_constraintStart_toStartOf="@+id/APtvEmail"
++            app:layout_constraintTop_toTopOf="parent" />
+ 
+         <TextView
+             android:id="@+id/APtvEmail"
+@@ -45,8 +34,8 @@
+             android:textSize="24dp"
+             android:textStyle="bold|italic"
+             app:layout_constraintBottom_toTopOf="@+id/APbtHistorial"
+-            app:layout_constraintEnd_toEndOf="@+id/APtvNombrePerfil"
+-            app:layout_constraintStart_toStartOf="@+id/APtvNombrePerfil"
++            app:layout_constraintEnd_toEndOf="@+id/APbtHistorial"
++            app:layout_constraintStart_toStartOf="@+id/APbtHistorial"
+             app:layout_constraintTop_toBottomOf="@+id/APtvNombrePerfil" />
+ 
+         <Button
+@@ -59,8 +48,8 @@
+             android:textSize="20sp"
+             app:backgroundTint="#FFC107"
+             app:layout_constraintBottom_toTopOf="@+id/APbtConfiguracion"
+-            app:layout_constraintEnd_toEndOf="@+id/APbtHistorial"
+-            app:layout_constraintStart_toStartOf="@+id/APbtHistorial"
++            app:layout_constraintEnd_toEndOf="@+id/APbtConfiguracion"
++            app:layout_constraintStart_toStartOf="@+id/APbtConfiguracion"
+             app:layout_constraintTop_toBottomOf="@+id/APbtHistorial" />
+ 
+         <Button
+@@ -73,8 +62,8 @@
+             android:textSize="20sp"
+             app:backgroundTint="#FFC107"
+             app:layout_constraintBottom_toTopOf="@+id/APbtCerrarSesion"
+-            app:layout_constraintEnd_toEndOf="@+id/APbtInformacion"
+-            app:layout_constraintStart_toStartOf="@+id/APbtInformacion"
++            app:layout_constraintEnd_toEndOf="@+id/APbtCerrarSesion"
++            app:layout_constraintStart_toStartOf="@+id/APbtCerrarSesion"
+             app:layout_constraintTop_toBottomOf="@+id/APbtInformacion" />
+ 
+         <Button
+@@ -87,8 +76,8 @@
+             android:textColor="#000000"
+             android:textSize="20sp"
+             app:layout_constraintBottom_toBottomOf="parent"
+-            app:layout_constraintEnd_toEndOf="@+id/APbtConfiguracion"
+-            app:layout_constraintStart_toStartOf="@+id/APbtConfiguracion"
++            app:layout_constraintEnd_toEndOf="parent"
++            app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toBottomOf="@+id/APbtConfiguracion" />
+ 
+         <Button
+@@ -101,8 +90,8 @@
+             android:textColor="@color/black"
+             android:textSize="20sp"
+             app:layout_constraintBottom_toTopOf="@+id/APbtInformacion"
+-            app:layout_constraintEnd_toEndOf="@+id/APtvEmail"
+-            app:layout_constraintStart_toStartOf="@+id/APtvEmail"
++            app:layout_constraintEnd_toEndOf="@+id/APbtInformacion"
++            app:layout_constraintStart_toStartOf="@+id/APbtInformacion"
+             app:layout_constraintTop_toBottomOf="@+id/APtvEmail" />
+     </androidx.constraintlayout.widget.ConstraintLayout>
+ 
+Index: app/src/main/java/com/example/temple_body/Login/Perfil.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.temple_body.Login;\r\n\r\nimport android.content.Context;\r\nimport android.content.SharedPreferences;\r\nimport android.os.Bundle;\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.widget.Button;\r\nimport android.widget.ImageButton;\r\nimport android.widget.TextView;\r\n\r\nimport androidx.fragment.app.Fragment;\r\nimport androidx.navigation.NavController;\r\nimport androidx.navigation.fragment.NavHostFragment;\r\n\r\nimport com.example.temple_body.R;\r\nimport com.google.firebase.auth.FirebaseAuth;\r\nimport com.google.firebase.database.DatabaseReference;\r\nimport com.google.firebase.database.FirebaseDatabase;\r\n\r\npublic class Perfil extends Fragment {\r\n    TextView etNombre, etCorreo;\r\n    Button btInformacion, btConfiguracion, btCerrarSesion, btHistorial;\r\n    ImageButton ibAvatar;\r\n    DatabaseReference mDatabase;\r\n\r\n    @Override\r\n    public View onCreateView(LayoutInflater inflater, ViewGroup container,\r\n                             Bundle savedInstanceState) {\r\n        View layout = inflater.inflate(R.layout.fragment_perfil, container, false);\r\n\r\n        etNombre = layout.findViewById(R.id.APtvNombrePerfil);\r\n        etCorreo = layout.findViewById(R.id.APtvEmail);\r\n        btConfiguracion = layout.findViewById(R.id.APbtConfiguracion);\r\n        btHistorial = layout.findViewById(R.id.APbtHistorial);\r\n        btInformacion = layout.findViewById(R.id.APbtInformacion);\r\n        btCerrarSesion = layout.findViewById(R.id.APbtCerrarSesion);\r\n        ibAvatar = layout.findViewById(R.id.APibAvatarPerfil);\r\n        mDatabase = FirebaseDatabase.getInstance().getReference();\r\n        guardarLayoutLogin();\r\n        cargarDatosUsuario();\r\n\r\n        btConfiguracion.setOnClickListener((v) -> {\r\n            viajarConfiguracion();\r\n        });\r\n\r\n        btHistorial.setOnClickListener((v) -> {\r\n            viajarHistorial();\r\n        });\r\n\r\n        btInformacion.setOnClickListener((v) -> {\r\n            viajarInformacion();\r\n        });\r\n\r\n        btCerrarSesion.setOnClickListener((v) -> {\r\n            viajarLogin();\r\n        });\r\n\r\n        return layout;\r\n    }\r\n\r\n    private void cargarDatosUsuario() {\r\n        SharedPreferences sharedPreferences = requireContext().getSharedPreferences(\"datos_usuario\", Context.MODE_PRIVATE);\r\n        String nombreUsuario = sharedPreferences.getString(\"nombreUsuario\", \"\");\r\n        String correo = sharedPreferences.getString(\"correo\", \"\");\r\n        etNombre.append(\" \"+nombreUsuario);\r\n        etCorreo.setText(correo);\r\n    }\r\n\r\n    private void viajarConfiguracion() {\r\n        NavController nav = NavHostFragment.findNavController(this);\r\n        nav.navigate(R.id.action_perfil_to_configuracion);\r\n    }\r\n\r\n    private void viajarInformacion() {\r\n        NavController nav = NavHostFragment.findNavController(this);\r\n        nav.navigate(R.id.action_perfil_to_informacion);\r\n    }\r\n\r\n    private void viajarLogin() {\r\n        FirebaseAuth.getInstance().signOut();\r\n        NavController nav = NavHostFragment.findNavController(this);\r\n        nav.navigate(R.id.action_perfil_to_loginPrincipal);\r\n    }\r\n\r\n    private void viajarHistorial() {\r\n        NavController nav = NavHostFragment.findNavController(this);\r\n        nav.navigate(R.id.action_perfil_to_historialFragment2);\r\n    }\r\n    private void guardarLayoutLogin() {\r\n        SharedPreferences sharedPreferences = requireContext().getSharedPreferences(\"cargaLayoutLogin\", Context.MODE_PRIVATE);\r\n        SharedPreferences.Editor editor=sharedPreferences.edit();\r\n        editor.putInt(\"cargaLayoutLogin\", 2);\r\n        editor.apply();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/temple_body/Login/Perfil.java b/app/src/main/java/com/example/temple_body/Login/Perfil.java
+--- a/app/src/main/java/com/example/temple_body/Login/Perfil.java	(revision ad8cb50f01c384eb0fb7bec66b836bc3b7be95f7)
++++ b/app/src/main/java/com/example/temple_body/Login/Perfil.java	(date 1718188249216)
+@@ -22,7 +22,6 @@
+ public class Perfil extends Fragment {
+     TextView etNombre, etCorreo;
+     Button btInformacion, btConfiguracion, btCerrarSesion, btHistorial;
+-    ImageButton ibAvatar;
+     DatabaseReference mDatabase;
+ 
+     @Override
+@@ -36,7 +35,6 @@
+         btHistorial = layout.findViewById(R.id.APbtHistorial);
+         btInformacion = layout.findViewById(R.id.APbtInformacion);
+         btCerrarSesion = layout.findViewById(R.id.APbtCerrarSesion);
+-        ibAvatar = layout.findViewById(R.id.APibAvatarPerfil);
+         mDatabase = FirebaseDatabase.getInstance().getReference();
+         guardarLayoutLogin();
+         cargarDatosUsuario();
+Index: app/src/main/res/layout/fragment_frag_reglamento.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<FrameLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".Login.fragmentsInformacion.fragReglamento\">\r\n\r\n    <!-- TODO: Update blank fragment layout -->\r\n\r\n    <androidx.core.widget.NestedScrollView\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"636dp\">\r\n\r\n        <TextView\r\n            android:id=\"@+id/fragmentReglamento\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"match_parent\"\r\n            android:textColor=\"@color/white\"\r\n            android:textSize=\"24sp\" />\r\n    </androidx.core.widget.NestedScrollView>\r\n\r\n    <androidx.constraintlayout.widget.ConstraintLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\">\r\n\r\n        <Button\r\n            android:id=\"@+id/ARbtRegreso\"\r\n            style=\"@style/Widget.MaterialComponents.Button.OutlinedButton\"\r\n            android:layout_width=\"280dp\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:text=\"return\"\r\n            android:textColor=\"#000000\"\r\n            android:textSize=\"18sp\"\r\n            app:backgroundTint=\"#F44336\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintStart_toStartOf=\"parent\" />\r\n    </androidx.constraintlayout.widget.ConstraintLayout>\r\n\r\n</FrameLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_frag_reglamento.xml b/app/src/main/res/layout/fragment_frag_reglamento.xml
+--- a/app/src/main/res/layout/fragment_frag_reglamento.xml	(revision ad8cb50f01c384eb0fb7bec66b836bc3b7be95f7)
++++ b/app/src/main/res/layout/fragment_frag_reglamento.xml	(date 1718188249220)
+@@ -16,6 +16,7 @@
+             android:id="@+id/fragmentReglamento"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
++            android:textAlignment="center"
+             android:textColor="@color/white"
+             android:textSize="24sp" />
+     </androidx.core.widget.NestedScrollView>
+Index: app/src/main/java/com/example/temple_body/Login/loginPrincipal.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.temple_body.Login;\r\n\r\nimport android.content.Context;\r\nimport android.content.SharedPreferences;\r\nimport android.os.Bundle;\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.widget.Button;\r\nimport android.widget.EditText;\r\nimport android.widget.TextView;\r\n\r\nimport androidx.annotation.NonNull;\r\nimport androidx.appcompat.app.AlertDialog;\r\nimport androidx.fragment.app.Fragment;\r\nimport androidx.navigation.NavController;\r\nimport androidx.navigation.fragment.NavHostFragment;\r\n\r\nimport com.example.temple_body.R;\r\nimport com.google.android.gms.tasks.OnCompleteListener;\r\nimport com.google.android.gms.tasks.Task;\r\nimport com.google.firebase.auth.AuthResult;\r\nimport com.google.firebase.auth.FirebaseAuth;\r\nimport com.google.firebase.auth.FirebaseUser;\r\nimport com.google.firebase.database.DataSnapshot;\r\nimport com.google.firebase.database.DatabaseReference;\r\nimport com.google.firebase.database.FirebaseDatabase;\r\n\r\npublic class loginPrincipal extends Fragment {\r\n\r\n    public loginPrincipal() {\r\n    }\r\n    EditText etCorreoElectronico;\r\n    EditText etPassword;\r\n    Button btIniciarSesion;\r\n    TextView tvRegistrarse, tvCambioContrasena;\r\n\r\n    private FirebaseAuth mauth;\r\n    private DatabaseReference dr;\r\n\r\n    private FirebaseAuth.AuthStateListener authStateListener;\r\n\r\n    @Override\r\n    public View onCreateView(LayoutInflater inflater, ViewGroup container,\r\n                             Bundle savedInstanceState) {\r\n        View layout = inflater.inflate(R.layout.fragment_login_principal, container, false);\r\n        guardarLayoutLogin();\r\n        etCorreoElectronico = layout.findViewById(R.id.ALetCorreoElectronico);\r\n        etPassword = layout.findViewById(R.id.ALetPassword);\r\n        btIniciarSesion = layout.findViewById(R.id.ALbtAccept);\r\n        tvRegistrarse = layout.findViewById(R.id.ALtvRegisterlink);\r\n        tvCambioContrasena = layout.findViewById(R.id.tvCambioContrasena);\r\n        mauth = FirebaseAuth.getInstance();\r\n\r\n        btIniciarSesion.setOnClickListener(v -> {\r\n            btIniciarSesion.setEnabled(false);\r\n            String email = etCorreoElectronico.getText().toString();\r\n            String contrasena = etPassword.getText().toString();\r\n            if (email.isEmpty()) {\r\n                etCorreoElectronico.setError(\"Email vacio o nula.\");\r\n                btIniciarSesion.setEnabled(true);\r\n            } else if (contrasena.isEmpty()) {\r\n                etPassword.setError(\"Contraseña vacia o nula\");\r\n                btIniciarSesion.setEnabled(true);\r\n            } else {\r\n                mauth.signInWithEmailAndPassword(email, contrasena).addOnCompleteListener(requireActivity(), new OnCompleteListener<AuthResult>() {\r\n                    @Override\r\n                    public void onComplete(@NonNull Task<AuthResult> task) {\r\n                        if (task.isSuccessful()) {\r\n                            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();\r\n                            assert user != null;\r\n                            if (user.isEmailVerified()) {\r\n                                // El correo electrónico está verificado, procede con el inicio de sesión\r\n                                String idUsuario = user.getUid();\r\n                                String correo = user.getEmail();\r\n                                dr = FirebaseDatabase.getInstance().getReference();\r\n                                dr.child(\"Users\").child(idUsuario).child(\"nombreUsuario\").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {\r\n                                    @Override\r\n                                    public void onComplete(@NonNull Task<DataSnapshot> task) {\r\n                                        if (task.isSuccessful()) {\r\n                                            String usuario = task.getResult().getValue(String.class);\r\n                                            viajarPerfil(correo, usuario);\r\n                                        } else {\r\n                                            AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());\r\n                                            builder.setTitle(\"Error\")\r\n                                                    .setMessage(\"Error al obtener el nombre de usuario\")\r\n                                                    .setPositiveButton(\"Aceptar\", null);\r\n\r\n                                            AlertDialog dialog = builder.create();\r\n                                            dialog.show();\r\n                                            btIniciarSesion.setEnabled(true);\r\n                                        }\r\n                                    }\r\n                                });\r\n                            } else {\r\n                                // El correo electrónico no está verificado, muestra un mensaje de error\r\n                                AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());\r\n                                builder.setTitle(\"Error\")\r\n                                        .setMessage(\"Recuerda que tienes que verificarte por correo electrónico, si no se ha enviado el correo de verificacion, contáctenos\")\r\n                                        .setPositiveButton(\"Aceptar\", null);\r\n\r\n                                AlertDialog dialog = builder.create();\r\n                                dialog.show();\r\n                                btIniciarSesion.setEnabled(true);\r\n\r\n                            }\r\n                        } else {\r\n                            // Error al iniciar sesión\r\n                            AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());\r\n                            builder.setTitle(\"Error\")\r\n                                    .setMessage(\"Usuario o contraseña incorrectos\")\r\n                                    .setPositiveButton(\"Aceptar\", null);\r\n\r\n                            AlertDialog dialog = builder.create();\r\n                            dialog.show();\r\n                            btIniciarSesion.setEnabled(true);\r\n\r\n                        }\r\n                    }\r\n                });\r\n            }\r\n        });\r\n\r\n\r\n        tvRegistrarse.setOnClickListener(v -> {\r\n            viajarRegistro();\r\n        });\r\n\r\n        tvCambioContrasena.setOnClickListener(v -> {\r\n            guardarLayoutIdaVuelta();\r\n            viajarCambioContrasena();\r\n        });\r\n\r\n        return layout;\r\n    }\r\n\r\n    private void viajarPerfil(String correo, String usuario) {\r\n        guardarCredencialesUsuario(usuario, correo);\r\n        NavController nav = NavHostFragment.findNavController(this);\r\n        nav.navigate(R.id.action_loginPrincipal_to_perfil);\r\n    }\r\n\r\n\r\n    // Método para limpiar los datos del usuario de las preferencias compartidas\r\n    private void guardarCredencialesUsuario(String nombreUsuario, String correo) {\r\n        SharedPreferences sharedPreferences = requireContext().getSharedPreferences(\"datos_usuario\", Context.MODE_PRIVATE);\r\n        SharedPreferences.Editor editor = sharedPreferences.edit();\r\n        editor.putString(\"nombreUsuario\", nombreUsuario);\r\n        editor.putString(\"correo\", correo);\r\n        editor.apply();\r\n    }\r\n\r\n    private void guardarLayoutIdaVuelta() {\r\n        SharedPreferences sharedPreferences = requireContext().getSharedPreferences(\"cargaLayoutCambioContrasena\", Context.MODE_PRIVATE);\r\n        SharedPreferences.Editor editor = sharedPreferences.edit();\r\n        editor.putInt(\"layoutLoginCambio\", 1);\r\n        editor.apply();\r\n    }\r\n\r\n    private void guardarLayoutLogin() {\r\n        SharedPreferences sharedPreferences = requireContext().getSharedPreferences(\"cargaLayoutLogin\", Context.MODE_PRIVATE);\r\n        SharedPreferences.Editor editor = sharedPreferences.edit();\r\n        editor.putInt(\"cargaLayoutLogin\", 1);\r\n        editor.apply();\r\n    }\r\n\r\n    private void viajarRegistro() {\r\n        NavController nav = NavHostFragment.findNavController(this);\r\n        nav.navigate(R.id.action_loginPrincipal_to_registro);\r\n    }\r\n\r\n    private void viajarCambioContrasena() {\r\n        NavController nav = NavHostFragment.findNavController(this);\r\n        nav.navigate(R.id.action_loginPrincipal_to_cambioContrasena);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/temple_body/Login/loginPrincipal.java b/app/src/main/java/com/example/temple_body/Login/loginPrincipal.java
+--- a/app/src/main/java/com/example/temple_body/Login/loginPrincipal.java	(revision ad8cb50f01c384eb0fb7bec66b836bc3b7be95f7)
++++ b/app/src/main/java/com/example/temple_body/Login/loginPrincipal.java	(date 1718188249218)
+@@ -19,6 +19,7 @@
+ import com.example.temple_body.R;
+ import com.google.android.gms.tasks.OnCompleteListener;
+ import com.google.android.gms.tasks.Task;
++import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+ import com.google.firebase.auth.AuthResult;
+ import com.google.firebase.auth.FirebaseAuth;
+ import com.google.firebase.auth.FirebaseUser;
+@@ -70,7 +71,6 @@
+                             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                             assert user != null;
+                             if (user.isEmailVerified()) {
+-                                // El correo electrónico está verificado, procede con el inicio de sesión
+                                 String idUsuario = user.getUid();
+                                 String correo = user.getEmail();
+                                 dr = FirebaseDatabase.getInstance().getReference();
+@@ -81,38 +81,33 @@
+                                             String usuario = task.getResult().getValue(String.class);
+                                             viajarPerfil(correo, usuario);
+                                         } else {
+-                                            AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
+-                                            builder.setTitle("Error")
+-                                                    .setMessage("Error al obtener el nombre de usuario")
+-                                                    .setPositiveButton("Aceptar", null);
+-
+-                                            AlertDialog dialog = builder.create();
+-                                            dialog.show();
++                                            new MaterialAlertDialogBuilder(requireContext())
++                                                    .setTitle("Error")
++                                                    .setMessage("Error al obtener el correo electronico del usuario")
++                                                    .setPositiveButton("ACEPTAR", (dialog, which) -> {
++                                                    })
++                                                    .show();
+                                             btIniciarSesion.setEnabled(true);
+                                         }
+                                     }
+                                 });
+                             } else {
+-                                // El correo electrónico no está verificado, muestra un mensaje de error
+-                                AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
+-                                builder.setTitle("Error")
++                                new MaterialAlertDialogBuilder(requireContext())
++                                        .setTitle("Error")
+                                         .setMessage("Recuerda que tienes que verificarte por correo electrónico, si no se ha enviado el correo de verificacion, contáctenos")
+-                                        .setPositiveButton("Aceptar", null);
+-
+-                                AlertDialog dialog = builder.create();
+-                                dialog.show();
++                                        .setPositiveButton("ACEPTAR", (dialog, which) -> {
++                                        })
++                                        .show();
+                                 btIniciarSesion.setEnabled(true);
+ 
+                             }
+                         } else {
+-                            // Error al iniciar sesión
+-                            AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
+-                            builder.setTitle("Error")
++                            new MaterialAlertDialogBuilder(requireContext())
++                                    .setTitle("Error")
+                                     .setMessage("Usuario o contraseña incorrectos")
+-                                    .setPositiveButton("Aceptar", null);
+-
+-                            AlertDialog dialog = builder.create();
+-                            dialog.show();
++                                    .setPositiveButton("ACEPTAR", (dialog, which) -> {
++                                    })
++                                    .show();
+                             btIniciarSesion.setEnabled(true);
+ 
+                         }
+Index: app/src/main/java/com/example/temple_body/Login/Registro.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.temple_body.Login;\r\n\r\nimport android.content.Context;\r\nimport android.content.DialogInterface;\r\nimport android.content.SharedPreferences;\r\nimport android.os.Bundle;\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.widget.Button;\r\nimport android.widget.CheckBox;\r\nimport android.widget.EditText;\r\nimport android.widget.TextView;\r\n\r\nimport androidx.annotation.NonNull;\r\nimport androidx.appcompat.app.AlertDialog;\r\nimport androidx.fragment.app.Fragment;\r\nimport androidx.navigation.NavController;\r\nimport androidx.navigation.fragment.NavHostFragment;\r\n\r\nimport com.example.temple_body.R;\r\nimport com.example.temple_body.Settings.Textos;\r\nimport com.google.android.gms.tasks.OnCompleteListener;\r\nimport com.google.android.gms.tasks.Task;\r\nimport com.google.firebase.auth.AuthResult;\r\nimport com.google.firebase.auth.FirebaseAuth;\r\nimport com.google.firebase.auth.FirebaseUser;\r\nimport com.google.firebase.database.DatabaseReference;\r\nimport com.google.firebase.database.FirebaseDatabase;\r\n\r\nimport java.util.HashMap;\r\nimport java.util.Map;\r\n\r\npublic class Registro extends Fragment {\r\n    public Registro() {\r\n    }\r\n\r\n    EditText usuario, email, contrasena;\r\n\r\n    CheckBox checkTerminos;\r\n\r\n    TextView iniciarSesionText;\r\n    Button registro;\r\n    FirebaseAuth mauth;\r\n\r\n    private static final int MINCARACTERESPASSWORD = 6;\r\n\r\n    DatabaseReference mDatabase;\r\n\r\n    @Override\r\n    public View onCreateView(LayoutInflater inflater, ViewGroup container,\r\n                             Bundle savedInstanceState) {\r\n        View layout = inflater.inflate(R.layout.fragment_registro, container, false);\r\n        usuario = layout.findViewById(R.id.reg_et_usuario);\r\n        contrasena = layout.findViewById(R.id.reg_et_password);\r\n        email = layout.findViewById(R.id.reg_et_email);\r\n        checkTerminos = layout.findViewById(R.id.cb_terminosYcondiciones);\r\n        registro = layout.findViewById(R.id.btRegistro);\r\n        iniciarSesionText=layout.findViewById(R.id.IniciarSesion);\r\n        iniciarSesionText.setOnClickListener(v -> {\r\n            viajarLogin();\r\n        });\r\n        mauth = FirebaseAuth.getInstance();\r\n        mDatabase = FirebaseDatabase.getInstance().getReference();\r\n        checkTerminos.setOnClickListener(v -> {\r\n            Textos textos=new Textos();\r\n            AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());\r\n            builder.setTitle(\"Politicas de privacidad\")\r\n                    .setMessage(textos.getPOLITICAS())\r\n                    .setPositiveButton(\"Aceptar\", new DialogInterface.OnClickListener() {\r\n                        public void onClick(DialogInterface dialog, int which) {\r\n                            checkTerminos.setChecked(true);\r\n                        }\r\n                    })\r\n                    .setNegativeButton(\"Cancelar\", new DialogInterface.OnClickListener() {\r\n                        public void onClick(DialogInterface dialog, int which) {\r\n                            checkTerminos.setChecked(false);\r\n                        }\r\n                    });\r\n\r\n            AlertDialog dialog = builder.create();\r\n            dialog.show();\r\n        });\r\n\r\n        registro.setOnClickListener(v -> {\r\n            if (usuario.getText().toString().isEmpty()) {\r\n                usuario.setError(\"Introduce nombre de usuario\");\r\n            } else if (contrasena.getText().toString().isEmpty()) {\r\n                contrasena.setError(\"Introduce contraseña\");\r\n            } else if (contrasena.getText().length() <= MINCARACTERESPASSWORD) {\r\n                contrasena.setError(\"la contraseña tiene que tener al menos 6 caracteres\");\r\n            } else if (email.getText().toString().isEmpty()) {\r\n                email.setError(\"El correo está vacío o no es válido\");\r\n            } else if (!checkTerminos.isChecked()) {\r\n                checkTerminos.setError(\"Lee las condiciones y términos\");\r\n            } else {\r\n                registrarUsuario();\r\n            }\r\n        });\r\n\r\n        return layout;\r\n    }\r\n\r\n    private void registrarUsuario() {\r\n        mauth.createUserWithEmailAndPassword(email.getText().toString(), contrasena.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {\r\n            @Override\r\n            public void onComplete(@NonNull Task<AuthResult> task) {\r\n                if (task.isSuccessful()) {\r\n                    String userId = mauth.getCurrentUser().getUid(); // Obtener el ID de usuario generado por Firebase\r\n                    Map<String, Object> mapa = new HashMap<>();\r\n                    mapa.put(\"nombreUsuario\", usuario.getText().toString());\r\n                    mapa.put(\"email\", email.getText().toString());\r\n                    mapa.put(\"contraseña\", contrasena.getText().toString());\r\n\r\n                    // Guardar los datos en la base de datos con el ID de usuario\r\n                    mDatabase.child(\"Users\").child(userId).setValue(mapa);\r\n                    ventanaEmergenteAvisoEmailVer();\r\n                    FirebaseUser user=mauth.getCurrentUser();\r\n                    user.sendEmailVerification();\r\n                    viajarLogin();\r\n                } else {\r\n                    AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());\r\n                    builder.setTitle(\"Error\")\r\n                            .setMessage(\"Error, es posible que ya se esté usando este mismo correo, Intentelo de nuevo!\")\r\n                            .setPositiveButton(\"Aceptar\", null);\r\n\r\n                    AlertDialog dialog = builder.create();\r\n                    dialog.show();\r\n                }\r\n            }\r\n\r\n            private void ventanaEmergenteAvisoEmailVer() {\r\n                AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());\r\n                builder.setTitle(\"Mensaje de verificación\")\r\n                        .setMessage(\"Gracias por registrarte, te hemos enviado un correo para probar que no eres un robot ;)\")\r\n                        .setPositiveButton(\"Aceptar\", null);\r\n\r\n                AlertDialog dialog = builder.create();\r\n                dialog.show();\r\n            }\r\n        });\r\n    }\r\n\r\n\r\n    private void viajarLogin() {\r\n        NavController nav = NavHostFragment.findNavController(this);\r\n        nav.navigate(R.id.action_registro_to_loginPrincipal);\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/temple_body/Login/Registro.java b/app/src/main/java/com/example/temple_body/Login/Registro.java
+--- a/app/src/main/java/com/example/temple_body/Login/Registro.java	(revision ad8cb50f01c384eb0fb7bec66b836bc3b7be95f7)
++++ b/app/src/main/java/com/example/temple_body/Login/Registro.java	(date 1718188249217)
+@@ -18,10 +18,12 @@
+ import androidx.navigation.NavController;
+ import androidx.navigation.fragment.NavHostFragment;
+ 
++import com.example.temple_body.Actividad_Gimnasios;
+ import com.example.temple_body.R;
+ import com.example.temple_body.Settings.Textos;
+ import com.google.android.gms.tasks.OnCompleteListener;
+ import com.google.android.gms.tasks.Task;
++import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+ import com.google.firebase.auth.AuthResult;
+ import com.google.firebase.auth.FirebaseAuth;
+ import com.google.firebase.auth.FirebaseUser;
+@@ -85,12 +87,14 @@
+         registro.setOnClickListener(v -> {
+             if (usuario.getText().toString().isEmpty()) {
+                 usuario.setError("Introduce nombre de usuario");
+-            } else if (contrasena.getText().toString().isEmpty()) {
++            }else if (!validarEmail() || email.getText().toString().isEmpty()) {
++                email.setError("El correo está vacío o no es válido");
++            }else if (contrasena.getText().toString().isEmpty()) {
+                 contrasena.setError("Introduce contraseña");
+-            } else if (contrasena.getText().length() <= MINCARACTERESPASSWORD) {
++            }else if (!validarEmail() || email.getText().toString().isEmpty()) {
++                email.setError("El correo está vacío o no es válido");
++            }else if (contrasena.getText().length() <= MINCARACTERESPASSWORD) {
+                 contrasena.setError("la contraseña tiene que tener al menos 6 caracteres");
+-            } else if (email.getText().toString().isEmpty()) {
+-                email.setError("El correo está vacío o no es válido");
+             } else if (!checkTerminos.isChecked()) {
+                 checkTerminos.setError("Lee las condiciones y términos");
+             } else {
+@@ -119,24 +123,25 @@
+                     user.sendEmailVerification();
+                     viajarLogin();
+                 } else {
+-                    AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
+-                    builder.setTitle("Error")
+-                            .setMessage("Error, es posible que ya se esté usando este mismo correo, Intentelo de nuevo!")
+-                            .setPositiveButton("Aceptar", null);
+-
+-                    AlertDialog dialog = builder.create();
+-                    dialog.show();
++                    new MaterialAlertDialogBuilder(requireContext())
++                            .setTitle("ERROR")
++                            .setMessage("Ya se esta usando esta cuenta de correo, por favor, quiere iniciar sesion?")
++                            .setPositiveButton("ACEPTAR", (dialog, which) -> {
++                                viajarLogin();
++                            })
++                            .setNegativeButton("CANCELAR", (dialog, which) -> {
++                                dialog.dismiss();
++                            })
++                            .show();
+                 }
+             }
+ 
+             private void ventanaEmergenteAvisoEmailVer() {
+-                AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
+-                builder.setTitle("Mensaje de verificación")
++                new MaterialAlertDialogBuilder(requireContext())
++                        .setTitle("¡Bienvenido!")
+                         .setMessage("Gracias por registrarte, te hemos enviado un correo para probar que no eres un robot ;)")
+-                        .setPositiveButton("Aceptar", null);
+-
+-                AlertDialog dialog = builder.create();
+-                dialog.show();
++                        .setPositiveButton("ACEPTAR", (dialog, which) -> {})
++                        .show();
+             }
+         });
+     }
+@@ -147,4 +152,9 @@
+         nav.navigate(R.id.action_registro_to_loginPrincipal);
+     }
+ 
++    private boolean validarEmail(){
++        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
++        return email.getText().toString().matches(emailPattern);
++    }
++
+ }
+Index: app/src/main/java/com/example/temple_body/Gimnasios/GimnasiosFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.temple_body.Gimnasios;\r\n\r\nimport android.Manifest;\r\nimport android.content.Intent;\r\nimport android.content.pm.PackageManager;\r\nimport android.net.Uri;\r\nimport android.os.Bundle;\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.widget.Toast;\r\n\r\nimport androidx.activity.result.ActivityResultLauncher;\r\nimport androidx.activity.result.contract.ActivityResultContracts;\r\nimport androidx.core.content.ContextCompat;\r\nimport androidx.fragment.app.Fragment;\r\nimport androidx.recyclerview.widget.LinearLayoutManager;\r\nimport androidx.recyclerview.widget.RecyclerView;\r\n\r\nimport com.example.temple_body.R;\r\n\r\npublic class GimnasiosFragment extends Fragment {\r\n\r\n    RecyclerView rcv;\r\n    GimnasiosAdapter a;\r\n    public String nombre = \"\";\r\n    private ActivityResultLauncher<String> requestPermissionLauncher;\r\n\r\n    public GimnasiosFragment() {\r\n    }\r\n\r\n    @Override\r\n    public View onCreateView(LayoutInflater inflater, ViewGroup container,\r\n                             Bundle savedInstanceState) {\r\n        View view = inflater.inflate(R.layout.fragment_gimnasios, container, false);\r\n\r\n        rcv = view.findViewById(R.id.listaContenedorGimnasios);\r\n        rcv.setLayoutManager(new LinearLayoutManager(getActivity()));\r\n\r\n        a = new GimnasiosAdapter(Gimnasios.generador());\r\n        rcv.setAdapter(a);\r\n\r\n        requestPermissionLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {\r\n            if (isGranted) {\r\n                // Permiso concedido. Continúa la acción o flujo en tu aplicación.\r\n                requestMaps();\r\n            } else {\r\n                // Explica al usuario que la función no está disponible debido a que\r\n                // se requiere un permiso que el usuario ha denegado.\r\n                Toast.makeText(getActivity(), \"Necesitamos permiso para obtener la localización.\", Toast.LENGTH_SHORT).show();\r\n            }\r\n        });\r\n\r\n        a.setClickListener(new GimnasiosAdapter.ItemClickListener() {\r\n            @Override\r\n            public void onClick(View view, int position, Gimnasios gimnasio) {\r\n                Gimnasios miGimnasio = new Gimnasios(gimnasio.getNombre(), gimnasio.getPrecio(), gimnasio.getValoracion(), gimnasio.getMasInfo());\r\n                nombre = miGimnasio.getNombre();\r\n                if (ContextCompat.checkSelfPermission(\r\n                        requireActivity(), Manifest.permission.ACCESS_FINE_LOCATION) ==\r\n                        PackageManager.PERMISSION_GRANTED) {\r\n                    // Puedes usar la API que requiere el permiso.\r\n                    requestMaps();\r\n                } else {\r\n                    // Puedes solicitar directamente el permiso.\r\n                    // El callback ActivityResultCallback registrado obtiene el resultado de esta solicitud.\r\n                    requestPermissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION);\r\n                }\r\n            }\r\n        });\r\n\r\n        return view;\r\n    }\r\n\r\n    private void requestMaps() {\r\n        Uri uri = Uri.parse(\"geo:0,0?q=\" + Uri.encode(nombre));\r\n        Intent i = new Intent(Intent.ACTION_VIEW, uri);\r\n        i.setPackage(\"com.google.android.apps.maps\");\r\n        startActivity(i);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/temple_body/Gimnasios/GimnasiosFragment.java b/app/src/main/java/com/example/temple_body/Gimnasios/GimnasiosFragment.java
+--- a/app/src/main/java/com/example/temple_body/Gimnasios/GimnasiosFragment.java	(revision ad8cb50f01c384eb0fb7bec66b836bc3b7be95f7)
++++ b/app/src/main/java/com/example/temple_body/Gimnasios/GimnasiosFragment.java	(date 1718188249215)
+@@ -8,10 +8,10 @@
+ import android.view.LayoutInflater;
+ import android.view.View;
+ import android.view.ViewGroup;
+-import android.widget.Toast;
+ 
+ import androidx.activity.result.ActivityResultLauncher;
+ import androidx.activity.result.contract.ActivityResultContracts;
++import androidx.appcompat.app.AlertDialog;
+ import androidx.core.content.ContextCompat;
+ import androidx.fragment.app.Fragment;
+ import androidx.recyclerview.widget.LinearLayoutManager;
+@@ -22,7 +22,7 @@
+ public class GimnasiosFragment extends Fragment {
+ 
+     RecyclerView rcv;
+-    GimnasiosAdapter a;
++    GimnasiosAdapter gimnasiosAdapter;
+     public String nombre = "";
+     private ActivityResultLauncher<String> requestPermissionLauncher;
+ 
+@@ -37,21 +37,23 @@
+         rcv = view.findViewById(R.id.listaContenedorGimnasios);
+         rcv.setLayoutManager(new LinearLayoutManager(getActivity()));
+ 
+-        a = new GimnasiosAdapter(Gimnasios.generador());
+-        rcv.setAdapter(a);
++        gimnasiosAdapter = new GimnasiosAdapter(Gimnasios.generador());
++        rcv.setAdapter(gimnasiosAdapter);
+ 
+         requestPermissionLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
+             if (isGranted) {
+-                // Permiso concedido. Continúa la acción o flujo en tu aplicación.
+                 requestMaps();
+             } else {
+-                // Explica al usuario que la función no está disponible debido a que
+-                // se requiere un permiso que el usuario ha denegado.
+-                Toast.makeText(getActivity(), "Necesitamos permiso para obtener la localización.", Toast.LENGTH_SHORT).show();
++                AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
++                builder.setTitle("Error")
++                        .setMessage("Error, sin el permiso no podrás usar la carecteristica")
++                        .setPositiveButton("Salir", null);
++                AlertDialog dialog = builder.create();
++                dialog.show();
+             }
+         });
+ 
+-        a.setClickListener(new GimnasiosAdapter.ItemClickListener() {
++        gimnasiosAdapter.setClickListener(new GimnasiosAdapter.ItemClickListener() {
+             @Override
+             public void onClick(View view, int position, Gimnasios gimnasio) {
+                 Gimnasios miGimnasio = new Gimnasios(gimnasio.getNombre(), gimnasio.getPrecio(), gimnasio.getValoracion(), gimnasio.getMasInfo());
+@@ -59,11 +61,8 @@
+                 if (ContextCompat.checkSelfPermission(
+                         requireActivity(), Manifest.permission.ACCESS_FINE_LOCATION) ==
+                         PackageManager.PERMISSION_GRANTED) {
+-                    // Puedes usar la API que requiere el permiso.
+                     requestMaps();
+                 } else {
+-                    // Puedes solicitar directamente el permiso.
+-                    // El callback ActivityResultCallback registrado obtiene el resultado de esta solicitud.
+                     requestPermissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION);
+                 }
+             }
+Index: app/src/main/java/com/example/temple_body/Gimnasios/Gimnasios.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.temple_body.Gimnasios;\r\n\r\nimport com.example.temple_body.Settings.Textos;\r\n\r\nimport java.util.ArrayList;\r\n\r\npublic class Gimnasios {\r\n    private String nombre;\r\n    private double precio;\r\n    private double valoracion;\r\n    private String masInfo;\r\n\r\n\r\n\r\n\r\n\r\n    public Gimnasios(String nombre, double precio, double valoracion, String masInfo) {\r\n        this.nombre = nombre;\r\n        this.precio = precio;\r\n        this.valoracion = valoracion;\r\n        this.masInfo = masInfo;\r\n    }\r\n\r\n    public String getNombre() {\r\n        return nombre;\r\n    }\r\n    public void setNombre(String nombre) {\r\n        this.nombre = nombre;\r\n    }\r\n    public double getPrecio() {\r\n        return precio;\r\n    }\r\n    public void setPrecio(double precio) {\r\n        this.precio = precio;\r\n    }\r\n    public double getValoracion() {return valoracion;}\r\n    public void setValoracion(double valoracion) {\r\n        this.valoracion = valoracion;\r\n    }\r\n\r\n    public String getMasInfo() {\r\n        return masInfo;\r\n    }\r\n    public void setMasInfo(String masInfo) {\r\n        this.masInfo = masInfo;\r\n    }\r\n\r\n    public static ArrayList<Gimnasios> generador() {\r\n        ArrayList<Gimnasios> gimnasios = new ArrayList<Gimnasios>();\r\n\r\n        gimnasios.add(new Gimnasios(\"Fitness Park\", 25, 4.1, Textos.FITNESS_PARK_INFO));\r\n        gimnasios.add(new Gimnasios(\"Basic Fit\", 24.99, 3.6, Textos.BASIC_FIT_INFO));\r\n        gimnasios.add(new Gimnasios(\"Forus\", 54.40, 3.9, Textos.FORUS_INFO));\r\n        gimnasios.add(new Gimnasios(\"Alta Fit\", 37.90, 4.0, Textos.ALTA_FIT_INFO));\r\n        gimnasios.add(new Gimnasios(\"Viva gym\", 29.90, 4.2, Textos.VIVA_GYM_INFO));\r\n        gimnasios.add(new Gimnasios(\"Synergym\", 24.99, 4.2, Textos.SYNERGYM_INFO));\r\n        gimnasios.add(new Gimnasios(\"DreamFit\", 34.90, 4.2, Textos.DREAMFIT_INFO));\r\n        gimnasios.add(new Gimnasios(\"McFit\", 29.90, 4.1, Textos.MCFIT_INFO));\r\n        gimnasios.add(new Gimnasios(\"Go-Fit\", 47.45, 4.2, Textos.GO_FIT_INFO));\r\n        gimnasios.add(new Gimnasios(\"Holiday gym\", 49, 3.6, Textos.HOLIDAY_GYM_INFO));\r\n\r\n        return gimnasios;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/temple_body/Gimnasios/Gimnasios.java b/app/src/main/java/com/example/temple_body/Gimnasios/Gimnasios.java
+--- a/app/src/main/java/com/example/temple_body/Gimnasios/Gimnasios.java	(revision ad8cb50f01c384eb0fb7bec66b836bc3b7be95f7)
++++ b/app/src/main/java/com/example/temple_body/Gimnasios/Gimnasios.java	(date 1718188249214)
+@@ -34,16 +34,10 @@
+         this.precio = precio;
+     }
+     public double getValoracion() {return valoracion;}
+-    public void setValoracion(double valoracion) {
+-        this.valoracion = valoracion;
+-    }
+ 
+     public String getMasInfo() {
+         return masInfo;
+     }
+-    public void setMasInfo(String masInfo) {
+-        this.masInfo = masInfo;
+-    }
+ 
+     public static ArrayList<Gimnasios> generador() {
+         ArrayList<Gimnasios> gimnasios = new ArrayList<Gimnasios>();
+Index: app/src/main/java/com/example/temple_body/Gimnasios/GimnasiosAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.temple_body.Gimnasios;\r\n\r\nimport android.text.Html;\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.widget.TextView;\r\n\r\nimport androidx.recyclerview.widget.RecyclerView;\r\n\r\nimport com.example.temple_body.R;\r\n\r\nimport java.util.ArrayList;\r\n\r\npublic class GimnasiosAdapter extends RecyclerView.Adapter<GimnasiosAdapter.ViewHolder> {\r\n    private ArrayList<Gimnasios> datos;\r\n\r\n    /*\r\n     * Relacionado con el evento.\r\n     */\r\n    public interface ItemClickListener {\r\n        void onClick(View view, int position, Gimnasios gimnasio);\r\n    }\r\n\r\n    private ItemClickListener clickListener;\r\n\r\n    public void setClickListener(ItemClickListener itemClickListener) {\r\n        this.clickListener = itemClickListener;\r\n    }\r\n\r\n\r\n    /**\r\n     * Provide a reference to the type of views that you are using\r\n     * (custom ViewHolder).\r\n     */\r\n    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {\r\n        private final TextView nombre;\r\n        private final TextView precio;\r\n\r\n        private  final TextView valoracion;\r\n        private  final TextView masInfo;\r\n\r\n        public ViewHolder(View view) {\r\n            super(view);\r\n            // Define click listener for the ViewHolder's View\r\n\r\n            nombre = (TextView) view.findViewById(R.id.nombreGimnasio);\r\n            precio = (TextView) view.findViewById(R.id.precioGimnasio);\r\n            valoracion = (TextView) view.findViewById(R.id.valoracionGimnasio);\r\n            masInfo = (TextView) view.findViewById(R.id.masInfoGimnasio);\r\n            view.setOnClickListener(this);\r\n        }\r\n\r\n        public void setInfo(String i_nombre, double i_precio, double i_valoracion, String masInformacion) {\r\n            nombre.setText(i_nombre);\r\n            precio.setText(\"Mensual Price: \"+String.valueOf(i_precio) + \"€\");\r\n            valoracion.setText(\"Valoration: \"+String.valueOf(i_valoracion) + \"*\");\r\n            masInfo.setText(Html.fromHtml(\"<h4><u>Additional Information</u>: </u></h4>\" + masInformacion));\r\n        }\r\n\r\n        @Override\r\n        public void onClick(View view) {\r\n            // Si tengo un manejador de evento lo propago con el índice\r\n            if (clickListener != null) clickListener.onClick(view, getAdapterPosition(), datos.get(getAdapterPosition()));\r\n        }\r\n    }\r\n\r\n    /**\r\n     * Initialize the dataset of the Adapter.\r\n     *\r\n     * @param dataSet String[] containing the data to populate views to be used\r\n     * by RecyclerView.\r\n     */\r\n    public GimnasiosAdapter(ArrayList<Gimnasios> dataSet) {\r\n        datos = new ArrayList<Gimnasios>();\r\n        add(dataSet);\r\n    }\r\n\r\n    // Create new views (invoked by the layout manager)\r\n    @Override\r\n    public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {\r\n        // Create a new view, which defines the UI of the list item\r\n        View view = LayoutInflater.from(viewGroup.getContext())\r\n                .inflate(R.layout.row_gimnasio, viewGroup, false);\r\n\r\n        return new ViewHolder(view);\r\n    }\r\n\r\n    // Replace the contents of a view (invoked by the layout manager)\r\n    @Override\r\n    public void onBindViewHolder(ViewHolder viewHolder, final int position) {\r\n\r\n        // Get element from your dataset at this position and replace the\r\n        // contents of the view with that element\r\n        Gimnasios e = datos.get(position);\r\n        viewHolder.setInfo(e.getNombre(),e.getPrecio(), e.getValoracion(), e.getMasInfo());\r\n    }\r\n\r\n    // Return the size of your dataset (invoked by the layout manager)\r\n    @Override\r\n    public int getItemCount() {\r\n        return datos.size();\r\n    }\r\n\r\n    public void add(ArrayList<Gimnasios> dataSet){\r\n        datos.addAll(dataSet);\r\n        notifyDataSetChanged();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/temple_body/Gimnasios/GimnasiosAdapter.java b/app/src/main/java/com/example/temple_body/Gimnasios/GimnasiosAdapter.java
+--- a/app/src/main/java/com/example/temple_body/Gimnasios/GimnasiosAdapter.java	(revision ad8cb50f01c384eb0fb7bec66b836bc3b7be95f7)
++++ b/app/src/main/java/com/example/temple_body/Gimnasios/GimnasiosAdapter.java	(date 1718188249215)
+@@ -55,7 +55,7 @@
+             nombre.setText(i_nombre);
+             precio.setText("Mensual Price: "+String.valueOf(i_precio) + "€");
+             valoracion.setText("Valoration: "+String.valueOf(i_valoracion) + "*");
+-            masInfo.setText(Html.fromHtml("<h4><u>Additional Information</u>: </u></h4>" + masInformacion));
++            masInfo.setText("Additional Information:\n" + masInformacion);
+         }
+ 
+         @Override
+Index: app/src/main/java/com/example/temple_body/Gimnasios/ListaGimnasios.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.temple_body.Gimnasios;\r\n\r\nimport android.Manifest;\r\nimport android.content.Intent;\r\nimport android.content.pm.PackageManager;\r\nimport android.net.Uri;\r\nimport android.os.Bundle;\r\nimport android.view.View;\r\nimport android.widget.Toast;\r\n\r\nimport androidx.activity.result.ActivityResultLauncher;\r\nimport androidx.activity.result.contract.ActivityResultContracts;\r\nimport androidx.appcompat.app.AppCompatActivity;\r\nimport androidx.core.content.ContextCompat;\r\nimport androidx.recyclerview.widget.LinearLayoutManager;\r\nimport androidx.recyclerview.widget.RecyclerView;\r\n\r\nimport com.example.temple_body.R;\r\n\r\npublic class ListaGimnasios extends AppCompatActivity {\r\n\r\n    RecyclerView rcv;\r\n    GimnasiosAdapter a;\r\n    public String nombre=\"\";\r\n    ActivityResultLauncher<String> requestPermissionLauncher;\r\n\r\n    @Override\r\n    protected void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        setContentView(R.layout.fragment_gimnasios);\r\n\r\n        rcv = findViewById(R.id.listaContenedorGimnasios);\r\n        rcv.setLayoutManager(new LinearLayoutManager(this));\r\n\r\n        a = new GimnasiosAdapter(Gimnasios.generador());\r\n        rcv.setAdapter(a);\r\n\r\n        requestPermissionLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {\r\n            if (isGranted) {\r\n                // Permission is granted. Continue the action or workflow in your\r\n                // app.\r\n                requestMaps();\r\n            } else {\r\n                // Explain to the user that the feature is unavailable because the\r\n                // feature requires a permission that the user has denied. At the\r\n                // same time, respect the user's decision. Don't link to system\r\n                // settings in an effort to convince the user to change their\r\n                // decision.\r\n                Toast.makeText(ListaGimnasios.this, \"Necesitamos permiso para obtener la localización.\", Toast.LENGTH_SHORT).show();\r\n            }\r\n        });\r\n        a.setClickListener(new GimnasiosAdapter.ItemClickListener() {\r\n            @Override\r\n            public void onClick(View view, int position, Gimnasios gimnasio) {\r\n                Gimnasios miGimnasio = new Gimnasios(gimnasio.getNombre(),gimnasio.getPrecio(),gimnasio.getValoracion(), gimnasio.getMasInfo());\r\n                nombre = miGimnasio.getNombre();\r\n                if (ContextCompat.checkSelfPermission(\r\n                        ListaGimnasios.this, Manifest.permission.ACCESS_FINE_LOCATION) ==\r\n                        PackageManager.PERMISSION_GRANTED) {\r\n                    // You can use the API that requires the permission.\r\n                    requestMaps();\r\n                } else if (false) {\r\n                    // In an educational UI, explain to the user why your app requires this\r\n                    // permission for a specific feature to behave as expected, and what\r\n                    // features are disabled if it's declined. In this UI, include a\r\n                    // \"cancel\" or \"no thanks\" button that lets the user continue\r\n                    // using your app without granting the permission.\r\n\r\n                    // Mostrar UI Dialog para explicar al usuarios la necesidad del permiso\r\n                    // Vamos a usar la de por defecto de Android. Se ejecuta en el else\r\n\r\n                }else {\r\n                    // You can directly ask for the permission.\r\n                    // The registered ActivityResultCallback gets the result of this request.\r\n                    requestPermissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION);\r\n                }\r\n\r\n\r\n            }\r\n\r\n        });\r\n    }\r\n    private void requestMaps() {\r\n        Uri uri = Uri.parse(\"geo:0,0?q=\"+ Uri.encode(nombre));\r\n        Intent i = new Intent(Intent.ACTION_VIEW, uri);\r\n        i.setPackage(\"com.google.android.apps.maps\");\r\n        startActivity(i);\r\n    }\r\n\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/temple_body/Gimnasios/ListaGimnasios.java b/app/src/main/java/com/example/temple_body/Gimnasios/ListaGimnasios.java
+--- a/app/src/main/java/com/example/temple_body/Gimnasios/ListaGimnasios.java	(revision ad8cb50f01c384eb0fb7bec66b836bc3b7be95f7)
++++ b/app/src/main/java/com/example/temple_body/Gimnasios/ListaGimnasios.java	(date 1718188249215)
+@@ -6,7 +6,6 @@
+ import android.net.Uri;
+ import android.os.Bundle;
+ import android.view.View;
+-import android.widget.Toast;
+ 
+ import androidx.activity.result.ActivityResultLauncher;
+ import androidx.activity.result.contract.ActivityResultContracts;
+@@ -16,11 +15,12 @@
+ import androidx.recyclerview.widget.RecyclerView;
+ 
+ import com.example.temple_body.R;
++import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+ 
+ public class ListaGimnasios extends AppCompatActivity {
+ 
+     RecyclerView rcv;
+-    GimnasiosAdapter a;
++    GimnasiosAdapter gimnasiosAdapter;
+     public String nombre="";
+     ActivityResultLauncher<String> requestPermissionLauncher;
+ 
+@@ -32,24 +32,21 @@
+         rcv = findViewById(R.id.listaContenedorGimnasios);
+         rcv.setLayoutManager(new LinearLayoutManager(this));
+ 
+-        a = new GimnasiosAdapter(Gimnasios.generador());
+-        rcv.setAdapter(a);
++        gimnasiosAdapter = new GimnasiosAdapter(Gimnasios.generador());
++        rcv.setAdapter(gimnasiosAdapter);
+ 
+         requestPermissionLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
+             if (isGranted) {
+-                // Permission is granted. Continue the action or workflow in your
+-                // app.
+                 requestMaps();
+             } else {
+-                // Explain to the user that the feature is unavailable because the
+-                // feature requires a permission that the user has denied. At the
+-                // same time, respect the user's decision. Don't link to system
+-                // settings in an effort to convince the user to change their
+-                // decision.
+-                Toast.makeText(ListaGimnasios.this, "Necesitamos permiso para obtener la localización.", Toast.LENGTH_SHORT).show();
++                new MaterialAlertDialogBuilder(ListaGimnasios.this)
++                        .setTitle("ERROR")
++                        .setMessage("Necesitamos el permiso para usar esta característica")
++                        .setPositiveButton("OK", (dialog, which) -> {})
++                        .show();
+             }
+         });
+-        a.setClickListener(new GimnasiosAdapter.ItemClickListener() {
++        gimnasiosAdapter.setClickListener(new GimnasiosAdapter.ItemClickListener() {
+             @Override
+             public void onClick(View view, int position, Gimnasios gimnasio) {
+                 Gimnasios miGimnasio = new Gimnasios(gimnasio.getNombre(),gimnasio.getPrecio(),gimnasio.getValoracion(), gimnasio.getMasInfo());
+@@ -57,27 +54,17 @@
+                 if (ContextCompat.checkSelfPermission(
+                         ListaGimnasios.this, Manifest.permission.ACCESS_FINE_LOCATION) ==
+                         PackageManager.PERMISSION_GRANTED) {
+-                    // You can use the API that requires the permission.
+                     requestMaps();
+                 } else if (false) {
+-                    // In an educational UI, explain to the user why your app requires this
+-                    // permission for a specific feature to behave as expected, and what
+-                    // features are disabled if it's declined. In this UI, include a
+-                    // "cancel" or "no thanks" button that lets the user continue
+-                    // using your app without granting the permission.
+-
+-                    // Mostrar UI Dialog para explicar al usuarios la necesidad del permiso
+-                    // Vamos a usar la de por defecto de Android. Se ejecuta en el else
+-
++                    new MaterialAlertDialogBuilder(ListaGimnasios.this)
++                            .setTitle("ERROR")
++                            .setMessage("Necesitamos el permiso para usar esta característica")
++                            .setPositiveButton("OK", (dialog, which) -> {})
++                            .show();
+                 }else {
+-                    // You can directly ask for the permission.
+-                    // The registered ActivityResultCallback gets the result of this request.
+                     requestPermissionLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION);
+                 }
+-
+-
+             }
+-
+         });
+     }
+     private void requestMaps() {
+Index: app/src/main/java/com/example/temple_body/Ejercicios/Historial/HistorialEjercicioFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.temple_body.Ejercicios.Historial;\r\n\r\nimport android.content.Context;\r\nimport android.content.SharedPreferences;\r\nimport android.os.Bundle;\r\n\r\nimport androidx.annotation.NonNull;\r\nimport androidx.appcompat.app.AlertDialog;\r\nimport androidx.fragment.app.Fragment;\r\nimport androidx.lifecycle.MutableLiveData;\r\nimport androidx.lifecycle.Observer;\r\nimport androidx.navigation.NavController;\r\nimport androidx.navigation.fragment.NavHostFragment;\r\nimport androidx.recyclerview.widget.LinearLayoutManager;\r\nimport androidx.recyclerview.widget.RecyclerView;\r\n\r\nimport android.util.Log;\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.widget.Button;\r\nimport android.widget.EditText;\r\nimport android.widget.TextView;\r\n\r\nimport com.example.temple_body.Ejercicios.Historial.RecycleHistorial.AdapterHistorialEjercicio;\r\nimport com.example.temple_body.Ejercicios.Historial.RecycleHistorial.Historial;\r\nimport com.example.temple_body.R;\r\nimport com.google.android.gms.tasks.OnCompleteListener;\r\nimport com.google.android.gms.tasks.Task;\r\nimport com.google.android.material.datepicker.CalendarConstraints;\r\nimport com.google.android.material.datepicker.DateValidatorPointBackward;\r\nimport com.google.android.material.datepicker.MaterialDatePicker;\r\nimport com.google.firebase.auth.AuthResult;\r\nimport com.google.firebase.auth.FirebaseAuth;\r\nimport com.google.firebase.auth.FirebaseUser;\r\nimport com.google.firebase.database.DataSnapshot;\r\nimport com.google.firebase.database.DatabaseError;\r\nimport com.google.firebase.database.DatabaseReference;\r\nimport com.google.firebase.database.FirebaseDatabase;\r\nimport com.google.firebase.database.ValueEventListener;\r\n\r\nimport java.lang.reflect.Array;\r\nimport java.text.SimpleDateFormat;\r\nimport java.util.ArrayList;\r\nimport java.util.Date;\r\nimport java.util.HashMap;\r\nimport java.util.List;\r\nimport java.util.Locale;\r\nimport java.util.Map;\r\n\r\npublic class HistorialEjercicioFragment extends Fragment {\r\n\r\n    private static String nombreEjercicio = \"nombreEjercicio\";\r\n    private EditText peso;\r\n    private EditText repeticiones;\r\n    private EditText series;\r\n    private TextView tituloNombreEjercicio;\r\n    private Button datepicker, generar, salir, filtrarFecha;\r\n    private String fecha, fechaFiltrada;\r\n    private MutableLiveData<List<Historial>> liveHistorial = new MutableLiveData<>();\r\n    private RecyclerView resultado;\r\n    FirebaseAuth mauth;\r\n    DatabaseReference mDatabase;\r\n    private int contadorDatos = 0;\r\n\r\n    private AdapterHistorialEjercicio adapter;\r\n    public HistorialEjercicioFragment() {\r\n    }\r\n\r\n    @Override\r\n    public View onCreateView(LayoutInflater inflater, ViewGroup container,\r\n                             Bundle savedInstanceState) {\r\n        View view = inflater.inflate(R.layout.fragment_historial_ejercicio, container, false);\r\n        peso = view.findViewById(R.id.EDPeso);\r\n        repeticiones = view.findViewById(R.id.EDRepeticiones);\r\n        series = view.findViewById(R.id.EDSeries);\r\n        tituloNombreEjercicio = view.findViewById(R.id.TVTituloHistorial);\r\n        resultado = view.findViewById(R.id.recycleHistorial);\r\n        generar = view.findViewById(R.id.BTGenerar);\r\n        salir = view.findViewById(R.id.BTSalir);\r\n        datepicker = view.findViewById(R.id.datePicker);\r\n        filtrarFecha = view.findViewById(R.id.filtrarFecha);\r\n\r\n        Bundle args = getArguments();\r\n        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());\r\n        resultado.setLayoutManager(layoutManager);\r\n\r\n        adapter = new AdapterHistorialEjercicio(new ArrayList<>());\r\n        resultado.setAdapter(adapter);\r\n\r\n        mDatabase = FirebaseDatabase.getInstance().getReference();\r\n        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();\r\n        String idUsuario = user.getUid();\r\n\r\n        if (args != null && args.containsKey(nombreEjercicio)) {\r\n            String getTituloEjercicio = args.getString(nombreEjercicio);\r\n            tituloNombreEjercicio.setText(getTituloEjercicio);\r\n        }\r\n        generar.setOnClickListener(v -> {\r\n            if (peso.getText().toString().isEmpty()) {\r\n                peso.setError(\"Por favor Introduzca Peso\");\r\n            } else if (repeticiones.getText().toString().isEmpty()) {\r\n                repeticiones.setError(\"Por favor Introduzca Repeticiones\");\r\n            } else if (series.getText().toString().isEmpty()) {\r\n                series.setError(\"Por favor Introduzca las series\");\r\n            } else if (datepicker.getText().equals(\"Selecciona Fecha\")) {\r\n                datepicker.setError(\"Por favor Introduzca la fecha\");\r\n            } else {\r\n                AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());\r\n                builder.setTitle(\"Datos Registrados\")\r\n                        .setMessage(\"Tu historial se ha subido correctamente.\")\r\n                        .setPositiveButton(\"Aceptar\", null);\r\n                AlertDialog dialog = builder.create();\r\n                dialog.show();\r\n                registrarEjercicio(idUsuario);\r\n            }\r\n        });\r\n        datepicker.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View v) {\r\n                MaterialDatePicker<Long> materialDatePicker = MaterialDatePicker.Builder.datePicker()\r\n                        .setTitleText(\"Selecciona una fecha\")\r\n                        .setSelection(MaterialDatePicker.todayInUtcMilliseconds())\r\n                        .setCalendarConstraints(new CalendarConstraints.Builder()\r\n                                .setValidator(DateValidatorPointBackward.now())\r\n                                .build())\r\n                        .build();\r\n                materialDatePicker.addOnPositiveButtonClickListener(selection -> {\r\n                    SimpleDateFormat dateFormat = new SimpleDateFormat(\"dd/MM/yyyy\", Locale.getDefault());\r\n                    fecha = dateFormat.format(new Date(selection));\r\n                    datepicker.setText(fecha);\r\n                });\r\n                materialDatePicker.show(getActivity().getSupportFragmentManager(), \"tag\");\r\n            }\r\n        });\r\n        filtrarFecha.setOnClickListener(v -> {\r\n            MaterialDatePicker<Long> materialDatePicker = MaterialDatePicker.Builder.datePicker()\r\n                    .setTitleText(\"Selecciona una fecha\")\r\n                    .setSelection(MaterialDatePicker.todayInUtcMilliseconds())\r\n                    .setCalendarConstraints(new CalendarConstraints.Builder()\r\n                            .setValidator(DateValidatorPointBackward.now())\r\n                            .build())\r\n                    .build();\r\n            materialDatePicker.addOnPositiveButtonClickListener(selection -> {\r\n                SimpleDateFormat dateFormat = new SimpleDateFormat(\"dd/MM/yyyy\", Locale.getDefault());\r\n                fechaFiltrada = dateFormat.format(new Date(selection));\r\n                String[] splitFecha = fechaFiltrada.split(\"/\");\r\n                StringBuilder fechaFormateada = new StringBuilder();\r\n                fechaFormateada.append(splitFecha[0]).append(\"-\").append(splitFecha[1]).append(\"-\").append(splitFecha[2]);\r\n                filtrarFecha.setText(\"Fecha: \" + fechaFiltrada);\r\n\r\n                // Filtrar los datos en Firebase por la fecha seleccionada\r\n                DatabaseReference ref = mDatabase.child(\"Ejercicios\").child(idUsuario).child(fechaFormateada.toString());\r\n                ref.addValueEventListener(new ValueEventListener() {\r\n                    @Override\r\n                    public void onDataChange(DataSnapshot dataSnapshot) {\r\n\r\n                        List<Historial> listaHistorial = new ArrayList<>();\r\n                        if (dataSnapshot.exists()) {\r\n                            for (DataSnapshot ejercicioSnapshot : dataSnapshot.getChildren()) {\r\n                                String nombreEjercicio = ejercicioSnapshot.getKey();\r\n                                String peso = ejercicioSnapshot.child(\"pesoEjercicio\").getValue(String.class);\r\n                                String repeticiones = ejercicioSnapshot.child(\"repeticionesEjercicio\").getValue(String.class);\r\n                                String series = ejercicioSnapshot.child(\"seriesEjercicio\").getValue(String.class);\r\n                                String fecha = ejercicioSnapshot.child(\"fechaEjercicio\").getValue(String.class);\r\n                                if(nombreEjercicio.equals(tituloNombreEjercicio.getText().toString())){\r\n                                    agregarHistorial(nombreEjercicio, Integer.parseInt(peso), Integer.parseInt(repeticiones), Integer.parseInt(series), fecha, idUsuario);\r\n                                    contadorDatos++;\r\n                                }\r\n                                if(contadorDatos == 0){\r\n                                    AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());\r\n                                    builder.setTitle(\"No hay mas datos\")\r\n                                            .setMessage(\"No se encontraron mas datos para la fecha seleccionada.\")\r\n                                            .setPositiveButton(\"Aceptar\", null);\r\n\r\n                                    AlertDialog dialog = builder.create();\r\n                                    dialog.show();\r\n                                }\r\n                                }\r\n\r\n                        } else {\r\n                            Log.d(\"HistorialFragment\", \"No se encontraron datos para la fecha seleccionada.\");\r\n                            AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());\r\n                            builder.setTitle(\"No hay datos\")\r\n                                    .setMessage(\"No se encontraron datos para la fecha seleccionada.\")\r\n                                    .setPositiveButton(\"Aceptar\", null);\r\n\r\n                            AlertDialog dialog = builder.create();\r\n                            dialog.show();\r\n                        }\r\n                    }\r\n\r\n                    @Override\r\n                    public void onCancelled(DatabaseError databaseError) {\r\n                        Log.w(\"HistorialFragment\", \"Error en la consulta\", databaseError.toException());\r\n                    }\r\n                });\r\n            });\r\n            materialDatePicker.show(getActivity().getSupportFragmentManager(), \"tag\");\r\n        });\r\n        salir.setOnClickListener(v -> {\r\n            closeHistorialFragment();\r\n        });\r\n        return view;\r\n    }\r\n\r\n    private void closeHistorialFragment() {\r\n        Bundle bundle = new Bundle();\r\n        bundle.putString(\"nombreEjercicio\", tituloNombreEjercicio.getText().toString());\r\n        NavController nav = NavHostFragment.findNavController(this);\r\n        nav.navigate(R.id.action_historialEjercicioFragment_to_detalleEjercicio, bundle);\r\n    }\r\n\r\n    public void agregarHistorial(String nombreEjercicio, int peso, int repeticiones, int series, String fecha, String idUsuario) {\r\n        Historial historial = new Historial(nombreEjercicio, peso, repeticiones, series, fecha);\r\n        ((AdapterHistorialEjercicio) resultado.getAdapter()).addHistorial(historial);\r\n\r\n    }\r\n    private void registrarEjercicio(String idUsuario) {\r\n        if (idUsuario != null) {\r\n            Map<String, Object> mapa = new HashMap<>();\r\n            mapa.put(\"pesoEjercicio\", peso.getText().toString());\r\n            mapa.put(\"repeticionesEjercicio\", repeticiones.getText().toString());\r\n            mapa.put(\"seriesEjercicio\", series.getText().toString());\r\n            mapa.put(\"fechaEjercicio\", fecha.toString());\r\n            String[] splitFecha = fecha.split(\"/\");\r\n            StringBuilder fechaBD = new StringBuilder(\"\");\r\n            fechaBD.append(splitFecha[0]).append(\"-\").append(splitFecha[1]).append(\"-\").append(splitFecha[2]);\r\n\r\n            // Guardar los datos en la base de datos\r\n            mDatabase.child(\"Ejercicios\").child(idUsuario).child(fechaBD.toString()).child(tituloNombreEjercicio.getText().toString()).setValue(mapa);\r\n        } else {\r\n            AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());\r\n            builder.setTitle(\"Error\")\r\n                    .setMessage(\"Datos mal introducidos\")\r\n                    .setPositiveButton(\"Aceptar\", null);\r\n            AlertDialog dialog = builder.create();\r\n            dialog.show();\r\n        }\r\n    }\r\n\r\n}\r\n\r\n\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/temple_body/Ejercicios/Historial/HistorialEjercicioFragment.java b/app/src/main/java/com/example/temple_body/Ejercicios/Historial/HistorialEjercicioFragment.java
+--- a/app/src/main/java/com/example/temple_body/Ejercicios/Historial/HistorialEjercicioFragment.java	(revision ad8cb50f01c384eb0fb7bec66b836bc3b7be95f7)
++++ b/app/src/main/java/com/example/temple_body/Ejercicios/Historial/HistorialEjercicioFragment.java	(date 1718188249214)
+@@ -57,9 +57,7 @@
+     private TextView tituloNombreEjercicio;
+     private Button datepicker, generar, salir, filtrarFecha;
+     private String fecha, fechaFiltrada;
+-    private MutableLiveData<List<Historial>> liveHistorial = new MutableLiveData<>();
+     private RecyclerView resultado;
+-    FirebaseAuth mauth;
+     DatabaseReference mDatabase;
+     private int contadorDatos = 0;
+ 
+@@ -103,9 +101,9 @@
+                 repeticiones.setError("Por favor Introduzca Repeticiones");
+             } else if (series.getText().toString().isEmpty()) {
+                 series.setError("Por favor Introduzca las series");
+-            } else if (datepicker.getText().equals("Selecciona Fecha")) {
++            } else if (datepicker.getText().equals("SELECT DATE") || datepicker.getText().toString().isEmpty() || fecha == null) {
+                 datepicker.setError("Por favor Introduzca la fecha");
+-            } else {
++            }else {
+                 AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
+                 builder.setTitle("Datos Registrados")
+                         .setMessage("Tu historial se ha subido correctamente.")
+@@ -222,7 +220,7 @@
+             mapa.put("pesoEjercicio", peso.getText().toString());
+             mapa.put("repeticionesEjercicio", repeticiones.getText().toString());
+             mapa.put("seriesEjercicio", series.getText().toString());
+-            mapa.put("fechaEjercicio", fecha.toString());
++            mapa.put("fechaEjercicio", fecha);
+             String[] splitFecha = fecha.split("/");
+             StringBuilder fechaBD = new StringBuilder("");
+             fechaBD.append(splitFecha[0]).append("-").append(splitFecha[1]).append("-").append(splitFecha[2]);
+Index: app/src/main/java/com/example/temple_body/Suplementacion/SuplementosFragment.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.temple_body.Suplementacion;\r\n\r\nimport android.Manifest;\r\nimport android.content.Intent;\r\nimport android.content.pm.PackageManager;\r\nimport android.graphics.Paint;\r\nimport android.net.Uri;\r\nimport android.os.Bundle;\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.widget.AdapterView;\r\nimport android.widget.Spinner;\r\nimport android.widget.TextView;\r\n\r\nimport androidx.activity.result.ActivityResultLauncher;\r\nimport androidx.activity.result.contract.ActivityResultContracts;\r\nimport androidx.core.content.ContextCompat;\r\nimport androidx.fragment.app.Fragment;\r\nimport androidx.recyclerview.widget.LinearLayoutManager;\r\nimport androidx.recyclerview.widget.RecyclerView;\r\n\r\nimport com.example.temple_body.R;\r\n\r\n/**\r\n * A simple {@link Fragment} subclass.\r\n * Use the {@link SuplementosFragment#newInstance} factory method to\r\n * create an instance of this fragment.\r\n */\r\npublic class SuplementosFragment extends Fragment {\r\n\r\n    // TODO: Rename parameter arguments, choose names that match\r\n    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER\r\n    private static final String ARG_PARAM1 = \"param1\";\r\n    private static final String ARG_PARAM2 = \"param2\";\r\n    public String OPCION_SELECTED;\r\n    public boolean OPCION_SELECCIONADA;\r\n\r\n    // TODO: Rename and change types of parameters\r\n    private String mParam1;\r\n    private String mParam2;\r\n\r\n    RecyclerView rcv;\r\n    SuplementosAdapter a;\r\n    public String nombre=\"\";\r\n    ActivityResultLauncher<String> requestPermissionLauncher;\r\n    Spinner spinnerSuplementos;\r\n    TextView proe,hsn,prozis,big_supps,marcasRecomendadas;\r\n\r\n    public SuplementosFragment() {\r\n        // Required empty public constructor\r\n    }\r\n\r\n    /**\r\n     * Use this factory method to create a new instance of\r\n     * this fragment using the provided parameters.\r\n     *\r\n     * @param param1 Parameter 1.\r\n     * @param param2 Parameter 2.\r\n     * @return A new instance of fragment SuplementosFragment.\r\n     */\r\n    // TODO: Rename and change types and number of parameters\r\n    public static SuplementosFragment newInstance(String param1, String param2) {\r\n        SuplementosFragment fragment = new SuplementosFragment();\r\n        Bundle args = new Bundle();\r\n        args.putString(ARG_PARAM1, param1);\r\n        args.putString(ARG_PARAM2, param2);\r\n        fragment.setArguments(args);\r\n        return fragment;\r\n    }\r\n\r\n    @Override\r\n    public void onCreate(Bundle savedInstanceState) {\r\n        super.onCreate(savedInstanceState);\r\n        if (getArguments() != null) {\r\n            mParam1 = getArguments().getString(ARG_PARAM1);\r\n            mParam2 = getArguments().getString(ARG_PARAM2);\r\n        }\r\n    }\r\n\r\n    @Override\r\n    public View onCreateView(LayoutInflater inflater, ViewGroup container,\r\n                             Bundle savedInstanceState) {\r\n        // Inflate the layout for this fragment\r\n        View layout = inflater.inflate(R.layout.fragment_suplementos, container, false);\r\n        spinnerSuplementos = layout.findViewById(R.id.spinnerEjercicios);\r\n\r\n        rcv = layout.findViewById(R.id.listaContenedorSuplementos);\r\n        rcv.setLayoutManager(new LinearLayoutManager(requireContext()));\r\n\r\n        marcasRecomendadas = layout.findViewById(R.id.tvMarcasRecomendadas);\r\n        proe = layout.findViewById(R.id.tvProe);\r\n        hsn = layout.findViewById(R.id.tvHsn);\r\n        prozis = layout.findViewById(R.id.tvProzis);\r\n        big_supps = layout.findViewById(R.id.tvBig);\r\n\r\n        marcasRecomendadas.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);\r\n\r\n        proe.setText(\"Proe-Nutrition\");\r\n        proe.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);\r\n\r\n        hsn.setText(\"HSN\");\r\n        hsn.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);\r\n\r\n        prozis.setText(\"Prozis\");\r\n        prozis.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);\r\n\r\n        big_supps.setText(\"Big-Supps\");\r\n        big_supps.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);\r\n\r\n\r\n        String opcion = spinnerSuplementos.getSelectedItem().toString();\r\n        if(opcion != null || !opcion.isEmpty() ){\r\n            OPCION_SELECCIONADA = true;\r\n        } else{\r\n            OPCION_SELECCIONADA = false;\r\n        }\r\n        spinnerSuplementos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {\r\n\r\n            @Override\r\n            public void onItemSelected(AdapterView<?> adapterView, View view,\r\n                                       int position, long id) {\r\n                Object item = adapterView.getItemAtPosition(position);\r\n                if (item != null) {\r\n                    a = new SuplementosAdapter(Suplementos.generador(item.toString()));\r\n                    rcv.setAdapter(a);\r\n                }\r\n            }\r\n            @Override\r\n            public void onNothingSelected(AdapterView<?> adapterView) {\r\n                // TODO Auto-generated method stub\r\n            }\r\n        });\r\n        a = new SuplementosAdapter(Suplementos.generador(opcion));\r\n        rcv.setAdapter(a);\r\n\r\n\r\n        proe.setOnClickListener((View v)->{\r\n            if (ContextCompat.checkSelfPermission(\r\n                    requireContext(), Manifest.permission.INTERNET) ==\r\n                    PackageManager.PERMISSION_GRANTED) {\r\n                OPCION_SELECTED = spinnerSuplementos.getSelectedItem().toString();\r\n                // Permiso concedido, realizar la acción\r\n                if(OPCION_SELECCIONADA){\r\n                    abrirWeb(\"https://proenutrition.es/module/iqitsearch/searchiqit?s=\" + OPCION_SELECTED);\r\n                }else{\r\n                    abrirWeb(\"https://proenutrition.es/\");\r\n                }\r\n\r\n            } else {\r\n                // Solicitar permiso al usuario\r\n                requestPermissionLauncher.launch(Manifest.permission.INTERNET);\r\n            }\r\n        });\r\n        hsn.setOnClickListener((View v)->{\r\n            if (ContextCompat.checkSelfPermission(\r\n                    requireContext(), Manifest.permission.INTERNET) ==\r\n                    PackageManager.PERMISSION_GRANTED) {\r\n                OPCION_SELECTED = spinnerSuplementos.getSelectedItem().toString();\r\n                // Permiso concedido, realizar la acción\r\n                if(OPCION_SELECCIONADA){\r\n                    abrirWeb(\"https://www.hsnstore.com/?q=\" + OPCION_SELECTED);\r\n                }else{\r\n                    abrirWeb(\"https://www.hsnstore.com/\");\r\n                }\r\n            } else {\r\n                // Solicitar permiso al usuario\r\n                requestPermissionLauncher.launch(Manifest.permission.INTERNET);\r\n            }\r\n        });\r\n        prozis.setOnClickListener((View v)->{\r\n            if (ContextCompat.checkSelfPermission(\r\n                    requireContext(), Manifest.permission.INTERNET) ==\r\n                    PackageManager.PERMISSION_GRANTED) {\r\n                OPCION_SELECTED = spinnerSuplementos.getSelectedItem().toString();\r\n                // Permiso concedido, realizar la acción\r\n                if(OPCION_SELECCIONADA){\r\n                    abrirWeb(\"https://www.prozis.com/es/es/search?text=\" + OPCION_SELECTED);\r\n                }else{\r\n                    abrirWeb(\"https://www.prozis.com/es/es\");\r\n                }\r\n\r\n            } else {\r\n                // Solicitar permiso al usuario\r\n                requestPermissionLauncher.launch(Manifest.permission.INTERNET);\r\n            }\r\n        });\r\n        big_supps.setOnClickListener((View v)->{\r\n            if (ContextCompat.checkSelfPermission(\r\n                    requireContext(), Manifest.permission.INTERNET) ==\r\n                    PackageManager.PERMISSION_GRANTED) {\r\n                OPCION_SELECTED = spinnerSuplementos.getSelectedItem().toString();\r\n                // Permiso concedido, realizar la acción\r\n                if(OPCION_SELECCIONADA){\r\n                    abrirWeb(\"https://bigsupps.site/search?type=product,article,page&q=*\" + OPCION_SELECTED + \"*\");\r\n                }else{\r\n                    abrirWeb(\"https://bigsupps.site/\");\r\n                }\r\n            } else {\r\n                // Solicitar permiso al usuario\r\n                requestPermissionLauncher.launch(Manifest.permission.INTERNET);\r\n            }\r\n        });\r\n        requestPermissionLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {\r\n            if (isGranted) {\r\n                // Permission is granted. Continue the action or workflow in your\r\n                // app.\r\n                abrirWeb(\"\");\r\n            } else {\r\n                // Explain to the user that the feature is unavailable because the\r\n                // feature requires a permission that the user has denied. At the\r\n                // same time, respect the user's decision. Don't link to system\r\n                // settings in an effort to convince the user to change their\r\n                // decision.\r\n\r\n            }\r\n        });\r\n        a.setClickListener(new SuplementosAdapter.ItemClickListener() {\r\n            @Override\r\n            public void onClick(View view, int position, Suplementos suplemento) {\r\n\r\n            }\r\n        });\r\n        return layout;\r\n    }\r\n    private void abrirWeb(String webSolicitada) {\r\n        Uri uri=Uri.parse(webSolicitada);\r\n        Intent webIntent = new Intent(Intent.ACTION_VIEW,uri);\r\n        startActivity(webIntent);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/temple_body/Suplementacion/SuplementosFragment.java b/app/src/main/java/com/example/temple_body/Suplementacion/SuplementosFragment.java
+--- a/app/src/main/java/com/example/temple_body/Suplementacion/SuplementosFragment.java	(revision ad8cb50f01c384eb0fb7bec66b836bc3b7be95f7)
++++ b/app/src/main/java/com/example/temple_body/Suplementacion/SuplementosFragment.java	(date 1718188249219)
+@@ -21,16 +21,7 @@
+ import androidx.recyclerview.widget.RecyclerView;
+ 
+ import com.example.temple_body.R;
+-
+-/**
+- * A simple {@link Fragment} subclass.
+- * Use the {@link SuplementosFragment#newInstance} factory method to
+- * create an instance of this fragment.
+- */
+ public class SuplementosFragment extends Fragment {
+-
+-    // TODO: Rename parameter arguments, choose names that match
+-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+     private static final String ARG_PARAM1 = "param1";
+     private static final String ARG_PARAM2 = "param2";
+     public String OPCION_SELECTED;
+@@ -42,24 +33,10 @@
+ 
+     RecyclerView rcv;
+     SuplementosAdapter a;
+-    public String nombre="";
++    public String nombre = "";
+     ActivityResultLauncher<String> requestPermissionLauncher;
+     Spinner spinnerSuplementos;
+-    TextView proe,hsn,prozis,big_supps,marcasRecomendadas;
+-
+-    public SuplementosFragment() {
+-        // Required empty public constructor
+-    }
+-
+-    /**
+-     * Use this factory method to create a new instance of
+-     * this fragment using the provided parameters.
+-     *
+-     * @param param1 Parameter 1.
+-     * @param param2 Parameter 2.
+-     * @return A new instance of fragment SuplementosFragment.
+-     */
+-    // TODO: Rename and change types and number of parameters
++    TextView proe, hsn, prozis, big_supps, marcasRecomendadas;
+     public static SuplementosFragment newInstance(String param1, String param2) {
+         SuplementosFragment fragment = new SuplementosFragment();
+         Bundle args = new Bundle();
+@@ -108,124 +85,62 @@
+         big_supps.setText("Big-Supps");
+         big_supps.setPaintFlags(Paint.UNDERLINE_TEXT_FLAG);
+ 
+-
+-        String opcion = spinnerSuplementos.getSelectedItem().toString();
+-        if(opcion != null || !opcion.isEmpty() ){
+-            OPCION_SELECCIONADA = true;
+-        } else{
+-            OPCION_SELECCIONADA = false;
+-        }
+         spinnerSuplementos.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+-
+             @Override
+             public void onItemSelected(AdapterView<?> adapterView, View view,
+                                        int position, long id) {
+                 Object item = adapterView.getItemAtPosition(position);
+                 if (item != null) {
+-                    a = new SuplementosAdapter(Suplementos.generador(item.toString()));
++                    OPCION_SELECTED = item.toString();
++                    OPCION_SELECCIONADA = !OPCION_SELECTED.equals("Select suplement");
++                    a = new SuplementosAdapter(Suplementos.generador(OPCION_SELECTED));
+                     rcv.setAdapter(a);
+                 }
+             }
++
+             @Override
+             public void onNothingSelected(AdapterView<?> adapterView) {
+                 // TODO Auto-generated method stub
+             }
+         });
+-        a = new SuplementosAdapter(Suplementos.generador(opcion));
+-        rcv.setAdapter(a);
+-
+ 
+-        proe.setOnClickListener((View v)->{
+-            if (ContextCompat.checkSelfPermission(
+-                    requireContext(), Manifest.permission.INTERNET) ==
+-                    PackageManager.PERMISSION_GRANTED) {
+-                OPCION_SELECTED = spinnerSuplementos.getSelectedItem().toString();
+-                // Permiso concedido, realizar la acción
+-                if(OPCION_SELECCIONADA){
+-                    abrirWeb("https://proenutrition.es/module/iqitsearch/searchiqit?s=" + OPCION_SELECTED);
+-                }else{
+-                    abrirWeb("https://proenutrition.es/");
+-                }
+-
+-            } else {
+-                // Solicitar permiso al usuario
+-                requestPermissionLauncher.launch(Manifest.permission.INTERNET);
+-            }
++        proe.setOnClickListener((View v) -> {
++            abrirWebConPermiso("https://proenutrition.es/", "https://proenutrition.es/module/iqitsearch/searchiqit?s=");
+         });
+-        hsn.setOnClickListener((View v)->{
+-            if (ContextCompat.checkSelfPermission(
+-                    requireContext(), Manifest.permission.INTERNET) ==
+-                    PackageManager.PERMISSION_GRANTED) {
+-                OPCION_SELECTED = spinnerSuplementos.getSelectedItem().toString();
+-                // Permiso concedido, realizar la acción
+-                if(OPCION_SELECCIONADA){
+-                    abrirWeb("https://www.hsnstore.com/?q=" + OPCION_SELECTED);
+-                }else{
+-                    abrirWeb("https://www.hsnstore.com/");
+-                }
+-            } else {
+-                // Solicitar permiso al usuario
+-                requestPermissionLauncher.launch(Manifest.permission.INTERNET);
+-            }
++        hsn.setOnClickListener((View v) -> {
++            abrirWebConPermiso("https://www.hsnstore.com/", "https://www.hsnstore.com/?q=");
+         });
+-        prozis.setOnClickListener((View v)->{
+-            if (ContextCompat.checkSelfPermission(
+-                    requireContext(), Manifest.permission.INTERNET) ==
+-                    PackageManager.PERMISSION_GRANTED) {
+-                OPCION_SELECTED = spinnerSuplementos.getSelectedItem().toString();
+-                // Permiso concedido, realizar la acción
+-                if(OPCION_SELECCIONADA){
+-                    abrirWeb("https://www.prozis.com/es/es/search?text=" + OPCION_SELECTED);
+-                }else{
+-                    abrirWeb("https://www.prozis.com/es/es");
+-                }
+-
+-            } else {
+-                // Solicitar permiso al usuario
+-                requestPermissionLauncher.launch(Manifest.permission.INTERNET);
+-            }
++        prozis.setOnClickListener((View v) -> {
++            abrirWebConPermiso("https://www.prozis.com/es/es", "https://www.prozis.com/es/es/search?text=");
+         });
+-        big_supps.setOnClickListener((View v)->{
+-            if (ContextCompat.checkSelfPermission(
+-                    requireContext(), Manifest.permission.INTERNET) ==
+-                    PackageManager.PERMISSION_GRANTED) {
+-                OPCION_SELECTED = spinnerSuplementos.getSelectedItem().toString();
+-                // Permiso concedido, realizar la acción
+-                if(OPCION_SELECCIONADA){
+-                    abrirWeb("https://bigsupps.site/search?type=product,article,page&q=*" + OPCION_SELECTED + "*");
+-                }else{
+-                    abrirWeb("https://bigsupps.site/");
+-                }
+-            } else {
+-                // Solicitar permiso al usuario
+-                requestPermissionLauncher.launch(Manifest.permission.INTERNET);
+-            }
++        big_supps.setOnClickListener((View v) -> {
++            abrirWebConPermiso("https://bigsupps.site/", "https://bigsupps.site/search?type=product,article,page&q=");
+         });
++
+         requestPermissionLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
+             if (isGranted) {
+-                // Permission is granted. Continue the action or workflow in your
+-                // app.
++                // Permission is granted. Continue the action or workflow in your app.
+                 abrirWeb("");
+             } else {
+-                // Explain to the user that the feature is unavailable because the
+-                // feature requires a permission that the user has denied. At the
+-                // same time, respect the user's decision. Don't link to system
+-                // settings in an effort to convince the user to change their
+-                // decision.
+-
++                // Explain to the user that the feature is unavailable because the feature requires a permission that the user has denied.
++                // At the same time, respect the user's decision. Don't link to system settings in an effort to convince the user to change their decision.
+             }
+         });
+-        a.setClickListener(new SuplementosAdapter.ItemClickListener() {
+-            @Override
+-            public void onClick(View view, int position, Suplementos suplemento) {
+ 
+-            }
+-        });
+         return layout;
+     }
++
++    private void abrirWebConPermiso(String defaultUrl, String searchUrl) {
++        if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.INTERNET) == PackageManager.PERMISSION_GRANTED) {
++            abrirWeb(OPCION_SELECCIONADA ? searchUrl + OPCION_SELECTED : defaultUrl);
++        } else {
++            requestPermissionLauncher.launch(Manifest.permission.INTERNET);
++        }
++    }
++
+     private void abrirWeb(String webSolicitada) {
+-        Uri uri=Uri.parse(webSolicitada);
+-        Intent webIntent = new Intent(Intent.ACTION_VIEW,uri);
++        Uri uri = Uri.parse(webSolicitada);
++        Intent webIntent = new Intent(Intent.ACTION_VIEW, uri);
+         startActivity(webIntent);
+     }
+-}
+\ No newline at end of file
++}
+Index: app/src/main/res/layout/fragment_historial_ejercicio.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<FrameLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".Ejercicios.Historial.HistorialEjercicioFragment\">\r\n\r\n    <androidx.constraintlayout.widget.ConstraintLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:background=\"@drawable/icono3\"\r\n        tools:layout_editor_absoluteX=\"-4dp\"\r\n        tools:layout_editor_absoluteY=\"0dp\">\r\n\r\n\r\n        <EditText\r\n            android:id=\"@+id/EDSeries\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:ems=\"10\"\r\n            android:inputType=\"text\"\r\n            android:textAlignment=\"center\"\r\n            android:textColor=\"@color/white\"\r\n            app:layout_constraintBottom_toTopOf=\"@+id/datePicker\"\r\n            app:layout_constraintEnd_toEndOf=\"@+id/EDRepeticiones\"\r\n            app:layout_constraintHorizontal_bias=\"0.5\"\r\n            app:layout_constraintStart_toEndOf=\"@+id/textViewSeries\"\r\n            app:layout_constraintStart_toStartOf=\"@+id/EDRepeticiones\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/EDRepeticiones\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/textViewSeries\"\r\n            android:layout_width=\"136dp\"\r\n            android:layout_height=\"35dp\"\r\n            android:text=\"Series\"\r\n            android:textAlignment=\"center\"\r\n            android:textColor=\"@color/white\"\r\n            android:textSize=\"24sp\"\r\n            app:layout_constraintBottom_toTopOf=\"@+id/datePicker\"\r\n            app:layout_constraintEnd_toEndOf=\"@+id/textViewRepeticiones\"\r\n            app:layout_constraintEnd_toStartOf=\"@+id/EDSeries\"\r\n            app:layout_constraintHorizontal_bias=\"0.5\"\r\n            app:layout_constraintStart_toStartOf=\"@+id/textViewRepeticiones\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/textViewRepeticiones\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/textViewPeso\"\r\n            android:layout_width=\"136dp\"\r\n            android:layout_height=\"35dp\"\r\n            android:layout_marginTop=\"16dp\"\r\n            android:text=\"Weight\"\r\n            android:textAlignment=\"center\"\r\n            android:textColor=\"@color/white\"\r\n            android:textSize=\"24sp\"\r\n            app:layout_constraintBottom_toTopOf=\"@+id/textViewRepeticiones\"\r\n            app:layout_constraintEnd_toStartOf=\"@+id/EDPeso\"\r\n            app:layout_constraintHorizontal_bias=\"0.5\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/TVTituloHistorial\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/textViewRepeticiones\"\r\n            android:layout_width=\"154dp\"\r\n            android:layout_height=\"33dp\"\r\n            android:layout_marginEnd=\"16dp\"\r\n            android:text=\"Repetitions\"\r\n            android:textAlignment=\"center\"\r\n            android:textColor=\"@color/white\"\r\n            android:textSize=\"24sp\"\r\n            app:layout_constraintBottom_toTopOf=\"@+id/textViewSeries\"\r\n            app:layout_constraintEnd_toEndOf=\"@+id/textViewPeso\"\r\n            app:layout_constraintEnd_toStartOf=\"@+id/EDRepeticiones\"\r\n            app:layout_constraintHorizontal_bias=\"0.5\"\r\n            app:layout_constraintStart_toStartOf=\"@+id/textViewPeso\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/textViewPeso\" />\r\n\r\n        <Button\r\n            android:id=\"@+id/BTGenerar\"\r\n            style=\"@style/Widget.MaterialComponents.Button.OutlinedButton\"\r\n            android:layout_width=\"169dp\"\r\n            android:layout_height=\"47dp\"\r\n            android:layout_marginStart=\"28dp\"\r\n            android:layout_marginTop=\"8dp\"\r\n            android:text=\"add history\"\r\n            android:textColor=\"@color/black\"\r\n            app:backgroundTint=\"#61FD00\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/datePicker\" />\r\n\r\n        <com.google.android.material.button.MaterialButton\r\n            android:id=\"@+id/datePicker\"\r\n            style=\"@style/Widget.MaterialComponents.Button.OutlinedButton\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginTop=\"16dp\"\r\n            android:text=\"Select Date\"\r\n            android:textColor=\"@color/black\"\r\n            app:backgroundTint=\"#FFC107\"\r\n            app:layout_constraintBottom_toTopOf=\"@+id/BTGenerar\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintHorizontal_bias=\"0.5\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/EDSeries\" />\r\n\r\n        <TextView\r\n            android:id=\"@+id/TVTituloHistorial\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginTop=\"32dp\"\r\n            android:layout_marginBottom=\"32dp\"\r\n            android:background=\"@drawable/border_color_encabezado\"\r\n            android:paddingLeft=\"8dp\"\r\n            android:paddingTop=\"8dp\"\r\n            android:paddingRight=\"8dp\"\r\n            android:paddingBottom=\"8dp\"\r\n            android:text=\"Exercise\"\r\n            android:textAlignment=\"center\"\r\n            android:textAllCaps=\"true\"\r\n            android:textColor=\"#FFC107\"\r\n            android:textSize=\"24sp\"\r\n            android:textStyle=\"bold\"\r\n            app:layout_constraintBottom_toTopOf=\"@+id/EDPeso\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toTopOf=\"parent\"\r\n            app:layout_constraintVertical_chainStyle=\"spread_inside\" />\r\n\r\n        <EditText\r\n            android:id=\"@+id/EDPeso\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:ems=\"10\"\r\n            android:inputType=\"text\"\r\n            android:textAlignment=\"center\"\r\n            android:textColor=\"@color/white\"\r\n            app:layout_constraintBottom_toTopOf=\"@+id/EDRepeticiones\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintHorizontal_bias=\"0.5\"\r\n            app:layout_constraintStart_toEndOf=\"@+id/textViewPeso\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/TVTituloHistorial\" />\r\n\r\n        <EditText\r\n            android:id=\"@+id/EDRepeticiones\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:ems=\"10\"\r\n            android:inputType=\"text\"\r\n            android:textAlignment=\"center\"\r\n            android:textColor=\"@color/white\"\r\n            app:layout_constraintBottom_toTopOf=\"@+id/EDSeries\"\r\n            app:layout_constraintEnd_toEndOf=\"@+id/EDPeso\"\r\n            app:layout_constraintHorizontal_bias=\"0.5\"\r\n            app:layout_constraintStart_toEndOf=\"@+id/textViewRepeticiones\"\r\n            app:layout_constraintStart_toStartOf=\"@+id/EDPeso\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/EDPeso\" />\r\n\r\n        <Button\r\n            android:id=\"@+id/BTSalir\"\r\n            style=\"@style/Widget.MaterialComponents.Button.OutlinedButton\"\r\n            android:layout_width=\"169dp\"\r\n            android:layout_height=\"47dp\"\r\n            android:layout_marginTop=\"8dp\"\r\n            android:text=\"return\"\r\n            android:textColor=\"@color/black\"\r\n            app:backgroundTint=\"#F44336\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintHorizontal_bias=\"0.533\"\r\n            app:layout_constraintStart_toEndOf=\"@+id/BTGenerar\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/datePicker\" />\r\n\r\n        <androidx.recyclerview.widget.RecyclerView\r\n            android:id=\"@+id/recycleHistorial\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"0dp\"\r\n            android:layout_marginTop=\"16dp\"\r\n            android:layout_marginBottom=\"32dp\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintHorizontal_bias=\"0.5\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/filtrarFecha\" />\r\n\r\n        <Button\r\n            android:id=\"@+id/filtrarFecha\"\r\n            style=\"@style/Widget.MaterialComponents.Button.OutlinedButton\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginTop=\"17dp\"\r\n            android:text=\"Filter by date\"\r\n            android:textColor=\"@color/black\"\r\n            app:backgroundTint=\"#FFC107\"\r\n            app:layout_constraintEnd_toEndOf=\"@+id/BTSalir\"\r\n            app:layout_constraintStart_toStartOf=\"@+id/BTGenerar\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/BTSalir\" />\r\n\r\n    </androidx.constraintlayout.widget.ConstraintLayout>\r\n\r\n</FrameLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_historial_ejercicio.xml b/app/src/main/res/layout/fragment_historial_ejercicio.xml
+--- a/app/src/main/res/layout/fragment_historial_ejercicio.xml	(revision ad8cb50f01c384eb0fb7bec66b836bc3b7be95f7)
++++ b/app/src/main/res/layout/fragment_historial_ejercicio.xml	(date 1718188249221)
+@@ -19,7 +19,7 @@
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:ems="10"
+-            android:inputType="text"
++            android:inputType="number"
+             android:textAlignment="center"
+             android:textColor="@color/white"
+             app:layout_constraintBottom_toTopOf="@+id/datePicker"
+@@ -80,7 +80,7 @@
+             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+             android:layout_width="169dp"
+             android:layout_height="47dp"
+-            android:layout_marginStart="28dp"
++            android:layout_marginStart="8dp"
+             android:layout_marginTop="8dp"
+             android:text="add history"
+             android:textColor="@color/black"
+@@ -131,7 +131,7 @@
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:ems="10"
+-            android:inputType="text"
++            android:inputType="number"
+             android:textAlignment="center"
+             android:textColor="@color/white"
+             app:layout_constraintBottom_toTopOf="@+id/EDRepeticiones"
+@@ -145,7 +145,7 @@
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:ems="10"
+-            android:inputType="text"
++            android:inputType="number"
+             android:textAlignment="center"
+             android:textColor="@color/white"
+             app:layout_constraintBottom_toTopOf="@+id/EDSeries"
+@@ -165,7 +165,7 @@
+             android:textColor="@color/black"
+             app:backgroundTint="#F44336"
+             app:layout_constraintEnd_toEndOf="parent"
+-            app:layout_constraintHorizontal_bias="0.533"
++            app:layout_constraintHorizontal_bias="0.698"
+             app:layout_constraintStart_toEndOf="@+id/BTGenerar"
+             app:layout_constraintTop_toBottomOf="@+id/datePicker" />
+ 
+@@ -173,7 +173,7 @@
+             android:id="@+id/recycleHistorial"
+             android:layout_width="0dp"
+             android:layout_height="0dp"
+-            android:layout_marginTop="16dp"
++            android:layout_marginTop="40dp"
+             android:layout_marginBottom="32dp"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+Index: app/src/main/java/com/example/temple_body/Login/CambioContrasena.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.temple_body.Login;\r\n\r\nimport android.content.Context;\r\nimport android.content.SharedPreferences;\r\nimport android.os.Bundle;\r\nimport android.util.Log;\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.widget.Button;\r\nimport android.widget.EditText;\r\n\r\nimport androidx.annotation.NonNull;\r\nimport androidx.appcompat.app.AlertDialog;\r\nimport androidx.fragment.app.Fragment;\r\nimport androidx.navigation.NavController;\r\nimport androidx.navigation.fragment.NavHostFragment;\r\n\r\nimport com.example.temple_body.R;\r\nimport com.google.android.gms.tasks.OnCompleteListener;\r\nimport com.google.android.gms.tasks.Task;\r\nimport com.google.firebase.auth.FirebaseAuth;\r\nimport com.google.firebase.auth.FirebaseUser;\r\nimport com.google.firebase.database.DataSnapshot;\r\nimport com.google.firebase.database.DatabaseError;\r\nimport com.google.firebase.database.DatabaseReference;\r\nimport com.google.firebase.database.FirebaseDatabase;\r\nimport com.google.firebase.database.ValueEventListener;\r\n\r\npublic class CambioContrasena extends Fragment {\r\n    public CambioContrasena() {}\r\n\r\n    EditText etCorreo;\r\n    Button btCambiar, btRegresar;\r\n\r\n    private static int regresoLayout =0;\r\n\r\n    @Override\r\n    public View onCreateView(LayoutInflater inflater, ViewGroup container,\r\n                             Bundle savedInstanceState) {\r\n        // Inflate the layout for this fragment\r\n        View layout = inflater.inflate(R.layout.fragment_cambio_contrasena, container, false);\r\n        cargarLayoutIdaVuelta();\r\n        etCorreo = layout.findViewById(R.id.ACPetMail);\r\n        btCambiar = layout.findViewById(R.id.ACPbtCambiar);\r\n        btRegresar = layout.findViewById(R.id.ACPbtRegresar);\r\n\r\n        btCambiar.setOnClickListener(v -> {\r\n            int invalidado=0;\r\n            if(etCorreo.getText().toString().isEmpty()){\r\n                etCorreo.setError(\"Introduce correo válido\");\r\n                invalidado++;\r\n            }\r\n            if(invalidado==0){\r\n                cambioContrasena(etCorreo.getText().toString().trim());\r\n            }\r\n        });\r\n\r\n        btRegresar.setOnClickListener(v ->{\r\n            if(regresoLayout ==0){\r\n                viajarConfiguracion();\r\n            }else{\r\n                viajarLogin();\r\n            }\r\n        });\r\n        return layout;\r\n    }\r\n\r\n\r\n\r\n    private void cambioContrasena(String correo) {\r\n        DatabaseReference usersRef = FirebaseDatabase.getInstance().getReference().child(\"Users\");\r\n        usersRef.orderByChild(\"email\").equalTo(correo).addListenerForSingleValueEvent(new ValueEventListener() {\r\n            @Override\r\n            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {\r\n                if (dataSnapshot.exists()) {\r\n                    enviarCorreoRestablecimiento(correo);\r\n                } else {\r\n                    mostrarErrorCorreoNoEncontrado();\r\n                }\r\n            }\r\n\r\n            @Override\r\n            public void onCancelled(@NonNull DatabaseError databaseError) {}\r\n        });\r\n    }\r\n\r\n    private void enviarCorreoRestablecimiento(String correo) {\r\n        FirebaseAuth mAuth = FirebaseAuth.getInstance();\r\n        mAuth.setLanguageCode(\"es\");\r\n        mAuth.sendPasswordResetEmail(correo).addOnCompleteListener(task -> {\r\n            if (task.isSuccessful()) {\r\n                mostrarExitoCorreoEnviado();\r\n            } else {\r\n                mostrarErrorCorreoNoEnviado();\r\n            }\r\n        });\r\n    }\r\n\r\n    private void mostrarErrorCorreoNoEncontrado() {\r\n        AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());\r\n        builder.setTitle(\"Error\")\r\n                .setMessage(\"Error, no se pudo encontrar un correo en nuestros sistemas\")\r\n                .setPositiveButton(\"Aceptar\", null);\r\n\r\n        AlertDialog dialog = builder.create();\r\n        dialog.show();\r\n    }\r\n\r\n    private void mostrarExitoCorreoEnviado() {\r\n        AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());\r\n        builder.setTitle(\"Enviado\")\r\n                .setMessage(\"Correo enviado con exito\")\r\n                .setPositiveButton(\"Aceptar\", null);\r\n\r\n        AlertDialog dialog = builder.create();\r\n        dialog.show();\r\n    }\r\n    private void mostrarErrorCorreoNoEnviado() {\r\n        AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());\r\n        builder.setTitle(\"Error\")\r\n                .setMessage(\"Error al enviar el correo de recuperación \")\r\n                .setPositiveButton(\"Aceptar\", null);\r\n\r\n        AlertDialog dialog = builder.create();\r\n        dialog.show();\r\n    }\r\n\r\n    private void cargarLayoutIdaVuelta() {\r\n        SharedPreferences sharedPreferences = requireContext().getSharedPreferences(\"cargaLayoutCambioContrasena\", Context.MODE_PRIVATE);\r\n        regresoLayout = sharedPreferences.getInt(\"layoutLoginCambio\",1);\r\n    }\r\n    private void viajarConfiguracion() {\r\n        NavController nav = NavHostFragment.findNavController(this);\r\n        nav.navigate(R.id.action_cambioContrasena_to_configuracion);\r\n    }\r\n    private void viajarLogin() {\r\n        NavController nav = NavHostFragment.findNavController(this);\r\n        nav.navigate(R.id.action_cambioContrasena_to_loginPrincipal);\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/temple_body/Login/CambioContrasena.java b/app/src/main/java/com/example/temple_body/Login/CambioContrasena.java
+--- a/app/src/main/java/com/example/temple_body/Login/CambioContrasena.java	(revision ad8cb50f01c384eb0fb7bec66b836bc3b7be95f7)
++++ b/app/src/main/java/com/example/temple_body/Login/CambioContrasena.java	(date 1718188249216)
+@@ -16,9 +16,11 @@
+ import androidx.navigation.NavController;
+ import androidx.navigation.fragment.NavHostFragment;
+ 
++import com.example.temple_body.Actividad_Gimnasios;
+ import com.example.temple_body.R;
+ import com.google.android.gms.tasks.OnCompleteListener;
+ import com.google.android.gms.tasks.Task;
++import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+ import com.google.firebase.auth.FirebaseAuth;
+ import com.google.firebase.auth.FirebaseUser;
+ import com.google.firebase.database.DataSnapshot;
+@@ -98,32 +100,29 @@
+     }
+ 
+     private void mostrarErrorCorreoNoEncontrado() {
+-        AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
+-        builder.setTitle("Error")
+-                .setMessage("Error, no se pudo encontrar un correo en nuestros sistemas")
+-                .setPositiveButton("Aceptar", null);
+-
+-        AlertDialog dialog = builder.create();
+-        dialog.show();
++        new MaterialAlertDialogBuilder(requireContext())
++                .setTitle("Error")
++                .setMessage("No se ha encontrado este correo en nuestros sistemas, correo invalido o no registrado")
++                .setPositiveButton("OK", (dialog, which) -> {
++                })
++                .show();
+     }
+ 
+     private void mostrarExitoCorreoEnviado() {
+-        AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
+-        builder.setTitle("Enviado")
+-                .setMessage("Correo enviado con exito")
+-                .setPositiveButton("Aceptar", null);
+-
+-        AlertDialog dialog = builder.create();
+-        dialog.show();
++        new MaterialAlertDialogBuilder(requireContext())
++                .setTitle("Confirmación")
++                .setMessage("El correo se ha enviado con exito, revise su bandeja de entrada o la carpeta de spam!")
++                .setPositiveButton("OK", (dialog, which) -> {
++                })
++                .show();
+     }
+     private void mostrarErrorCorreoNoEnviado() {
+-        AlertDialog.Builder builder = new AlertDialog.Builder(requireContext());
+-        builder.setTitle("Error")
+-                .setMessage("Error al enviar el correo de recuperación ")
+-                .setPositiveButton("Aceptar", null);
+-
+-        AlertDialog dialog = builder.create();
+-        dialog.show();
++        new MaterialAlertDialogBuilder(requireContext())
++                .setTitle("Error")
++                .setMessage("Error al enviar el correo de recuperacion de contraseña, correo invalido o no registrado")
++                .setPositiveButton("OK", (dialog, which) -> {
++                })
++                .show();
+     }
+ 
+     private void cargarLayoutIdaVuelta() {
+Index: app/src/main/java/com/example/temple_body/Login/configuracion.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.temple_body.Login;\r\n\r\nimport android.Manifest;\r\nimport android.content.Context;\r\nimport android.content.Intent;\r\nimport android.content.SharedPreferences;\r\nimport android.content.pm.PackageManager;\r\nimport android.net.Uri;\r\nimport android.os.Bundle;\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.widget.Button;\r\nimport android.widget.ProgressBar;\r\nimport android.widget.Toast;\r\n\r\nimport androidx.activity.result.ActivityResultLauncher;\r\nimport androidx.activity.result.contract.ActivityResultContracts;\r\nimport androidx.appcompat.app.AlertDialog;\r\nimport androidx.core.content.ContextCompat;\r\nimport androidx.fragment.app.Fragment;\r\nimport androidx.fragment.app.FragmentManager;\r\nimport androidx.fragment.app.FragmentTransaction;\r\nimport androidx.navigation.NavController;\r\nimport androidx.navigation.fragment.NavHostFragment;\r\n\r\nimport com.example.temple_body.R;\r\n\r\npublic class configuracion extends Fragment {\r\n\r\n    public configuracion() {}\r\n    Button btinfProblema, btActualiza, btProbCuenta, btRegresar, btModificar;\r\n    ProgressBar pbActualiza;\r\n    ActivityResultLauncher<String> requestPermissionLauncher;\r\n\r\n    @Override\r\n    public View onCreateView(LayoutInflater inflater, ViewGroup container,\r\n                             Bundle savedInstanceState) {\r\n        // Inflate the layout for this fragment\r\n        View layout = inflater.inflate(R.layout.fragment_configuracion, container, false);\r\n\r\n        btinfProblema = layout.findViewById(R.id.ACbtInformacionProblema);\r\n        btActualiza = layout.findViewById(R.id.ACbtActulizarAPP);\r\n        pbActualiza = layout.findViewById(R.id.ACpbActualizacion);\r\n        btRegresar = layout.findViewById(R.id.ACbtRegresar);\r\n        btProbCuenta  = layout.findViewById(R.id.ACbtProblemasCuenta);\r\n        btModificar = layout.findViewById(R.id.ACbtModificarDatos);\r\n        guardarLayoutLogin();\r\n        pbActualiza.setVisibility(View.INVISIBLE);\r\n\r\n        requestPermissionLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {\r\n            if (isGranted) {\r\n                // Permission is granted. Continue the action or workflow in your\r\n                // app.\r\n                requestCorreo();\r\n                requestLlamada();\r\n            } else {\r\n                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());\r\n                builder.setTitle(\"Error\")\r\n                        .setMessage(\"Necesitamos que acepte los permisos para poder realizar la accion.\")\r\n                        .setPositiveButton(\"Aceptar\", null);\r\n\r\n                AlertDialog dialog = builder.create();\r\n                dialog.show();\r\n            }\r\n        });\r\n\r\n        btProbCuenta.setOnClickListener(new View.OnClickListener() {\r\n            @Override\r\n            public void onClick(View v) {\r\n                if (ContextCompat.checkSelfPermission(\r\n                        getActivity(), Manifest.permission.CALL_PHONE) ==\r\n                        PackageManager.PERMISSION_GRANTED) {\r\n                    // You can use the API that requires the permission.\r\n                    requestLlamada();\r\n                } else {\r\n                    // You can directly ask for the permission.\r\n                    // The registered ActivityResultCallback gets the result of this request.\r\n                    requestPermissionLauncher.launch(Manifest.permission.CALL_PHONE);\r\n                }\r\n\r\n            }\r\n        });\r\n        btinfProblema.setOnClickListener(v -> {\r\n            if (ContextCompat.checkSelfPermission(\r\n                    getActivity(), Manifest.permission.SEND_SMS) ==\r\n                    PackageManager.PERMISSION_GRANTED) {\r\n                requestCorreo();\r\n            } else {\r\n                requestPermissionLauncher.launch(Manifest.permission.SEND_SMS);\r\n            }\r\n        });\r\n\r\n        btRegresar.setOnClickListener(v -> {\r\n            viajarPerfil();\r\n        });\r\n\r\n        btModificar.setOnClickListener(v -> {\r\n            guardarLayoutIdaVuelta();\r\n            viajarCambioCotrasena();\r\n        });\r\n\r\n        btActualiza.setOnClickListener(v -> {\r\n            pbActualiza.setVisibility(View.VISIBLE);\r\n            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());\r\n            builder.setTitle(\"Info\")\r\n                    .setMessage(\"Tu APP esta actualizada a la ultima version!\")\r\n                    .setPositiveButton(\"Aceptar\", null);\r\n\r\n            AlertDialog dialog = builder.create();\r\n            dialog.show();\r\n            pbActualiza.setVisibility(View.INVISIBLE);\r\n        });\r\n\r\n        return layout;\r\n    }\r\n    private void requestCorreo(){\r\n        Uri uri = Uri.parse(\"mailto:soporte.cuenta.templebody@gmail.com\"); // Para abrir Gmail\r\n        Intent i = new Intent(Intent.ACTION_VIEW, uri);\r\n        i.putExtra(\"mail_body\", \"Problema con la cuenta.\");\r\n        startActivity(i);\r\n    }\r\n    private void guardarLayoutIdaVuelta() {\r\n        SharedPreferences sharedPreferences = requireContext().getSharedPreferences(\"cargaLayoutCambioContrasena\", Context.MODE_PRIVATE);\r\n        SharedPreferences.Editor editor=sharedPreferences.edit();\r\n        editor.putInt(\"layoutLoginCambio\", 0);\r\n        editor.apply();\r\n    }\r\n    private void requestLlamada(){\r\n        Intent phoneIntent = new Intent(Intent.ACTION_CALL);\r\n        phoneIntent.setData(Uri.parse(\"tel:0034 911 66 66 66\"));\r\n        startActivity(phoneIntent);\r\n    }\r\n    private void viajarPerfil() {\r\n        NavController nav = NavHostFragment.findNavController(this);\r\n        nav.navigate(R.id.action_configuracion_to_perfil);\r\n    }\r\n    private void viajarCambioCotrasena() {\r\n        NavController nav = NavHostFragment.findNavController(this);\r\n        nav.navigate(R.id.action_configuracion_to_cambioContrasena);\r\n    }\r\n    private void guardarLayoutLogin() {\r\n        SharedPreferences sharedPreferences = requireContext().getSharedPreferences(\"cargaLayoutLogin\", Context.MODE_PRIVATE);\r\n        SharedPreferences.Editor editor=sharedPreferences.edit();\r\n        editor.putInt(\"cargaLayoutLogin\", 3);\r\n        editor.apply();\r\n    }\r\n\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/temple_body/Login/configuracion.java b/app/src/main/java/com/example/temple_body/Login/configuracion.java
+--- a/app/src/main/java/com/example/temple_body/Login/configuracion.java	(revision ad8cb50f01c384eb0fb7bec66b836bc3b7be95f7)
++++ b/app/src/main/java/com/example/temple_body/Login/configuracion.java	(date 1718188249217)
+@@ -29,8 +29,7 @@
+ public class configuracion extends Fragment {
+ 
+     public configuracion() {}
+-    Button btinfProblema, btActualiza, btProbCuenta, btRegresar, btModificar;
+-    ProgressBar pbActualiza;
++    Button btinfProblema,btRegresar, btModificar;
+     ActivityResultLauncher<String> requestPermissionLauncher;
+ 
+     @Override
+@@ -40,55 +39,12 @@
+         View layout = inflater.inflate(R.layout.fragment_configuracion, container, false);
+ 
+         btinfProblema = layout.findViewById(R.id.ACbtInformacionProblema);
+-        btActualiza = layout.findViewById(R.id.ACbtActulizarAPP);
+-        pbActualiza = layout.findViewById(R.id.ACpbActualizacion);
+         btRegresar = layout.findViewById(R.id.ACbtRegresar);
+-        btProbCuenta  = layout.findViewById(R.id.ACbtProblemasCuenta);
+         btModificar = layout.findViewById(R.id.ACbtModificarDatos);
+         guardarLayoutLogin();
+-        pbActualiza.setVisibility(View.INVISIBLE);
+-
+-        requestPermissionLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
+-            if (isGranted) {
+-                // Permission is granted. Continue the action or workflow in your
+-                // app.
+-                requestCorreo();
+-                requestLlamada();
+-            } else {
+-                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+-                builder.setTitle("Error")
+-                        .setMessage("Necesitamos que acepte los permisos para poder realizar la accion.")
+-                        .setPositiveButton("Aceptar", null);
+ 
+-                AlertDialog dialog = builder.create();
+-                dialog.show();
+-            }
+-        });
+-
+-        btProbCuenta.setOnClickListener(new View.OnClickListener() {
+-            @Override
+-            public void onClick(View v) {
+-                if (ContextCompat.checkSelfPermission(
+-                        getActivity(), Manifest.permission.CALL_PHONE) ==
+-                        PackageManager.PERMISSION_GRANTED) {
+-                    // You can use the API that requires the permission.
+-                    requestLlamada();
+-                } else {
+-                    // You can directly ask for the permission.
+-                    // The registered ActivityResultCallback gets the result of this request.
+-                    requestPermissionLauncher.launch(Manifest.permission.CALL_PHONE);
+-                }
+-
+-            }
+-        });
+         btinfProblema.setOnClickListener(v -> {
+-            if (ContextCompat.checkSelfPermission(
+-                    getActivity(), Manifest.permission.SEND_SMS) ==
+-                    PackageManager.PERMISSION_GRANTED) {
+                 requestCorreo();
+-            } else {
+-                requestPermissionLauncher.launch(Manifest.permission.SEND_SMS);
+-            }
+         });
+ 
+         btRegresar.setOnClickListener(v -> {
+@@ -100,22 +56,10 @@
+             viajarCambioCotrasena();
+         });
+ 
+-        btActualiza.setOnClickListener(v -> {
+-            pbActualiza.setVisibility(View.VISIBLE);
+-            AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+-            builder.setTitle("Info")
+-                    .setMessage("Tu APP esta actualizada a la ultima version!")
+-                    .setPositiveButton("Aceptar", null);
+-
+-            AlertDialog dialog = builder.create();
+-            dialog.show();
+-            pbActualiza.setVisibility(View.INVISIBLE);
+-        });
+-
+         return layout;
+     }
+     private void requestCorreo(){
+-        Uri uri = Uri.parse("mailto:soporte.cuenta.templebody@gmail.com"); // Para abrir Gmail
++        Uri uri = Uri.parse("mailto:soporte@templebody.es");
+         Intent i = new Intent(Intent.ACTION_VIEW, uri);
+         i.putExtra("mail_body", "Problema con la cuenta.");
+         startActivity(i);
+@@ -126,11 +70,6 @@
+         editor.putInt("layoutLoginCambio", 0);
+         editor.apply();
+     }
+-    private void requestLlamada(){
+-        Intent phoneIntent = new Intent(Intent.ACTION_CALL);
+-        phoneIntent.setData(Uri.parse("tel:0034 911 66 66 66"));
+-        startActivity(phoneIntent);
+-    }
+     private void viajarPerfil() {
+         NavController nav = NavHostFragment.findNavController(this);
+         nav.navigate(R.id.action_configuracion_to_perfil);
+Index: app/src/main/java/com/example/temple_body/Login/informacion.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.temple_body.Login;\r\n\r\nimport android.Manifest;\r\nimport android.content.Context;\r\nimport android.content.Intent;\r\nimport android.content.SharedPreferences;\r\nimport android.content.pm.PackageManager;\r\nimport android.net.Uri;\r\nimport android.os.Bundle;\r\nimport android.view.LayoutInflater;\r\nimport android.view.View;\r\nimport android.view.ViewGroup;\r\nimport android.widget.Button;\r\nimport android.widget.ProgressBar;\r\n\r\nimport androidx.activity.result.ActivityResultLauncher;\r\nimport androidx.activity.result.contract.ActivityResultContracts;\r\nimport androidx.appcompat.app.AlertDialog;\r\nimport androidx.core.content.ContextCompat;\r\nimport androidx.fragment.app.Fragment;\r\nimport androidx.fragment.app.FragmentManager;\r\nimport androidx.fragment.app.FragmentTransaction;\r\nimport androidx.navigation.NavController;\r\nimport androidx.navigation.fragment.NavHostFragment;\r\n\r\nimport com.example.temple_body.Login.fragmentsInformacion.fragCondicionesUso;\r\nimport com.example.temple_body.Login.fragmentsInformacion.fragPoliticasInformacion;\r\nimport com.example.temple_body.Login.fragmentsInformacion.fragReglamento;\r\nimport com.example.temple_body.R;\r\npublic class informacion extends Fragment {\r\n\r\n    Button btInformacion, btCondiciones, btReglamento, btRegresar, btTelegram;\r\n    ActivityResultLauncher<String> requestPermissionLauncher;\r\n\r\n    @Override\r\n    public View onCreateView(LayoutInflater inflater, ViewGroup container,\r\n                             Bundle savedInstanceState) {\r\n        // Inflate the layout for this fragment\r\n        View layout = inflater.inflate(R.layout.fragment_informacion, container, false);\r\n\r\n        btInformacion = layout.findViewById(R.id.AIbtInformacionLegal);\r\n        btReglamento = layout.findViewById(R.id.AIbtReglamento);\r\n        btCondiciones = layout.findViewById(R.id.AIbtCondicionesUso);\r\n        btRegresar = layout.findViewById(R.id.AIbtRegresar);\r\n        btTelegram = layout.findViewById(R.id.AIbtTelegram);\r\n        guardarLayoutLogin();\r\n        requestPermissionLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {\r\n            if (isGranted) {\r\n                // Permission is granted. Continue the action or workflow in your\r\n                // app.\r\n                requestTelegram();\r\n            } else {\r\n                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());\r\n                builder.setTitle(\"Error\")\r\n                        .setMessage(\"Necesitamos que acepte los permisos para poder realizar la accion.\")\r\n                        .setPositiveButton(\"Aceptar\", null);\r\n\r\n                AlertDialog dialog = builder.create();\r\n                dialog.show();\r\n            }\r\n        });\r\n       btInformacion.setOnClickListener(v -> {\r\n           viajarInformacion();\r\n       });\r\n\r\n        btTelegram.setOnClickListener(v -> {\r\n            if (ContextCompat.checkSelfPermission(\r\n                    getActivity(), Manifest.permission.SEND_SMS) ==\r\n                    PackageManager.PERMISSION_GRANTED) {\r\n                requestTelegram();\r\n            } else {\r\n                requestPermissionLauncher.launch(Manifest.permission.SEND_SMS);\r\n            }\r\n        });\r\n\r\n        btReglamento.setOnClickListener(v -> {\r\n            viajarReglamento();\r\n        });\r\n\r\n        btCondiciones.setOnClickListener(v -> {\r\n            viajarCondiciones();\r\n        });\r\n\r\n        btRegresar.setOnClickListener(v -> {\r\n            viajarPerfil();\r\n        });\r\n\r\n\r\n\r\n        return layout;\r\n    }\r\n    private void requestTelegram() {\r\n        try {\r\n            String toNumber = \"0034 644516218\";\r\n\r\n            Intent sendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse(\"smsto:\" + toNumber));\r\n            sendIntent.setPackage(\"com.telegram\");\r\n            startActivity(sendIntent);\r\n        } catch (Exception e) {\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n    private void viajarInformacion(){\r\n        NavController nav= NavHostFragment.findNavController(this);\r\n        nav.navigate(R.id.action_informacion_to_fragPoliticasInformacion);\r\n    }\r\n    private void viajarCondiciones() {\r\n        NavController nav = NavHostFragment.findNavController(this);\r\n        nav.navigate(R.id.action_informacion_to_fragCondicionesUso);\r\n    }\r\n    private void viajarReglamento() {\r\n        NavController nav = NavHostFragment.findNavController(this);\r\n        nav.navigate(R.id.action_informacion_to_fragReglamento);\r\n    }\r\n    private void viajarPerfil() {\r\n        NavController nav = NavHostFragment.findNavController(this);\r\n        nav.navigate(R.id.action_informacion_to_perfil);\r\n    }\r\n    private void guardarLayoutLogin() {\r\n        SharedPreferences sharedPreferences = requireContext().getSharedPreferences(\"cargaLayoutLogin\", Context.MODE_PRIVATE);\r\n        SharedPreferences.Editor editor=sharedPreferences.edit();\r\n        editor.putInt(\"cargaLayoutLogin\", 4);\r\n        editor.apply();\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/example/temple_body/Login/informacion.java b/app/src/main/java/com/example/temple_body/Login/informacion.java
+--- a/app/src/main/java/com/example/temple_body/Login/informacion.java	(revision ad8cb50f01c384eb0fb7bec66b836bc3b7be95f7)
++++ b/app/src/main/java/com/example/temple_body/Login/informacion.java	(date 1718188249218)
+@@ -1,35 +1,26 @@
+ package com.example.temple_body.Login;
+ 
+-import android.Manifest;
+ import android.content.Context;
+ import android.content.Intent;
+ import android.content.SharedPreferences;
+-import android.content.pm.PackageManager;
+ import android.net.Uri;
+ import android.os.Bundle;
+ import android.view.LayoutInflater;
+ import android.view.View;
+ import android.view.ViewGroup;
+ import android.widget.Button;
+-import android.widget.ProgressBar;
+ 
+ import androidx.activity.result.ActivityResultLauncher;
+ import androidx.activity.result.contract.ActivityResultContracts;
+ import androidx.appcompat.app.AlertDialog;
+-import androidx.core.content.ContextCompat;
+ import androidx.fragment.app.Fragment;
+-import androidx.fragment.app.FragmentManager;
+-import androidx.fragment.app.FragmentTransaction;
+ import androidx.navigation.NavController;
+ import androidx.navigation.fragment.NavHostFragment;
+ 
+-import com.example.temple_body.Login.fragmentsInformacion.fragCondicionesUso;
+-import com.example.temple_body.Login.fragmentsInformacion.fragPoliticasInformacion;
+-import com.example.temple_body.Login.fragmentsInformacion.fragReglamento;
+ import com.example.temple_body.R;
+ public class informacion extends Fragment {
+ 
+-    Button btInformacion, btCondiciones, btReglamento, btRegresar, btTelegram;
++    Button btInformacion, btCondiciones, btReglamento, btRegresar, btComunidad;
+     ActivityResultLauncher<String> requestPermissionLauncher;
+ 
+     @Override
+@@ -42,35 +33,15 @@
+         btReglamento = layout.findViewById(R.id.AIbtReglamento);
+         btCondiciones = layout.findViewById(R.id.AIbtCondicionesUso);
+         btRegresar = layout.findViewById(R.id.AIbtRegresar);
+-        btTelegram = layout.findViewById(R.id.AIbtTelegram);
++        btComunidad = layout.findViewById(R.id.AIbtTelegram);
+         guardarLayoutLogin();
+-        requestPermissionLauncher = registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
+-            if (isGranted) {
+-                // Permission is granted. Continue the action or workflow in your
+-                // app.
+-                requestTelegram();
+-            } else {
+-                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+-                builder.setTitle("Error")
+-                        .setMessage("Necesitamos que acepte los permisos para poder realizar la accion.")
+-                        .setPositiveButton("Aceptar", null);
+ 
+-                AlertDialog dialog = builder.create();
+-                dialog.show();
+-            }
+-        });
+        btInformacion.setOnClickListener(v -> {
+            viajarInformacion();
+        });
+ 
+-        btTelegram.setOnClickListener(v -> {
+-            if (ContextCompat.checkSelfPermission(
+-                    getActivity(), Manifest.permission.SEND_SMS) ==
+-                    PackageManager.PERMISSION_GRANTED) {
+-                requestTelegram();
+-            } else {
+-                requestPermissionLauncher.launch(Manifest.permission.SEND_SMS);
+-            }
++        btComunidad.setOnClickListener(v -> {
++            requestComunity();
+         });
+ 
+         btReglamento.setOnClickListener(v -> {
+@@ -89,16 +60,11 @@
+ 
+         return layout;
+     }
+-    private void requestTelegram() {
+-        try {
+-            String toNumber = "0034 644516218";
+-
+-            Intent sendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:" + toNumber));
+-            sendIntent.setPackage("com.telegram");
+-            startActivity(sendIntent);
+-        } catch (Exception e) {
+-            e.printStackTrace();
+-        }
++    private void requestComunity() {
++        String enlace="https://discord.gg/khBQwgRJ";
++        Intent intent = new Intent(Intent.ACTION_VIEW);
++        intent.setData(Uri.parse(enlace));
++        startActivity(intent);
+     }
+     private void viajarInformacion(){
+         NavController nav= NavHostFragment.findNavController(this);
+Index: app/src/main/res/layout/fragment_informacion.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<FrameLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".Login.informacion\">\r\n\r\n    <androidx.constraintlayout.widget.ConstraintLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\">\r\n\r\n        <TextView\r\n            android:id=\"@+id/tvIVlogo\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"0dp\"\r\n            android:background=\"#000000\"\r\n            android:text=\"\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n        <ImageView\r\n            android:id=\"@+id/iv_logo\"\r\n            android:layout_width=\"305dp\"\r\n            android:layout_height=\"145dp\"\r\n            android:layout_marginTop=\"16dp\"\r\n            android:layout_marginBottom=\"16dp\"\r\n            android:adjustViewBounds=\"true\"\r\n            android:scaleType=\"fitCenter\"\r\n            android:src=\"@drawable/templebody\"\r\n            app:layout_constraintBottom_toBottomOf=\"@+id/tvIVlogo\"\r\n            app:layout_constraintEnd_toEndOf=\"@+id/tvIVlogo\"\r\n            app:layout_constraintStart_toStartOf=\"@+id/tvIVlogo\"\r\n            app:layout_constraintTop_toTopOf=\"@+id/tvIVlogo\"\r\n            app:layout_constraintVertical_bias=\"0.0\"\r\n            app:srcCompat=\"@drawable/templebody\" />\r\n    </androidx.constraintlayout.widget.ConstraintLayout>\r\n\r\n    <androidx.constraintlayout.widget.ConstraintLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:layout_marginTop=\"150dp\"\r\n        android:background=\"@drawable/icono3\"\r\n        tools:context=\".InfromacionActivity\">\r\n\r\n        <Button\r\n            android:id=\"@+id/AIbtInformacionLegal\"\r\n            style=\"@style/Widget.MaterialComponents.Button.OutlinedButton\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"60dp\"\r\n            android:backgroundTint=\"#4B8C8C8C\"\r\n            android:text=\"Legal Information and Privacy Policies\"\r\n            android:textAlignment=\"viewStart\"\r\n            android:textColor=\"#FFFFFF\"\r\n            android:textSize=\"16sp\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintHorizontal_bias=\"0.0\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toTopOf=\"parent\"\r\n            app:layout_constraintVertical_bias=\"0.20\" />\r\n\r\n        <Button\r\n            android:id=\"@+id/AIbtCondicionesUso\"\r\n            style=\"@style/Widget.MaterialComponents.Button.OutlinedButton\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"60dp\"\r\n            android:layout_marginTop=\"8dp\"\r\n            android:backgroundTint=\"#4B8C8C8C\"\r\n            android:text=\"Terms of use\"\r\n            android:textAlignment=\"viewStart\"\r\n            android:textColor=\"#FFFFFF\"\r\n            android:textSize=\"16sp\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintHorizontal_bias=\"1.0\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/AIbtInformacionLegal\"\r\n            app:layout_constraintVertical_bias=\"0.0\" />\r\n\r\n        <Button\r\n            android:id=\"@+id/AIbtReglamento\"\r\n            style=\"@style/Widget.MaterialComponents.Button.OutlinedButton\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"60dp\"\r\n            android:layout_marginTop=\"8dp\"\r\n            android:backgroundTint=\"#4B8C8C8C\"\r\n            android:text=\" EU Regulation 2021/1232\"\r\n            android:textAlignment=\"viewStart\"\r\n            android:textColor=\"#FFFFFF\"\r\n            android:textSize=\"16sp\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintHorizontal_bias=\"1.0\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/AIbtCondicionesUso\"\r\n            app:layout_constraintVertical_bias=\"0.0\" />\r\n\r\n        <Button\r\n            android:id=\"@+id/AIbtTelegram\"\r\n            style=\"@style/Widget.MaterialComponents.Button.OutlinedButton\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"60dp\"\r\n            android:layout_marginTop=\"8dp\"\r\n            android:backgroundTint=\"#4B8C8C8C\"\r\n            android:text=\"Telegram\"\r\n            android:textAlignment=\"viewStart\"\r\n            android:textColor=\"#FFFFFF\"\r\n            android:textSize=\"16sp\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintHorizontal_bias=\"1.0\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/AIbtReglamento\"\r\n            app:layout_constraintVertical_bias=\"0.0\" />\r\n\r\n        <Button\r\n            android:id=\"@+id/AIbtRegresar\"\r\n            style=\"@style/Widget.MaterialComponents.Button.OutlinedButton\"\r\n            android:layout_width=\"280dp\"\r\n            android:layout_height=\"50dp\"\r\n            android:text=\"Return\"\r\n            android:textColor=\"#000000\"\r\n            android:textSize=\"18sp\"\r\n            app:backgroundTint=\"#F44336\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/AIbtReglamento\" />\r\n\r\n    </androidx.constraintlayout.widget.ConstraintLayout>\r\n</FrameLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_informacion.xml b/app/src/main/res/layout/fragment_informacion.xml
+--- a/app/src/main/res/layout/fragment_informacion.xml	(revision ad8cb50f01c384eb0fb7bec66b836bc3b7be95f7)
++++ b/app/src/main/res/layout/fragment_informacion.xml	(date 1718188249221)
+@@ -6,115 +6,91 @@
+     android:layout_height="match_parent"
+     tools:context=".Login.informacion">
+ 
+-    <androidx.constraintlayout.widget.ConstraintLayout
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content">
+-
+-        <TextView
+-            android:id="@+id/tvIVlogo"
+-            android:layout_width="match_parent"
+-            android:layout_height="0dp"
+-            android:background="#000000"
+-            android:text=""
+-            app:layout_constraintBottom_toBottomOf="parent"
+-            app:layout_constraintEnd_toEndOf="parent"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toTopOf="parent" />
+-
+-        <ImageView
+-            android:id="@+id/iv_logo"
+-            android:layout_width="305dp"
+-            android:layout_height="145dp"
+-            android:layout_marginTop="16dp"
+-            android:layout_marginBottom="16dp"
+-            android:adjustViewBounds="true"
+-            android:scaleType="fitCenter"
+-            android:src="@drawable/templebody"
+-            app:layout_constraintBottom_toBottomOf="@+id/tvIVlogo"
+-            app:layout_constraintEnd_toEndOf="@+id/tvIVlogo"
+-            app:layout_constraintStart_toStartOf="@+id/tvIVlogo"
+-            app:layout_constraintTop_toTopOf="@+id/tvIVlogo"
+-            app:layout_constraintVertical_bias="0.0"
+-            app:srcCompat="@drawable/templebody" />
+-    </androidx.constraintlayout.widget.ConstraintLayout>
+-
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+-        android:layout_marginTop="150dp"
+         android:background="@drawable/icono3"
+         tools:context=".InfromacionActivity">
+ 
++        <TextView
++            android:id="@+id/TVTituloHistorial"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:background="@drawable/border_color_encabezado"
++            android:paddingLeft="8dp"
++            android:paddingTop="8dp"
++            android:paddingRight="8dp"
++            android:paddingBottom="8dp"
++            android:text="INFORMATION"
++            android:textAlignment="center"
++            android:textAllCaps="true"
++            android:textColor="#FFC107"
++            android:textSize="24sp"
++            android:textStyle="bold"
++            app:layout_constraintBottom_toTopOf="@+id/AIbtInformacionLegal"
++            app:layout_constraintEnd_toEndOf="@+id/AIbtInformacionLegal"
++            app:layout_constraintStart_toStartOf="@+id/AIbtInformacionLegal"
++            app:layout_constraintTop_toTopOf="parent" />
++
+         <Button
+             android:id="@+id/AIbtInformacionLegal"
+             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+-            android:layout_width="0dp"
+-            android:layout_height="60dp"
++            android:layout_width="315dp"
++            android:layout_height="61dp"
+             android:backgroundTint="#4B8C8C8C"
+             android:text="Legal Information and Privacy Policies"
+             android:textAlignment="viewStart"
+             android:textColor="#FFFFFF"
+             android:textSize="16sp"
+-            app:layout_constraintBottom_toBottomOf="parent"
+-            app:layout_constraintEnd_toEndOf="parent"
+-            app:layout_constraintHorizontal_bias="0.0"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toTopOf="parent"
+-            app:layout_constraintVertical_bias="0.20" />
++            app:layout_constraintBottom_toTopOf="@+id/AIbtCondicionesUso"
++            app:layout_constraintEnd_toEndOf="@+id/AIbtCondicionesUso"
++            app:layout_constraintStart_toStartOf="@+id/AIbtCondicionesUso"
++            app:layout_constraintTop_toBottomOf="@+id/TVTituloHistorial" />
+ 
+         <Button
+             android:id="@+id/AIbtCondicionesUso"
+             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+-            android:layout_width="0dp"
+-            android:layout_height="60dp"
+-            android:layout_marginTop="8dp"
++            android:layout_width="315dp"
++            android:layout_height="61dp"
+             android:backgroundTint="#4B8C8C8C"
+             android:text="Terms of use"
+             android:textAlignment="viewStart"
+             android:textColor="#FFFFFF"
+             android:textSize="16sp"
+-            app:layout_constraintBottom_toBottomOf="parent"
+-            app:layout_constraintEnd_toEndOf="parent"
+-            app:layout_constraintHorizontal_bias="1.0"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toBottomOf="@+id/AIbtInformacionLegal"
+-            app:layout_constraintVertical_bias="0.0" />
++            app:layout_constraintBottom_toTopOf="@+id/AIbtReglamento"
++            app:layout_constraintEnd_toEndOf="@+id/AIbtReglamento"
++            app:layout_constraintStart_toStartOf="@+id/AIbtReglamento"
++            app:layout_constraintTop_toBottomOf="@+id/AIbtInformacionLegal" />
+ 
+         <Button
+             android:id="@+id/AIbtReglamento"
+             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+-            android:layout_width="0dp"
+-            android:layout_height="60dp"
+-            android:layout_marginTop="8dp"
++            android:layout_width="315dp"
++            android:layout_height="61dp"
+             android:backgroundTint="#4B8C8C8C"
+             android:text=" EU Regulation 2021/1232"
+             android:textAlignment="viewStart"
+             android:textColor="#FFFFFF"
+             android:textSize="16sp"
+-            app:layout_constraintBottom_toBottomOf="parent"
+-            app:layout_constraintEnd_toEndOf="parent"
+-            app:layout_constraintHorizontal_bias="1.0"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toBottomOf="@+id/AIbtCondicionesUso"
+-            app:layout_constraintVertical_bias="0.0" />
++            app:layout_constraintBottom_toTopOf="@+id/AIbtTelegram"
++            app:layout_constraintEnd_toEndOf="@+id/AIbtTelegram"
++            app:layout_constraintStart_toStartOf="@+id/AIbtTelegram"
++            app:layout_constraintTop_toBottomOf="@+id/AIbtCondicionesUso" />
+ 
+         <Button
+             android:id="@+id/AIbtTelegram"
+             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+-            android:layout_width="0dp"
+-            android:layout_height="60dp"
+-            android:layout_marginTop="8dp"
++            android:layout_width="324dp"
++            android:layout_height="61dp"
+             android:backgroundTint="#4B8C8C8C"
+-            android:text="Telegram"
++            android:text="Comunity"
+             android:textAlignment="viewStart"
+             android:textColor="#FFFFFF"
+             android:textSize="16sp"
+-            app:layout_constraintBottom_toBottomOf="parent"
+-            app:layout_constraintEnd_toEndOf="parent"
+-            app:layout_constraintHorizontal_bias="1.0"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toBottomOf="@+id/AIbtReglamento"
+-            app:layout_constraintVertical_bias="0.0" />
++            app:layout_constraintBottom_toTopOf="@+id/AIbtRegresar"
++            app:layout_constraintEnd_toEndOf="@+id/AIbtRegresar"
++            app:layout_constraintStart_toStartOf="@+id/AIbtRegresar"
++            app:layout_constraintTop_toBottomOf="@+id/AIbtReglamento" />
+ 
+         <Button
+             android:id="@+id/AIbtRegresar"
+@@ -128,7 +104,7 @@
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toBottomOf="@+id/AIbtReglamento" />
++            app:layout_constraintTop_toBottomOf="@+id/AIbtTelegram" />
+ 
+     </androidx.constraintlayout.widget.ConstraintLayout>
+ </FrameLayout>
+\ No newline at end of file
+Index: app/src/main/res/layout/fragment_configuracion.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<FrameLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".Login.configuracion\">\r\n\r\n    <androidx.constraintlayout.widget.ConstraintLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\">\r\n\r\n        <TextView\r\n            android:id=\"@+id/tvIVlogo\"\r\n            android:layout_width=\"match_parent\"\r\n            android:layout_height=\"0dp\"\r\n            android:background=\"#000000\"\r\n            android:text=\"\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toTopOf=\"parent\" />\r\n\r\n        <ImageView\r\n            android:id=\"@+id/iv_logo\"\r\n            android:layout_width=\"305dp\"\r\n            android:layout_height=\"145dp\"\r\n            android:layout_marginTop=\"16dp\"\r\n            android:layout_marginBottom=\"16dp\"\r\n            android:adjustViewBounds=\"true\"\r\n            android:scaleType=\"fitCenter\"\r\n            android:src=\"@drawable/templebody\"\r\n            app:layout_constraintBottom_toBottomOf=\"@+id/tvIVlogo\"\r\n            app:layout_constraintEnd_toEndOf=\"@+id/tvIVlogo\"\r\n            app:layout_constraintStart_toStartOf=\"@+id/tvIVlogo\"\r\n            app:layout_constraintTop_toTopOf=\"@+id/tvIVlogo\"\r\n            app:layout_constraintVertical_bias=\"0.0\"\r\n            app:srcCompat=\"@drawable/templebody\" />\r\n    </androidx.constraintlayout.widget.ConstraintLayout>\r\n\r\n    <androidx.constraintlayout.widget.ConstraintLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\"\r\n        android:layout_marginTop=\"150dp\"\r\n        android:background=\"@drawable/icono3\"\r\n        tools:context=\".ConfiguracionActivity\">\r\n\r\n        <Button\r\n            android:id=\"@+id/ACbtInformacionProblema\"\r\n            style=\"@style/Widget.MaterialComponents.Button.OutlinedButton\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"60dp\"\r\n            android:backgroundTint=\"#4B8C8C8C\"\r\n            android:text=\"Report a problem\"\r\n            android:textAlignment=\"viewStart\"\r\n            android:textColor=\"#FFFFFF\"\r\n            android:textSize=\"16sp\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintHorizontal_bias=\"0.0\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toTopOf=\"parent\"\r\n            app:layout_constraintVertical_bias=\"0.15\" />\r\n\r\n        <Button\r\n            android:id=\"@+id/ACbtActulizarAPP\"\r\n            style=\"@style/Widget.MaterialComponents.Button.OutlinedButton\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"60dp\"\r\n            android:layout_marginTop=\"8dp\"\r\n            android:backgroundTint=\"#4B8C8C8C\"\r\n            android:text=\"upgrade app\"\r\n            android:textAlignment=\"viewStart\"\r\n            android:textColor=\"#FFFFFF\"\r\n            android:textSize=\"16sp\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintHorizontal_bias=\"1.0\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/ACbtInformacionProblema\"\r\n            app:layout_constraintVertical_bias=\"0.0\" />\r\n\r\n        <ProgressBar\r\n            android:id=\"@+id/ACpbActualizacion\"\r\n            style=\"?android:attr/progressBarStyle\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:layout_marginTop=\"8dp\"\r\n            android:indeterminateBehavior=\"repeat\"\r\n            android:indeterminateTint=\"#FFC107\"\r\n            app:layout_constraintBottom_toBottomOf=\"@+id/ACbtActulizarAPP\"\r\n            app:layout_constraintEnd_toEndOf=\"@+id/ACbtActulizarAPP\"\r\n            app:layout_constraintStart_toStartOf=\"@+id/ACbtActulizarAPP\"\r\n            app:layout_constraintTop_toTopOf=\"@+id/ACbtActulizarAPP\" />\r\n\r\n\r\n        <Button\r\n            android:id=\"@+id/ACbtProblemasCuenta\"\r\n            style=\"@style/Widget.MaterialComponents.Button.OutlinedButton\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"60dp\"\r\n            android:layout_marginTop=\"8dp\"\r\n            android:backgroundTint=\"#4B8C8C8C\"\r\n            android:text=\"account problems\"\r\n            android:textAlignment=\"viewStart\"\r\n            android:textColor=\"#FFFFFF\"\r\n            android:textSize=\"16sp\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintHorizontal_bias=\"1.0\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/ACbtActulizarAPP\"\r\n            app:layout_constraintVertical_bias=\"0.0\" />\r\n\r\n        <Button\r\n            android:id=\"@+id/ACbtModificarDatos\"\r\n            style=\"@style/Widget.MaterialComponents.Button.OutlinedButton\"\r\n            android:layout_width=\"0dp\"\r\n            android:layout_height=\"60dp\"\r\n            android:layout_marginTop=\"8dp\"\r\n            android:backgroundTint=\"#4B8C8C8C\"\r\n            android:text=\"modify personal data\"\r\n            android:textAlignment=\"viewStart\"\r\n            android:textColor=\"#FFFFFF\"\r\n            android:textSize=\"16sp\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintHorizontal_bias=\"1.0\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/ACbtProblemasCuenta\"\r\n            app:layout_constraintVertical_bias=\"0.0\" />\r\n\r\n        <Button\r\n            android:id=\"@+id/ACbtRegresar\"\r\n            style=\"@style/Widget.MaterialComponents.Button.OutlinedButton\"\r\n            android:layout_width=\"280dp\"\r\n            android:layout_height=\"50dp\"\r\n            android:text=\"return\"\r\n            android:textColor=\"#000000\"\r\n            android:textSize=\"18sp\"\r\n            app:backgroundTint=\"#F44336\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintHorizontal_bias=\"0.5\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toBottomOf=\"@+id/ACbtModificarDatos\"\r\n            app:layout_constraintVertical_bias=\"0.25\" />\r\n\r\n    </androidx.constraintlayout.widget.ConstraintLayout>\r\n\r\n</FrameLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_configuracion.xml b/app/src/main/res/layout/fragment_configuracion.xml
+--- a/app/src/main/res/layout/fragment_configuracion.xml	(revision ad8cb50f01c384eb0fb7bec66b836bc3b7be95f7)
++++ b/app/src/main/res/layout/fragment_configuracion.xml	(date 1718188249219)
+@@ -6,145 +6,76 @@
+     android:layout_height="match_parent"
+     tools:context=".Login.configuracion">
+ 
+-    <androidx.constraintlayout.widget.ConstraintLayout
+-        android:layout_width="match_parent"
+-        android:layout_height="wrap_content">
+-
+-        <TextView
+-            android:id="@+id/tvIVlogo"
+-            android:layout_width="match_parent"
+-            android:layout_height="0dp"
+-            android:background="#000000"
+-            android:text=""
+-            app:layout_constraintBottom_toBottomOf="parent"
+-            app:layout_constraintEnd_toEndOf="parent"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toTopOf="parent" />
+-
+-        <ImageView
+-            android:id="@+id/iv_logo"
+-            android:layout_width="305dp"
+-            android:layout_height="145dp"
+-            android:layout_marginTop="16dp"
+-            android:layout_marginBottom="16dp"
+-            android:adjustViewBounds="true"
+-            android:scaleType="fitCenter"
+-            android:src="@drawable/templebody"
+-            app:layout_constraintBottom_toBottomOf="@+id/tvIVlogo"
+-            app:layout_constraintEnd_toEndOf="@+id/tvIVlogo"
+-            app:layout_constraintStart_toStartOf="@+id/tvIVlogo"
+-            app:layout_constraintTop_toTopOf="@+id/tvIVlogo"
+-            app:layout_constraintVertical_bias="0.0"
+-            app:srcCompat="@drawable/templebody" />
+-    </androidx.constraintlayout.widget.ConstraintLayout>
+-
+     <androidx.constraintlayout.widget.ConstraintLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+-        android:layout_marginTop="150dp"
+         android:background="@drawable/icono3"
+         tools:context=".ConfiguracionActivity">
+ 
++
+         <Button
+-            android:id="@+id/ACbtInformacionProblema"
++            android:id="@+id/ACbtRegresar"
+             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+-            android:layout_width="0dp"
+-            android:layout_height="60dp"
+-            android:backgroundTint="#4B8C8C8C"
+-            android:text="Report a problem"
+-            android:textAlignment="viewStart"
+-            android:textColor="#FFFFFF"
+-            android:textSize="16sp"
++            android:layout_width="280dp"
++            android:layout_height="50dp"
++            android:text="return"
++            android:textColor="#000000"
++            android:textSize="18sp"
++            app:backgroundTint="#F44336"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+-            app:layout_constraintHorizontal_bias="0.0"
+             app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toTopOf="parent"
+-            app:layout_constraintVertical_bias="0.15" />
++            app:layout_constraintTop_toBottomOf="@+id/ACbtModificarDatos" />
+ 
+         <Button
+-            android:id="@+id/ACbtActulizarAPP"
++            android:id="@+id/ACbtModificarDatos"
+             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+-            android:layout_width="0dp"
+-            android:layout_height="60dp"
+-            android:layout_marginTop="8dp"
++            android:layout_width="315dp"
++            android:layout_height="61dp"
+             android:backgroundTint="#4B8C8C8C"
+-            android:text="upgrade app"
++            android:text="modify Password"
+             android:textAlignment="viewStart"
+             android:textColor="#FFFFFF"
+             android:textSize="16sp"
+-            app:layout_constraintBottom_toBottomOf="parent"
+-            app:layout_constraintEnd_toEndOf="parent"
+-            app:layout_constraintHorizontal_bias="1.0"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toBottomOf="@+id/ACbtInformacionProblema"
+-            app:layout_constraintVertical_bias="0.0" />
+-
+-        <ProgressBar
+-            android:id="@+id/ACpbActualizacion"
+-            style="?android:attr/progressBarStyle"
+-            android:layout_width="wrap_content"
+-            android:layout_height="wrap_content"
+-            android:layout_marginTop="8dp"
+-            android:indeterminateBehavior="repeat"
+-            android:indeterminateTint="#FFC107"
+-            app:layout_constraintBottom_toBottomOf="@+id/ACbtActulizarAPP"
+-            app:layout_constraintEnd_toEndOf="@+id/ACbtActulizarAPP"
+-            app:layout_constraintStart_toStartOf="@+id/ACbtActulizarAPP"
+-            app:layout_constraintTop_toTopOf="@+id/ACbtActulizarAPP" />
+-
++            app:layout_constraintBottom_toTopOf="@+id/ACbtRegresar"
++            app:layout_constraintEnd_toEndOf="@+id/ACbtRegresar"
++            app:layout_constraintStart_toStartOf="@+id/ACbtRegresar"
++            app:layout_constraintTop_toBottomOf="@+id/ACbtInformacionProblema" />
+ 
+         <Button
+-            android:id="@+id/ACbtProblemasCuenta"
++            android:id="@+id/ACbtInformacionProblema"
+             style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+-            android:layout_width="0dp"
+-            android:layout_height="60dp"
+-            android:layout_marginTop="8dp"
++            android:layout_width="315dp"
++            android:layout_height="61dp"
+             android:backgroundTint="#4B8C8C8C"
+-            android:text="account problems"
++            android:text="Report a problem"
+             android:textAlignment="viewStart"
+             android:textColor="#FFFFFF"
+             android:textSize="16sp"
+-            app:layout_constraintBottom_toBottomOf="parent"
+-            app:layout_constraintEnd_toEndOf="parent"
+-            app:layout_constraintHorizontal_bias="1.0"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toBottomOf="@+id/ACbtActulizarAPP"
+-            app:layout_constraintVertical_bias="0.0" />
++            app:layout_constraintBottom_toTopOf="@+id/ACbtModificarDatos"
++            app:layout_constraintEnd_toEndOf="@+id/ACbtModificarDatos"
++            app:layout_constraintStart_toStartOf="@+id/ACbtModificarDatos"
++            app:layout_constraintTop_toBottomOf="@+id/TVTituloHistorial" />
+ 
+-        <Button
+-            android:id="@+id/ACbtModificarDatos"
+-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+-            android:layout_width="0dp"
+-            android:layout_height="60dp"
+-            android:layout_marginTop="8dp"
+-            android:backgroundTint="#4B8C8C8C"
+-            android:text="modify personal data"
+-            android:textAlignment="viewStart"
+-            android:textColor="#FFFFFF"
+-            android:textSize="16sp"
+-            app:layout_constraintBottom_toBottomOf="parent"
+-            app:layout_constraintEnd_toEndOf="parent"
+-            app:layout_constraintHorizontal_bias="1.0"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toBottomOf="@+id/ACbtProblemasCuenta"
+-            app:layout_constraintVertical_bias="0.0" />
+-
+-        <Button
+-            android:id="@+id/ACbtRegresar"
+-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+-            android:layout_width="280dp"
+-            android:layout_height="50dp"
+-            android:text="return"
+-            android:textColor="#000000"
+-            android:textSize="18sp"
+-            app:backgroundTint="#F44336"
+-            app:layout_constraintBottom_toBottomOf="parent"
+-            app:layout_constraintEnd_toEndOf="parent"
+-            app:layout_constraintHorizontal_bias="0.5"
+-            app:layout_constraintStart_toStartOf="parent"
+-            app:layout_constraintTop_toBottomOf="@+id/ACbtModificarDatos"
+-            app:layout_constraintVertical_bias="0.25" />
++        <TextView
++            android:id="@+id/TVTituloHistorial"
++            android:layout_width="wrap_content"
++            android:layout_height="wrap_content"
++            android:background="@drawable/border_color_encabezado"
++            android:paddingLeft="8dp"
++            android:paddingTop="8dp"
++            android:paddingRight="8dp"
++            android:paddingBottom="8dp"
++            android:text="CONFIGURATION"
++            android:textAlignment="center"
++            android:textAllCaps="true"
++            android:textColor="#FFC107"
++            android:textSize="24sp"
++            android:textStyle="bold"
++            app:layout_constraintBottom_toTopOf="@+id/ACbtInformacionProblema"
++            app:layout_constraintEnd_toEndOf="@+id/ACbtInformacionProblema"
++            app:layout_constraintStart_toStartOf="@+id/ACbtInformacionProblema"
++            app:layout_constraintTop_toTopOf="parent" />
+ 
+     </androidx.constraintlayout.widget.ConstraintLayout>
+ 
+Index: app/src/main/res/layout/fragment_frag_condiciones_uso.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<FrameLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n    xmlns:tools=\"http://schemas.android.com/tools\"\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\"\r\n    tools:context=\".Login.fragmentsInformacion.fragCondicionesUso\">\r\n\r\n    <!-- TODO: Update blank fragment layout -->\r\n\r\n    <androidx.constraintlayout.widget.ConstraintLayout\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"match_parent\">\r\n\r\n        <androidx.core.widget.NestedScrollView\r\n            android:layout_width=\"332dp\"\r\n            android:layout_height=\"615dp\"\r\n            app:layout_constraintBottom_toTopOf=\"@+id/ACUbtRegreso\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintStart_toStartOf=\"parent\"\r\n            app:layout_constraintTop_toTopOf=\"parent\">\r\n\r\n            <TextView\r\n                android:id=\"@+id/fragmentCondicionesUso\"\r\n                android:layout_width=\"match_parent\"\r\n                android:layout_height=\"match_parent\"\r\n                android:background=\"#000000\"\r\n                android:text=\"Use terms\"\r\n                android:textAlignment=\"center\"\r\n                android:textColor=\"@color/white\"\r\n                android:textSize=\"24sp\"\r\n                android:textStyle=\"bold\" />\r\n        </androidx.core.widget.NestedScrollView>\r\n\r\n        <Button\r\n            android:id=\"@+id/ACUbtRegreso\"\r\n            style=\"@style/Widget.MaterialComponents.Button.OutlinedButton\"\r\n            android:layout_width=\"280dp\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:text=\"Return\"\r\n            android:textColor=\"#000000\"\r\n            android:textSize=\"18sp\"\r\n            app:backgroundTint=\"#F44336\"\r\n            app:layout_constraintBottom_toBottomOf=\"parent\"\r\n            app:layout_constraintEnd_toEndOf=\"parent\"\r\n            app:layout_constraintStart_toStartOf=\"parent\" />\r\n    </androidx.constraintlayout.widget.ConstraintLayout>\r\n\r\n</FrameLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/fragment_frag_condiciones_uso.xml b/app/src/main/res/layout/fragment_frag_condiciones_uso.xml
+--- a/app/src/main/res/layout/fragment_frag_condiciones_uso.xml	(revision ad8cb50f01c384eb0fb7bec66b836bc3b7be95f7)
++++ b/app/src/main/res/layout/fragment_frag_condiciones_uso.xml	(date 1718188249220)
+@@ -28,8 +28,7 @@
+                 android:text="Use terms"
+                 android:textAlignment="center"
+                 android:textColor="@color/white"
+-                android:textSize="24sp"
+-                android:textStyle="bold" />
++                android:textSize="24sp" />
+         </androidx.core.widget.NestedScrollView>
+ 
+         <Button

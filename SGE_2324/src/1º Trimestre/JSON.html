@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Nombre del profesor</p>
+    <input type="text" name="" id="textNombreProfesor">
+    <p>Nombre del 2º profesor</p>
+    <input type="text" name="" id="textNombreProfesor2">
+    <p>Nombre del 3º profesor</p>
+    <input type="text" name="" id="textNombreProfesor3">
+    <br>
+    <br>
+    <input type="button" value="Boton sacar JSON" id="button1"></input>
+    <input type="button" value="Boton meter JSON" id="button2"></input>
+</body>
+<script>
+    Clientes={
+   "Cliente":1233,
+    "Nombre":"Pedro Ramirez",
+    "Direccion":"Calle de la Piuleta 14",
+    "ultimo_pedido":{
+        "id_pedido":2,
+        "Productos":[
+            {
+                "id_producto":77,
+                "Nombre":"Impresora Laser",
+                "Fabricante":"Canon",
+                "Cantidad":3,
+                "precio_uni":80
+            },
+            {
+                "id_producto":22,
+                "Nombre":"Raton Gamer",
+                "Fabricante":"Longitech",
+                "Cantidad":2,
+                "precio_uni":55
+            }
+        ]
+    }
+}
+    document.getElementById("button1").addEventListener("click",SacarJSON)
+    var padre=document.getElementsByTagName("body")[0];
+    function SacarJSON(){
+        var textoInformacionCliente=document.createElement("p");
+        textoInformacionCliente.textContent=Clientes.Nombre+" que vive en la "+Clientes.Direccion+" ha comprado:";
+
+        var Comprado1=document.createElement("p")
+        Comprado1.textContent=Clientes.ultimo_pedido.Productos[0].Cantidad+" "+Clientes.ultimo_pedido.Productos[0].Nombre+" "+Clientes.ultimo_pedido.Productos[0].Fabricante
+        
+        var Comprado2=document.createElement("p")
+        Comprado2.textContent=Clientes.ultimo_pedido.Productos[1].Cantidad+" "+Clientes.ultimo_pedido.Productos[1].Nombre+" "+Clientes.ultimo_pedido.Productos[1].Fabricante
+        
+        var VentaTotal=document.createElement("p")
+        
+        var ImpresorasSuma=Clientes.ultimo_pedido.Productos[0].precio_uni*Clientes.ultimo_pedido.Productos[0].Cantidad;
+        
+        var RatonesSuma=Clientes.ultimo_pedido.Productos[1].precio_uni*Clientes.ultimo_pedido.Productos[1].Cantidad;
+        
+        var sumaTotal=ImpresorasSuma+RatonesSuma
+        
+        VentaTotal.textContent="ha costado: "+sumaTotal+"€"
+        
+        padre.appendChild(textoInformacionCliente);
+        
+        padre.appendChild(Comprado1);
+        
+        padre.appendChild(Comprado2);
+        
+        padre.appendChild(VentaTotal)
+    }
+
+    document.getElementsByTagName(button[1]).addEventListener("click",MeterJSON)
+    function MeterJSON(){
+        var textoProfesor1=document.getElementById("textNombreProfesor");
+        var textoProfesor2=document.getElementById("textNombreProfesor2");
+        var textoProfesor3=document.getElementById("textNombreProfesor3");
+        var profesor1 = {
+            "nombre": textoProfesor.value,
+            "dni": "123456789A",
+            "telefono": "987654321",
+            "departamento": "Matemáticas",
+            "asignaturas": ["Matemáticas", "Física"],
+            "proyectos": []
+        };
+
+        var profesor2 = {
+            "nombre": textoProfesor2.value,
+            "dni": "987654321B",
+            "telefono": "123456789",
+            "departamento": "Deportes",
+            "asignaturas": ["Educación Física"],
+            "proyectos": ["Convivencia", "Deportivo"]
+        };
+
+        var profesor3 = {
+            "nombre":  textoProfesor3.value,
+            "dni": "567890123C",
+            "telefono": "456789012",
+            "departamento": "Ciencias",
+            "asignaturas": ["Biología", "Química", "Física", "Matemáticas"],
+            "proyectos": ["Investigación"]
+        };
+        var profesor1Text=document.createElement("p");
+        var profesor2Text=document.createElement("p");
+        var profesor3Text=document.createElement("p");
+        profesor1Text.textContent=profesor1.nombre+" "+profesor1.dni+" "+profesor1.telefono+" "+profesor1.departamento+" "+profesor1.asignaturas[0]+" "+profesor1.asignaturas[1]
+        profesor2Text.textContent=profesor2.nombre+" "+profesor2.dni+" "+profesor2.telefono+" "+profesor2.departamento+" "+profesor2.asignaturas[0]+" "+profesor2.proyectos[0]+" "+profesor2.proyectos[1]
+        profesor3Text.textContent=profesor3.nombre+" "+profesor3.dni+" "+profesor3.telefono+" "+profesor3.departamento+" "+profesor3.asignaturas[0]+" "+profesor3.asignaturas[1]+" "+profesor3.asignaturas[2]+" "+profesor3.asignaturas[3]
+        padre.appendChild(profesor1Text);
+        padre.appendChild(profesor2Text);
+        padre.appendChild(profesor3Text);
+    }
+</script>
+</html>

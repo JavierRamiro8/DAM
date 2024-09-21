@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.CambioContrasena">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/icono3">
+
+        <TextView
+            android:id="@+id/ACPtvCambioPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Password Reset"
+            android:textColor="#FFC107"
+            android:textColorHint="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/ACPetMail"
+            app:layout_constraintEnd_toEndOf="@+id/ACPetMail"
+            app:layout_constraintStart_toStartOf="@+id/ACPetMail"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/ACPetMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="@color/material_dynamic_neutral90"
+            android:drawablePadding="10dp"
+            android:hint="E-Mail"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/ACPbtCambiar"
+            app:layout_constraintEnd_toEndOf="@+id/ACPbtCambiar"
+            app:layout_constraintStart_toStartOf="@+id/ACPbtCambiar"
+            app:layout_constraintTop_toBottomOf="@+id/ACPtvCambioPass" />
+
+        <Button
+            android:id="@+id/ACPbtCambiar"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:text="Reset Password"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="20sp"
+            app:backgroundTint="#FFC107"
+            app:layout_constraintBottom_toTopOf="@+id/ACPbtRegresar"
+            app:layout_constraintEnd_toEndOf="@+id/ACPbtRegresar"
+            app:layout_constraintStart_toStartOf="@+id/ACPbtRegresar"
+            app:layout_constraintTop_toBottomOf="@+id/ACPetMail" />
+
+        <Button
+            android:id="@+id/ACPbtRegresar"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:text="Return"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            android:textSize="16sp"
+            app:backgroundTint="#F44336"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ACPbtCambiar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

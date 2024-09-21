@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traductor</title>
+</head>
+<body>
+    Español: <input type="text" name="texto" id="txtOriginal">
+    Otro idioma: <input type="text" name="texto" id="textoModificado">
+    <input type="button" value="Aceptar" id="btAceptar">
+</body>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+    document.getElementById("btAceptar").addEventListener("click", traducir);
+
+    async function traducir() {
+        const textoOriginal = document.getElementById("txtOriginal").value;
+        const textoModificado = document.getElementById("textoModificado");
+
+        const apiKey = '6059c47febmsha84374a61d7abcfp11c6ebjsn74fbf3094e51'; // Reemplaza con tu propia clave de API de RapidAPI
+        const apiUrl = 'https://google-translate1.p.rapidapi.com/language/translate/v2';
+        const encodedParams = new URLSearchParams();
+        encodedParams.set('q', textoOriginal);
+        encodedParams.set('target', 'en'); // Cambia 'en' al idioma al que deseas traducir
+
+        const options = {
+            method: 'POST',
+            url: apiUrl,
+            headers: {
+                'content-type': 'application/x-www-form-urlencoded',
+                'x-rapidapi-key': apiKey,
+                'x-rapidapi-host': 'google-translate1.p.rapidapi.com',
+            },
+            data: encodedParams,
+        };
+        try {
+            const response = await axios.request(options);
+            const translatedText = response.data.data.translations[0].translatedText;
+            textoModificado.value = translatedText;
+        } catch (error) {
+            console.error(error);
+        }
+    }
+</script>
+</html>
+
+
+

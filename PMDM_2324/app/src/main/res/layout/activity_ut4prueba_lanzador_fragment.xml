@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ejerciciosBasicos.LanzadorFragment"
+    tools:layout_editor_absoluteX="2dp"
+    tools:layout_editor_absoluteY="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ejerciciosBasicos.LanzadorFragment"
+        tools:layout_editor_absoluteX="74dp"
+        tools:layout_editor_absoluteY="173dp">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView3"
+            android:name="com.example.pmdm_2324.ejerciciosBasicos.MiPrimerFragment"
+            android:layout_width="195dp"
+            android:layout_height="391dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/fragmentContainerView"
+            app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView2"
+            app:layout_constraintVertical_bias="0.954" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView"
+            android:name="com.example.pmdm_2324.ejerciciosBasicos.MiPrimerFragment"
+            android:layout_width="195dp"
+            android:layout_height="391dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView2"
+            android:name="com.example.pmdm_2324.ejerciciosBasicos.MiPrimerFragment"
+            android:layout_width="201dp"
+            android:layout_height="391dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView4"
+            android:name="com.example.pmdm_2324.ejerciciosBasicos.MiPrimerFragment"
+            android:layout_width="0dp"
+            android:layout_height="391dp"
+            app:layout_constraintBottom_toTopOf="@+id/fragmentContainerView"
+            app:layout_constraintEnd_toStartOf="@+id/fragmentContainerView2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

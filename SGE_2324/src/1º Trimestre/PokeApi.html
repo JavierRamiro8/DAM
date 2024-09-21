@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Data</title>
+</head>
+<body>
+    <div>
+        Pokemon: <input type="text" name="texto" id="textoPokemon">
+        <input type="button" value="Aceptar" id="botonAceptar">
+        <input type="button" value="MostrarPorPantalla" id="botonMostrarPorPantalla">
+        <input type="button" value="PokemonShiny" id="botonPokemonShiny">
+    </div>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Tipo</th>
+                    <th>Movimientos</th>
+                    <th>Estadísticas</th>
+                    <th>Sprite</th>
+                </tr>
+            </thead>
+            <tbody id="tablaDatos">
+            </tbody>
+        </table>
+    </div>
+</body>
+<script>
+    document.getElementById("botonAceptar").addEventListener("click", cambiarPokemon);
+
+    function cambiarPokemon() {
+        var texto = document.getElementById("textoPokemon").value;
+        var enlace = 'https://pokeapi.co/api/v2/pokemon/' + texto;
+
+        fetch(enlace)
+            .then(response => response.json())
+            .then(data => {
+                mostrarDatosEnTabla(data);
+                imprimirDatosEnConsola(data);
+            })
+            .catch(error => {
+                console.error("Error al cargar los datos del Pokémon:", error);
+            });
+    }
+
+    document.getElementById("botonMostrarPorPantalla").addEventListener("click", mostrarDatosEnTabla);
+
+    function mostrarDatosEnTabla(data) {
+        var tabla = document.getElementById("tablaDatos");
+        tabla.innerHTML = ""; // Limpiar la tabla antes de agregar nuevos datos
+
+        // Crear una fila para el Pokémon
+        var fila = document.createElement("tr");
+
+        // Nombre del Pokémon
+        var celdaNombre = document.createElement("td");
+        celdaNombre.textContent = data.name;
+        fila.appendChild(celdaNombre);
+
+        // Tipo del Pokémon (solo el primer tipo)
+        var celdaTipo = document.createElement("td");
+        celdaTipo.textContent = data.types[0].type.name;
+        fila.appendChild(celdaTipo);
+
+        // Movimientos del Pokémon (los primeros 5)
+        var celdaMovimientos = document.createElement("td");
+        var movimientos = data.moves.slice(0, 5).map(move => move.move.name);
+        celdaMovimientos.textContent = movimientos;
+        fila.appendChild(celdaMovimientos);
+
+        // Estadísticas del Pokémon (los primeros 6)
+        var celdaEstadisticas = document.createElement("td");
+        var estadisticas = data.stats.slice(0, 6).map(stat => stat.stat.name + ": " + stat.base_stat).join("<br>");
+        celdaEstadisticas.innerHTML = estadisticas;
+        fila.appendChild(celdaEstadisticas);
+
+        // Sprite del Pokémon
+        var celdaSprite = document.createElement("td");
+        var imagen = document.createElement("img");
+        imagen.src = data.sprites.front_default;
+        celdaSprite.appendChild(imagen);
+        fila.appendChild(celdaSprite);
+
+        tabla.appendChild(fila);
+    }
+
+    document.getElementById("botonPokemonShiny").addEventListener("click", mostrarShiny);
+
+    function mostrarShiny() {
+        var texto = document.getElementById("textoPokemon").value;
+        var enlace = 'https://pokeapi.co/api/v2/pokemon/' + texto;
+
+        fetch(enlace)
+            .then(response => response.json())
+            .then(data => {
+                mostrarDatosShinyEnTabla(data);
+            })
+            .catch(error => {
+                console.error("Error al cargar los datos shiny del Pokémon:", error);
+            });
+    }
+
+    function mostrarDatosShinyEnTabla(data) {
+        var tabla = document.getElementById("tablaDatos");
+        tabla.innerHTML = ""; // Limpiar la tabla antes de agregar nuevos datos
+
+        // Crear una fila para el Pokémon
+        var fila = document.createElement("tr");
+
+        // Nombre del Pokémon
+        var celdaNombre = document.createElement("td");
+        celdaNombre.textContent = data.name;
+        fila.appendChild(celdaNombre);
+
+        // Tipo del Pokémon (solo el primer tipo)
+        var celdaTipo = document.createElement("td");
+        celdaTipo.textContent = data.types[0].type.name;
+        fila.appendChild(celdaTipo);
+
+        // Movimientos del Pokémon (los primeros 5)
+        var celdaMovimientos = document.createElement("td");
+        var movimientos = data.moves.slice(0, 5).map(move => move.move.name);
+        celdaMovimientos.textContent = movimientos;
+        fila.appendChild(celdaMovimientos);
+
+        // Estadísticas del Pokémon (los primeros 6)
+        var celdaEstadisticas = document.createElement("td");
+        var estadisticas = data.stats.slice(0, 6).map(stat => stat.stat.name + ": " + stat.base_stat).join("<br>");
+        celdaEstadisticas.innerHTML = estadisticas;
+        fila.appendChild(celdaEstadisticas);
+
+        // Sprite del Pokémon Shiny
+        var celdaSprite = document.createElement("td");
+        var imagen = document.createElement("img");
+        imagen.src = data.sprites.front_shiny;
+        celdaSprite.appendChild(imagen);
+        fila.appendChild(celdaSprite);
+
+        tabla.appendChild(fila);
+    }
+
+    function imprimirDatosEnConsola(data) {
+        console.log("Nombre: " + data.name);
+        console.log("Tipo: " + data.types[0].type.name);
+        console.log("Movimientos: " + data.moves.slice(0, 5).map(move => move.move.name).join(", "));
+        console.log("Estadísticas:\n" + data.stats.slice(0, 6).map(stat => stat.stat.name + ": " + stat.base_stat).join("\n"));
+    }
+</script>
+</html>
+

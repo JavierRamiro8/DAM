@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ejerciciosBasicos.EjemploBAsicoIdaYVueltaLanzada">
+
+    <Button
+        android:id="@+id/btPracticaCancelarNumero"
+        android:layout_width="184dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="108dp"
+        android:text="Cancelar"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btPracticaEnviarNumero"
+        app:layout_constraintVertical_bias="0.119" />
+
+    <EditText
+        android:id="@+id/etPracticaIntroducirNumero"
+        android:layout_width="391dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btPracticaEnviarNumero"
+        android:layout_width="184dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="116dp"
+        android:text="Aceptar"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPracticaIntroducirNumero" />
+</androidx.constraintlayout.widget.ConstraintLayout>

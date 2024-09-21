@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "677115545787",
+    "project_id": "temple-body-1dea1",
+    "storage_bucket": "temple-body-1dea1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:677115545787:android:63b079ac1e867c738a019e",
+        "android_client_info": {
+          "package_name": "com.example.temple_body"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBv_KzjJ7k4ayzmOZFpi4s-_oWjoWlKqJA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

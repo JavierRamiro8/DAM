@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/icono3"
+    tools:context=".Ejercicios.Detalles.DetalleEjercicio">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/salida"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:text="return"
+            android:textColor="@color/black"
+            app:backgroundTint="#F44336"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/historial"
+            app:layout_constraintHorizontal_bias="0.125"
+            app:layout_constraintStart_toStartOf="@+id/historial"
+            app:layout_constraintTop_toBottomOf="@+id/historial"
+            app:layout_constraintVertical_bias="0.776" />
+
+        <TextView
+            android:id="@+id/TVTituloHistorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/border_color_encabezado"
+            android:paddingLeft="8dp"
+            android:paddingTop="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
+            android:text="Exercises List"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#FFC107"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/historial"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Add History"
+            android:textColor="@color/black"
+            app:backgroundTint="#FFC107"
+            app:iconTint="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/video"
+            app:layout_constraintStart_toStartOf="@+id/video"
+            app:layout_constraintTop_toBottomOf="@+id/video"
+            app:strokeColor="@color/black" />
+
+        <Button
+            android:id="@+id/video"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="show explanatory video"
+            android:textColor="@color/black"
+            app:backgroundTint="#51FF07"
+            app:iconTint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descripcion"
+            app:strokeColor="@color/black" />
+
+        <ScrollView
+            android:id="@+id/descripcion"
+            android:layout_width="353dp"
+            android:layout_height="5dp"
+            android:background="@drawable/border_color_encabezado"
+            android:maxHeight="250px"
+            app:layout_constraintEnd_toEndOf="@+id/verExplicacion"
+            app:layout_constraintStart_toStartOf="@+id/verExplicacion"
+            app:layout_constraintTop_toBottomOf="@+id/verExplicacion">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textoDescripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="8dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/verExplicacion"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#51FF07"
+            android:text="show explication"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="@+id/TVTituloHistorial"
+            app:layout_constraintStart_toStartOf="@+id/TVTituloHistorial"
+            app:layout_constraintTop_toBottomOf="@+id/TVTituloHistorial" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

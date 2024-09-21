@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ut03_PasosDeDatosEntreActividades.ut307MetalSlugMain">
+
+    <ImageButton
+        android:id="@+id/ut307ImgArmaOcultaP1"
+        android:layout_width="202dp"
+        android:layout_height="179dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ut307ImgArmaOcultaP2"
+        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ut307ImgPersonajeOcultoP1"
+        app:layout_constraintVertical_bias="0.024"
+        app:srcCompat="@drawable/siluetapistola" />
+
+    <ImageButton
+        android:id="@+id/ut307ImgArmaOcultaP2"
+        android:layout_width="197dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ut307ImgPersonajeOcultoP2"
+        app:layout_constraintVertical_bias="0.013"
+        app:srcCompat="@drawable/siluetapistola" />
+
+    <ImageButton
+        android:id="@+id/ut307ImgPersonajeOcultoP2"
+        android:layout_width="160dp"
+        android:layout_height="203dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintStart_toEndOf="@+id/ut307ImgPersonajeOcultoP1"
+        app:layout_constraintTop_toBottomOf="@+id/ut307tvP2"
+        app:srcCompat="@drawable/personajeoculto" />
+
+    <TextView
+        android:id="@+id/ut307tvP2"
+        android:layout_width="115dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="44dp"
+        android:text="Jugador 2"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ut307tvP1"
+        android:layout_width="115dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="24dp"
+        android:text="Jugador 1"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/ut307tvP2"
+        app:layout_constraintHorizontal_bias="0.326"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/ut307ImgPersonajeOcultoP1"
+        android:layout_width="159dp"
+        android:layout_height="202dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ut307tvP1"
+        app:srcCompat="@drawable/personajeoculto" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Añadir coches</h1>
+    <p>Marca: </p>
+    <input type="text" name="" id="textoMarca"></input>
+    <p>Modelo: </p>
+    <input type="text" name="" id="textoModelo">
+    <input type="button" value="Añadir" id="boton">
+    <div id="padre"></div>  
+</body>
+<script>
+        document.getElementById("boton").addEventListener("click",AñadirCoche)
+        function AñadirCoche(){
+          let marca=document.getElementsByTagName("input")[0].value;
+          let modelo=document.getElementsByTagName("input")[1].value;
+         let padre=document.getElementById("padre")
+         let listas=document.createElement("li")
+         listas.textContent="Este vehiculo es de la marca: "+marca+" "+ "y el modelo es el: "+modelo
+         padre.appendChild(listas)
+        }
+</script>
+</html>

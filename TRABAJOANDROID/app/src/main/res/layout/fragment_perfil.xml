@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.Perfil">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/icono3">
+
+        <TextView
+            android:id="@+id/APtvNombrePerfil"
+            android:layout_width="351dp"
+            android:layout_height="60dp"
+            android:text="Welcome"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="39dp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/APtvEmail"
+            app:layout_constraintEnd_toEndOf="@+id/APtvEmail"
+            app:layout_constraintStart_toStartOf="@+id/APtvEmail"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/APtvEmail"
+            android:layout_width="350dp"
+            android:layout_height="40dp"
+            android:text="Email"
+            android:textColor="#FFFFFF"
+            android:textSize="24dp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toTopOf="@+id/APbtHistorial"
+            app:layout_constraintEnd_toEndOf="@+id/APbtHistorial"
+            app:layout_constraintStart_toStartOf="@+id/APbtHistorial"
+            app:layout_constraintTop_toBottomOf="@+id/APtvNombrePerfil" />
+
+        <Button
+            android:id="@+id/APbtInformacion"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:text="Information"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:backgroundTint="#FFC107"
+            app:layout_constraintBottom_toTopOf="@+id/APbtConfiguracion"
+            app:layout_constraintEnd_toEndOf="@+id/APbtConfiguracion"
+            app:layout_constraintStart_toStartOf="@+id/APbtConfiguracion"
+            app:layout_constraintTop_toBottomOf="@+id/APbtHistorial" />
+
+        <Button
+            android:id="@+id/APbtConfiguracion"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:text="Configuration"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:backgroundTint="#FFC107"
+            app:layout_constraintBottom_toTopOf="@+id/APbtCerrarSesion"
+            app:layout_constraintEnd_toEndOf="@+id/APbtCerrarSesion"
+            app:layout_constraintStart_toStartOf="@+id/APbtCerrarSesion"
+            app:layout_constraintTop_toBottomOf="@+id/APbtInformacion" />
+
+        <Button
+            android:id="@+id/APbtCerrarSesion"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#F44336"
+            android:text="Log out"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/APbtConfiguracion" />
+
+        <Button
+            android:id="@+id/APbtHistorial"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:backgroundTint="#FFC107"
+            android:text="history"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/APbtInformacion"
+            app:layout_constraintEnd_toEndOf="@+id/APbtInformacion"
+            app:layout_constraintStart_toStartOf="@+id/APbtInformacion"
+            app:layout_constraintTop_toBottomOf="@+id/APtvEmail" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

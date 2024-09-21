@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.loginPrincipal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/icono3">
+
+        <TextView
+            android:id="@+id/tvBienvenida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baskervville"
+            android:gravity="center"
+            android:text="Welcome"
+            android:textColor="#FFC107"
+            android:textSize="60sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/ALetCorreoElectronico"
+            app:layout_constraintEnd_toEndOf="@+id/ALetCorreoElectronico"
+            app:layout_constraintStart_toStartOf="@+id/ALetCorreoElectronico"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/ALetPassword"
+            android:layout_width="334dp"
+            android:layout_height="62dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/border_radius_et_login"
+            android:drawablePadding="10dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/tvCambioContrasena"
+            app:layout_constraintEnd_toEndOf="@+id/tvCambioContrasena"
+            app:layout_constraintStart_toStartOf="@+id/tvCambioContrasena"
+            app:layout_constraintTop_toBottomOf="@+id/ALetCorreoElectronico" />
+
+        <Button
+            android:id="@+id/ALbtAccept"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="238dp"
+            android:layout_height="52dp"
+            android:layout_centerInParent="true"
+            android:text="Log In"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:backgroundTint="#FFC107"
+            app:layout_constraintBottom_toTopOf="@+id/ALtvRegisterlink"
+            app:layout_constraintEnd_toEndOf="@+id/ALtvRegisterlink"
+            app:layout_constraintStart_toStartOf="@+id/ALtvRegisterlink"
+            app:layout_constraintTop_toBottomOf="@+id/tvCambioContrasena" />
+
+        <TextView
+            android:id="@+id/ALtvRegisterlink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Dont have any account? Register here"
+            android:textAlignment="center"
+            android:textColor="#DFDFDF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ALbtAccept"
+            tools:layout_editor_absoluteX="3dp" />
+
+        <EditText
+            android:id="@+id/ALetCorreoElectronico"
+            android:layout_width="334dp"
+            android:layout_height="62dp"
+            android:background="@drawable/border_radius_et_login"
+            android:drawablePadding="10dp"
+            android:hint="E-Mail"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/ALetPassword"
+            app:layout_constraintEnd_toEndOf="@+id/ALetPassword"
+            app:layout_constraintStart_toStartOf="@+id/ALetPassword"
+            app:layout_constraintTop_toBottomOf="@+id/tvBienvenida" />
+
+        <TextView
+            android:id="@+id/tvCambioContrasena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I forgot my password"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/ALbtAccept"
+            app:layout_constraintEnd_toEndOf="@+id/ALbtAccept"
+            app:layout_constraintStart_toStartOf="@+id/ALbtAccept"
+            app:layout_constraintTop_toBottomOf="@+id/ALetPassword" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

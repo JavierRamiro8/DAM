@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="texto" id="texto"></input>
+    <br>
+    <input type="radio" name="opcion" id="rdTexto" value="Texto">Texto</input>
+    <input type="radio" name="opcion" id="rdEnlace" value="Enlace">Enlace</input>
+    <input type="radio" name="opcion" id="rdFoto" value="Foto">Foto</input>
+    <input type="button" id="btnAnadir" value="Añadir"></input>
+    <br>
+    <div id="padre"></div>
+
+    <script>
+        document.getElementById("btnAnadir").addEventListener("click", textoEnlaceFoto);
+
+        function textoEnlaceFoto() {
+            let padre = document.getElementById("padre");
+            let entrada = document.getElementById("texto");
+            let btnTexto = document.getElementById("rdTexto");
+            let btnEnlace = document.getElementById("rdEnlace");
+            let btnFoto = document.getElementById("rdFoto");
+            let lista = document.createElement("li");
+            if (btnTexto.checked) {
+                lista.textContent = entrada.value;
+                padre.appendChild(lista);
+            } else if (btnEnlace.checked) {
+                let enlace=document.createElement("a");
+                enlace.href= entrada.value;
+                enlace.textContent=entrada.value;
+                lista.appendChild(enlace);
+                padre.appendChild(lista);
+            } else if (btnFoto.checked) {
+                let imagen=document.createElement("img");
+                imagen.src=entrada.value;
+                lista.appendChild(imagen);
+                padre.appendChild(lista);
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>

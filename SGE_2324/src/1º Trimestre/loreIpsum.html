@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body id="padre">
+    <p id="p1">
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+        anim id est laborum."
+        <a href="https://google.es" id="a1">google</a>
+    </p>
+    <p id="p2">
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+        anim id est laborum."
+        <a href="https://google.es">google</a>
+    </p>
+    <p id="p3">
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+        anim id est laborum."
+        <a href="https://google.es">google</a>
+    </p>
+    <input type="button" value="Pulsame" id="botonValue" name="Pulsame"></input>
+    <br>
+    <script>
+        document.getElementById("botonValue").addEventListener("click", Presionar);
+        function Presionar() {
+            var contadorP = 0;
+            var contadorEnlaces = 0;
+            for (var i = 0; i < document.getElementsByTagName("p").length; i++) {
+                contadorP++;
+            }
+            console.log("Tienes " + contadorP + " Parrafos");
+
+            for (var i = 0; i < document.getElementsByTagName("a").length; i++) {
+                contadorEnlaces++;
+            }
+            alert("Tienes " + contadorEnlaces + " Enlaces");
+
+            var enlace1=document.getElementById("a1")
+            var StringEnlace= document.createElement("p");
+            var AEnlace=document.createElement("a");
+            AEnlace=enlace1;
+            AEnlace.textContent="Enlace"
+            StringEnlace.textContent="El 4º enlace es: ";
+            document.getElementsByTagName("body");
+            padre.appendChild(StringEnlace);
+            padre.appendChild(AEnlace);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" value="Nombre">
+    <input type="text" value="Apellido">
+    <input type="checkbox" value="Azul">Azul</input>
+    <input type="checkbox" value="Rojo">Rojo</input>
+    <input type="checkbox" value="Verde">Verde</input>
+    <input type="button" value="Enviar">
+</body>
+<script>
+    var cuerpo = document.getElementsByTagName("body")[0]
+    document.getElementsByTagName("input")[5].addEventListener("click", imprimirResultado)
+    function imprimirResultado() {
+        var nombre = document.getElementsByTagName("input")[0].value;
+        var apellido = document.getElementsByTagName("input")[1].value;
+        var checkbox1 = document.getElementsByTagName("input")[2];
+        var checkbox2 = document.getElementsByTagName("input")[3];
+        var checkbox3 = document.getElementsByTagName("input")[4];
+
+        var lineaError = document.createElement("p");
+        if (nombre === "") {
+            alert("No has introducido el nombre")
+
+        } else if (nombre.length <= 5 || nombre.length >= 40) {
+            alert("Tamaño insuficiente")
+        } else if (apellido === "") {
+            alert("No has introducido el apellido")
+        }
+        if(!checkbox1.checked && !checkbox2.checked && !checkbox3.checked){
+            alert("No has introducido ningun color")
+
+        }
+    }
+</script>
+
+</html>
